@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "greekit"
+version = "0.1.0"
+description = "Lightweight, dependency-free option pricing: Black-Scholes, Greeks, implied volatility and binomial trees."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{ name = "Leop" }]
+keywords = ["options", "black-scholes", "greeks", "implied-volatility", "quantitative-finance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+greekit = "greekit.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/greekit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "src"]
+addopts = "--doctest-modules"
+pythonpath = ["src"]
