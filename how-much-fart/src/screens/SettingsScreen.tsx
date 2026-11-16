@@ -3,13 +3,15 @@ import { BUDGET } from '../data';
 import { parseQuantity } from '../engine/compute';
 import { formatKg } from '../engine/format';
 import { MuteButton, PixelButton, PixelFrame, PixelLink } from '../ui/components';
-import { useSettings } from '../ui/store';
+import { useSettings, type Theme } from '../ui/store';
 import { useBudget } from '../ui/useBudget';
 
 export function SettingsScreen() {
   const muted = useSettings((s) => s.muted);
   const setCustom = useSettings((s) => s.setCustomMonthlyBudgetKg);
   const { budgetKg, defaultBudgetKg, isCustom } = useBudget();
+  const theme = useSettings((s) => s.theme);
+  const setTheme = useSettings((s) => s.setTheme);
   const [value, setValue] = useState(String(Math.round(budgetKg)));
   const [message, setMessage] = useState<string | null>(null);
 
@@ -21,6 +23,17 @@ export function SettingsScreen() {
           <MuteButton />
           <p>{muted ? 'Son coupé.' : 'Son activé.'} Ce choix est mémorisé sur cet appareil.</p>
         </div>
+      </PixelFrame>
+
+      <PixelFrame title="Apparence">
+        <div className="chips mt-3" role="group" aria-label="Apparence">
+          {([['auto', 'Automatique'], ['clair', 'Clair'], ['sombre', 'Sombre']] as Array<[Theme, string]>).map(([t, label]) => (
+            <button key={t} type="button" className="chip" aria-pressed={theme === t} onClick={() => setTheme(t)}>
+              {label}
+            </button>
+          ))}
+        </div>
+        <p className="small muted mt-2">« Automatique » suit le réglage clair ou sombre de ton appareil.</p>
       </PixelFrame>
 
       <PixelFrame title="Budget mensuel">

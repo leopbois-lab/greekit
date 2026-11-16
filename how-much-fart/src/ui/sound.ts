@@ -1,6 +1,6 @@
 import { useSettings } from './store';
 
-/** Sons chiptune générés en Web Audio : aucun fichier audio. */
+/** Sons courts et doux, générés en Web Audio : aucun fichier audio. */
 
 let ctx: AudioContext | null = null;
 
@@ -34,16 +34,14 @@ export function installAudioUnlock(): void {
 
 type Note = [freq: number, start: number, duration: number];
 
+// Ondes sinusoïdales, attaque et extinction progressives, volume bas : présent sans être agressif.
 const SFX = {
-  click: { wave: 'square', notes: [[660, 0, 0.05]] },
-  toggle: { wave: 'square', notes: [[440, 0, 0.05], [660, 0.05, 0.06]] },
-  coin: { wave: 'square', notes: [[988, 0, 0.07], [1319, 0.07, 0.22]] },
-  levelUp: {
-    wave: 'square',
-    notes: [[523, 0, 0.09], [659, 0.09, 0.09], [784, 0.18, 0.09], [1047, 0.27, 0.09], [1319, 0.36, 0.3]],
-  },
-  error: { wave: 'triangle', notes: [[220, 0, 0.12], [165, 0.12, 0.2]] },
-} satisfies Record<string, { wave: OscillatorType; notes: Note[] }>;
+  click: { volume: 0.05, notes: [[520, 0, 0.09]] },
+  toggle: { volume: 0.05, notes: [[440, 0, 0.1], [587, 0.07, 0.14]] },
+  coin: { volume: 0.06, notes: [[659, 0, 0.16], [880, 0.09, 0.28]] },
+  levelUp: { volume: 0.06, notes: [[523, 0, 0.22], [659, 0.11, 0.22], [784, 0.22, 0.24], [1047, 0.33, 0.5]] },
+  error: { volume: 0.05, notes: [[233, 0, 0.16], [196, 0.12, 0.26]] },
+} satisfies Record<string, { volume: number; notes: Note[] }>;
 
 export type SfxName = keyof typeof SFX;
 export const SFX_NAMES = Object.keys(SFX) as SfxName[];
@@ -53,17 +51,18 @@ export function playSfx(name: SfxName): void {
   const c = getContext();
   if (!c) return;
   if (c.state === 'suspended') void c.resume();
-  const { wave, notes } = SFX[name];
+  const { volume, notes } = SFX[name];
   const t0 = c.currentTime + 0.01;
   for (const [freq, start, duration] of notes) {
     const osc = c.createOscillator();
     const gain = c.createGain();
-    osc.type = wave;
+    osc.type = 'sine';
     osc.frequency.value = freq;
-    gain.gain.setValueAtTime(0.07, t0 + start);
+    gain.gain.setValueAtTime(0.0001, t0 + start);
+    gain.gain.linearRampToValueAtTime(volume, t0 + start + 0.015);
     gain.gain.exponentialRampToValueAtTime(0.0001, t0 + start + duration);
     osc.connect(gain).connect(c.destination);
     osc.start(t0 + start);
-    osc.stop(t0 + start + duration + 0.02);
+    osc.stop(t0 + start + duration + 0.03);
   }
 }

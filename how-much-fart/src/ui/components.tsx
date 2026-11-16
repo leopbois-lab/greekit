@@ -1,14 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link, type LinkProps } from 'react-router';
-import {
-  clampHealth,
-  filledSegments,
-  PLANET_LABELS,
-  planetStateFromHealth,
-} from '../engine/planet';
+import { clampHealth, PLANET_LABELS, planetStateFromHealth } from '../engine/planet';
+import { Icon } from './icons';
+import { PlanetIllustration } from './illustrations';
 import { playSfx, type SfxName } from './sound';
-import { Sprite } from './Sprite';
-import { ICONS, planetSprite } from './sprites';
 import { useSettings } from './store';
 
 type Variant = 'primary' | 'secondary' | 'danger';
@@ -91,9 +86,9 @@ export function PixelFrame({
   );
 }
 
-export function HealthBar({ health, segments = 10 }: { health: number; segments?: number }) {
+/** Barre de vie : part du budget du mois encore disponible. Sa couleur suit l'état de la planète. */
+export function HealthBar({ health }: { health: number }) {
   const h = clampHealth(health);
-  const on = filledSegments(h, segments);
   const pct = Math.round(h * 100);
   return (
     <div
@@ -105,34 +100,21 @@ export function HealthBar({ health, segments = 10 }: { health: number; segments?
       aria-valuenow={pct}
       aria-valuetext={`${pct} % du budget du mois restant`}
     >
-      <span className="hp__label" aria-hidden="true">PV</span>
-      <div className="hp__track" aria-hidden="true">
-        {Array.from({ length: segments }, (_, i) => (
-          <span key={i} className={`hp__seg ${i < on ? 'hp__seg--on' : ''}`} />
-        ))}
+      <div className="hp__track">
+        {/* Tant qu'il reste de la vie, la barre reste visible. */}
+        <div className="hp__fill" style={{ width: h === 0 ? '0%' : `${Math.max(4, pct)}%` }} />
       </div>
-      <span className="hp__value" aria-hidden="true">{pct} %</span>
     </div>
   );
 }
 
-export function Planet({
-  health,
-  scale = 10,
-  float = true,
-}: {
-  health: number;
-  scale?: number;
-  float?: boolean;
-}) {
+/** Planète-mascotte : grande illustration vectorielle qui change avec la vie restante. */
+export function Planet({ health, size = 220, float = true }: { health: number; size?: number; float?: boolean }) {
   const state = planetStateFromHealth(health);
   return (
-    <Sprite
-      sprite={planetSprite(state)}
-      scale={scale}
-      label={`Planète ${PLANET_LABELS[state].name.toLowerCase()}`}
-      className={float ? 'anim-float' : ''}
-    />
+    <div className={`planet ${float ? 'anim-float' : ''}`} style={{ width: size, maxWidth: '100%' }}>
+      <PlanetIllustration state={state} title={`Planète ${PLANET_LABELS[state].name.toLowerCase()}`} />
+    </div>
   );
 }
 
@@ -152,12 +134,12 @@ export function MuteButton() {
         playSfx('toggle');
       }}
     >
-      <Sprite sprite={muted ? ICONS.soundOff : ICONS.soundOn} scale={3} />
+      <Icon name={muted ? 'soundOff' : 'soundOn'} />
     </button>
   );
 }
 
-const PARTICLE_COLORS = ['var(--yellow)', 'var(--cyan)', 'var(--green)', 'var(--red)', 'var(--purple)'];
+const PARTICLE_COLORS = ['var(--cat-energie)', 'var(--cat-boissons)', 'var(--cat-alimentation)', 'var(--cat-transport)', 'var(--cat-electronique)'];
 
 /** Gerbe de particules carrées ; se relance à chaque changement de `burst`. */
 export function Particles({ burst }: { burst: number }) {
@@ -190,7 +172,7 @@ export function LevelUp({ trigger }: { trigger: number }) {
   if (!visible) return null;
   return (
     <div className="levelup" role="status">
-      <div key={trigger} className="levelup__text">LEVEL UP !</div>
+      <div key={trigger} className="levelup__text">Niveau supérieur !</div>
     </div>
   );
 }

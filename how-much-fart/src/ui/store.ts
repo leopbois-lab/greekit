@@ -3,9 +3,14 @@ import { persist } from 'zustand/middleware';
 import type { Purchase } from '../engine/types';
 import { addPurchase, deletePurchase, listPurchases } from '../services/storage';
 
+export type Theme = 'auto' | 'clair' | 'sombre';
+
 interface SettingsState {
   muted: boolean;
   toggleMuted: () => void;
+  /** Apparence : suit le système, ou forcée en clair ou en sombre. */
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
   /** Budget mensuel personnalisé en kg CO2e ; `null` = moyenne française ÷ 12. */
   customMonthlyBudgetKg: number | null;
   setCustomMonthlyBudgetKg: (kg: number | null) => void;
@@ -17,6 +22,8 @@ export const useSettings = create<SettingsState>()(
     (set) => ({
       muted: false,
       toggleMuted: () => set((s) => ({ muted: !s.muted })),
+      theme: 'auto',
+      setTheme: (theme) => set({ theme }),
       customMonthlyBudgetKg: null,
       setCustomMonthlyBudgetKg: (customMonthlyBudgetKg) => set({ customMonthlyBudgetKg }),
     }),

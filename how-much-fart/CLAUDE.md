@@ -1,6 +1,6 @@
 # How much fart
 
-Web app installable (PWA, responsive PC + mobile) qui calcule l'empreinte carbone (kg CO2e) des achats de l'utilisateur et la rend fun avec une ambiance jeu vidéo pixel art. Interface en français. Pas de backend, pas de compte.
+Web app installable (PWA, responsive PC + mobile) qui calcule l'empreinte carbone (kg CO2e) des achats de l'utilisateur et la rend fun avec une planète-mascotte à garder en forme, dans une interface moderne et épurée. Interface en français. Pas de backend, pas de compte.
 
 ## Règles permanentes
 
@@ -25,7 +25,7 @@ src/
   engine/     calcul, confiance, équivalences, règles de jeu (TS pur, testé)
   data/       factors.v1.json, equivalences.v1.json
   services/   openFoodFacts, barcode, ocr (interface OcrProvider), storage, exportImport
-  ui/         design system pixel : cadres, boutons, barre de vie, sprites, sons
+  ui/         design system : cartes, boutons, barre de vie, icônes, illustrations SVG, sons
   screens/    les 7 écrans
 scripts/
   build-factors.ts   génère les JSON depuis les sources (lancé en dev, jamais par l'app)
@@ -58,19 +58,21 @@ Chaque achat propose une alternative moins émettrice (facteur sourcé plus bas 
 
 ## Équivalences
 
-Chaque total s'affiche en cartes animées avec sprite : km en voiture thermique, km en TGV, vols Paris–New York, pets de vache (info-bulle : en vrai ce sont surtout des rots), steaks de bœuf, heures de streaming, recharges de smartphone, smartphones fabriqués, jeans, douches chaudes, jours de chauffage, litres d'essence, arbres pour absorber ça en un an, m² de banquise fondue, ballons remplis de CO2, % du budget annuel de 2 t CO2e, comparaison à la moyenne française.
+Chaque total s'affiche en cartes animées avec une illustration : km en voiture thermique, km en TGV, vols Paris–New York, pets de vache (info-bulle : en vrai ce sont surtout des rots), steaks de bœuf, heures de streaming, recharges de smartphone, smartphones fabriqués, jeans, douches chaudes, jours de chauffage, litres d'essence, arbres pour absorber ça en un an, m² de banquise fondue, ballons remplis de CO2, % du budget annuel de 2 t CO2e, comparaison à la moyenne française.
 
 Chaque conversion est sourcée comme un facteur. « Pets de vache », « arbres » et « banquise » sont les plus fragiles : ne pas forcer un chiffre. Pour les ballons, expliciter l'hypothèse de volume.
 
 ## Direction artistique
 
-Pixel art rétro 8/16 bits. La planète-mascotte et sa barre de vie sont l'élément fort ; le reste de l'interface reste sobre autour.
+Interface moderne et épurée (refonte du 16/11/2026 : le pixel art rétro est abandonné). La planète-mascotte et sa barre de vie restent l'élément fort ; tout le reste est sobre autour.
 
-- Palette limitée et très colorée sur fond de ciel spatial ; les teintes de l'interface suivent l'état de la planète (verdoyante → enfumée).
-- Titres en police pixel auto-hébergée avec tous les accents français ; texte courant dans une police lisible. Vérifier et lister les licences.
-- Sprites faits maison en grilles de pixels (SVG ou canvas), `image-rendering: pixelated`, agrandissement par multiples entiers. Tout asset externe doit être CC0 et listé.
-- Boutons et cadres façon console rétro. Animations : pièces, particules, transitions d'écran, « LEVEL UP ».
-- Sons chiptune courts générés en Web Audio (pas de fichiers), bouton muet mémorisé.
+- Beaucoup d'espace, fond neutre clair et mode sombre (automatique selon le système, forçable dans les réglages), coins et ombres discrets.
+- Une seule famille de police sans-serif très lisible, auto-hébergée, avec tous les accents français ; la hiérarchie passe par la taille et la graisse. Vérifier et lister les licences.
+- La couleur est réservée à ce qui compte : bouton principal, barre de vie (elle suit l'état de la planète, verdoyante → enfumée), illustrations, graphiques. Tout le reste est neutre.
+- Graphiques très colorés : une couleur fixe par catégorie, la même dans toute l'app (jetons `--cat-*` de `src/index.css`), contrastes vérifiés, légende lisible et libellés directs : la couleur ne porte jamais seule l'information.
+- Illustrations vectorielles (SVG) faites maison, en aplats de couleurs vives, pour la planète-mascotte, les cartes d'équivalences, les succès et les écrans vides. Tout asset externe doit être CC0 et listé.
+- Animations fluides et discrètes (transitions d'écran, apparition des cartes, passage de niveau), coupées avec `prefers-reduced-motion`.
+- Sons courts et doux générés en Web Audio (pas de fichiers), bouton muet mémorisé.
 
 ## Gamification
 
@@ -86,7 +88,7 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 
 ## Étapes
 
-- [x] 1. Squelette + design system pixel : navigation, palette, polices, galerie de composants, sons et bouton muet.
+- [x] 1. Squelette + design system : navigation, palette, polices, galerie de composants, sons et bouton muet.
 - [x] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
 - [x] 3. Code-barres.
 - [ ] 4. Ticket de caisse.
@@ -124,3 +126,9 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Mode de segmentation « bloc unique » (PSM 6) pour garder libellé et prix sur la même ligne.
 - La lecture du texte (`src/engine/receipt.ts`) est heuristique : lignes « libellé + prix », libellé seul suivi d'une ligne de quantité, exclusion des totaux, paiements, TVA et remises. Vérifiée sur une image de ticket générée ; à confirmer sur de vraies photos de tickets.
 - `public/ocr/` pèse environ 12 Mo (trois variantes du moteur, une seule est téléchargée par appareil) : à l'étape 6, ne pas tout mettre en pré-cache du service worker.
+
+## Constats de la refonte graphique (16/11/2026)
+
+- Police : Atkinson Hyperlegible Next (variable, graisses 200 à 800, OFL 1.1), auto-hébergée via `@fontsource-variable/atkinson-hyperlegible-next`. Accents français complets ; « ₂ » et « ≈ » absents (repli sur la police système).
+- Couleurs des catégories, dans l'ordre d'affichage des graphiques : vêtements, alimentation, transport, électronique, énergie, numérique, mobilier, électroménager, boissons, loisirs. Cet ordre passe le validateur (voisins distinguables en vision normale et simulée daltonienne, en clair et en sombre). Avec dix catégories, deux paires voisines restent proches pour un daltonien et trois couleurs sont peu contrastées sur fond clair : chaque graphique doit donc porter des libellés directs ou une légende.
+- Les couleurs d'état de la planète (`--state-*`) et de confiance (`--conf-*`) sont réservées à ces usages et toujours accompagnées d'un libellé.

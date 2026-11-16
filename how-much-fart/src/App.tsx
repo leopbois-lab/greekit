@@ -13,9 +13,8 @@ import { ComingSoon } from './screens/ComingSoon';
 import { SettingsScreen } from './screens/SettingsScreen';
 import { MuteButton } from './ui/components';
 import { playSfx } from './ui/sound';
-import { Sprite } from './ui/Sprite';
-import { ICONS, type IconName } from './ui/sprites';
-import { usePurchases } from './ui/store';
+import { Icon, type IconName } from './ui/icons';
+import { usePurchases, useSettings } from './ui/store';
 import { useBudget } from './ui/useBudget';
 
 interface NavItem {
@@ -36,9 +35,7 @@ const SIDE = [HOME, ADD, HISTORY, STATS, QUESTS, SETTINGS];
 
 function Logo() {
   return (
-    <Link to="/" className="app__logo">
-      HOW MUCH <span>FART</span>
-    </Link>
+    <Link to="/" className="app__logo">How much fart</Link>
   );
 }
 
@@ -51,7 +48,16 @@ export function App() {
     void load();
   }, [load]);
 
-  // Les teintes de l'interface suivent l'état de la planète.
+  const theme = useSettings((s) => s.theme);
+
+  // Mode clair ou sombre forcé ; sinon on suit le réglage du système.
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'auto') delete root.dataset.theme;
+    else root.dataset.theme = theme === 'sombre' ? 'dark' : 'light';
+  }, [theme]);
+
+  // L'état de la planète colore la barre de vie et le halo de la mascotte.
   useEffect(() => {
     document.documentElement.dataset.planet = planetStateFromHealth(health);
   }, [health]);
@@ -66,7 +72,7 @@ export function App() {
         <Logo />
         {SIDE.map((item) => (
           <NavLink key={item.to} to={item.to} end={item === HOME} className="side-link" onClick={() => playSfx('click')}>
-            <Sprite sprite={ICONS[item.icon]} scale={2} />
+            <Icon name={item.icon} size={22} />
             {item.label}
           </NavLink>
         ))}
@@ -82,7 +88,7 @@ export function App() {
             aria-label="Réglages"
             onClick={() => playSfx('click')}
           >
-            <Sprite sprite={ICONS.gear} scale={3} />
+            <Icon name="gear" />
           </Link>
         </div>
       </header>
@@ -134,7 +140,7 @@ export function App() {
             className={`tab ${item === ADD ? 'tab--add' : ''}`}
             onClick={() => playSfx('click')}
           >
-            <Sprite sprite={ICONS[item.icon]} scale={item === ADD ? 4 : 3} />
+            <Icon name={item.icon} size={item === ADD ? 28 : 24} />
             <span className={item === ADD ? 'sr-only' : ''}>{item.label}</span>
           </NavLink>
         ))}

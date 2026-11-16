@@ -11,7 +11,8 @@ import {
 } from '../ui/components';
 import { SFX_NAMES, type SfxName } from '../ui/sound';
 import { Sprite } from '../ui/Sprite';
-import { COIN, HEART, ICONS, planetSprite, type IconName } from '../ui/sprites';
+import { PlanetIllustration } from '../ui/illustrations';
+import { COIN, HEART, ICONS, type IconName } from '../ui/sprites';
 import { usePlanet } from '../ui/store';
 import { useBudget } from '../ui/useBudget';
 import { EquivalenceCards } from '../ui/EquivalenceCards';
@@ -43,7 +44,7 @@ export function GalleryScreen() {
 
       <PixelFrame title="Planète et barre de vie" accent>
         <div className="mt-3 flex flex-col items-center gap-3">
-          <Planet health={health} scale={8} />
+          <Planet health={health} size={180} />
           <p className="font-pixel text-accent text-[0.7rem]">{PLANET_LABELS[state].name}</p>
         </div>
         <div className="mt-3"><HealthBar health={health} /></div>
@@ -60,7 +61,7 @@ export function GalleryScreen() {
         <div className="mt-2 flex flex-wrap items-end justify-center gap-4">
           {PLANET_STATES.map((s) => (
             <figure key={s} className="flex flex-col items-center gap-2">
-              <Sprite sprite={planetSprite(s)} scale={3} label={`Planète ${PLANET_LABELS[s].name}`} />
+              <div style={{ width: 84 }}><PlanetIllustration state={s} title={`Planète ${PLANET_LABELS[s].name}`} /></div>
               <figcaption className="text-sm text-ink-dim">{PLANET_LABELS[s].name}</figcaption>
             </figure>
           ))}

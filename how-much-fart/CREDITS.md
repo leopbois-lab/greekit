@@ -1,17 +1,16 @@
 # Crédits et licences
 
-## Polices (auto-hébergées via les paquets npm Fontsource)
+## Police (auto-hébergée via le paquet npm Fontsource)
 
 | Police | Usage | Licence | Vérifié |
 | --- | --- | --- | --- |
-| Press Start 2P (The Press Start 2P Project Authors) | Titres, boutons | SIL Open Font License 1.1 | Accents français complets (à â ç é è ê ë î ï ô ù û ü ÿ œ æ, majuscules, « » €) avec les sous-ensembles latin + latin-ext |
-| Atkinson Hyperlegible (Braille Institute of America) | Texte courant | SIL Open Font License 1.1 | Idem |
+| Atkinson Hyperlegible Next, variable 200–800 (The Atkinson Hyperlegible Next Project Authors) | Toute l'interface | SIL Open Font License 1.1 | Accents français complets (à â ç é è ê ë î ï ô ù û ü ÿ œ æ, majuscules, « » €) avec les sous-ensembles latin + latin-ext |
 
-Textes de licence : `node_modules/@fontsource/*/LICENSE`.
+Texte de licence : `node_modules/@fontsource-variable/atkinson-hyperlegible-next/LICENSE`.
 
-## Sprites et sons
+## Illustrations, icônes et sons
 
-Tous les sprites sont faits maison (grilles de pixels dans `src/ui/sprites.ts`). Les sons sont générés en Web Audio (`src/ui/sound.ts`). Aucun asset externe.
+Illustrations (planète-mascotte, cartes d'équivalence) et icônes faites maison en SVG : `src/ui/illustrations.tsx`, `src/ui/icons.tsx`. Les sons sont générés en Web Audio (`src/ui/sound.ts`). Aucun asset externe.
 
 ## Données
 

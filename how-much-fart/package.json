@@ -15,8 +15,7 @@
     "build:factors": "node scripts/build-factors.ts"
   },
   "dependencies": {
-    "@fontsource/atkinson-hyperlegible": "^5.3.0",
-    "@fontsource/press-start-2p": "^5.3.0",
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
     "@tesseract.js-data/fra": "^1.0.0",
     "dexie": "^4.4.7",
     "react": "^19.3.1",
