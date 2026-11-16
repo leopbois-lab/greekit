@@ -1,0 +1,4362 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-16",
+  "licences": [
+    {
+      "name": "Impact CO2 (ADEME)",
+      "licence": "Réutilisation non commerciale et pédagogique autorisée, avec mention de l’ADEME",
+      "url": "https://impactco2.fr/mentions-legales"
+    },
+    {
+      "name": "Base Carbone V23.6 (ADEME)",
+      "licence": "Licence Ouverte / Open Licence (Etalab)",
+      "url": "https://data.ademe.fr/datasets/base-carboner"
+    },
+    {
+      "name": "Agribalyse 3.2 (ADEME, INRAE)",
+      "licence": "Licence Ouverte / Open Licence (Etalab)",
+      "url": "https://data.ademe.fr/datasets/agribalyse-31-synthese"
+    }
+  ],
+  "factors": [
+    {
+      "id": "ico2-boeuf",
+      "label": "Boeuf",
+      "value": 28.01,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/boeuf"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "viandes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-veau",
+      "label": "Veau",
+      "value": 22.5,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/veau"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "viandes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-porc",
+      "label": "Porc",
+      "value": 6.671,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/porc"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "viandes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-canard",
+      "label": "Canard",
+      "value": 8.061,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/canard"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "viandes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-lapin",
+      "label": "Lapin",
+      "value": 5.783,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/lapin"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "viandes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-poulet",
+      "label": "Poulet",
+      "value": 4.56,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/poulet"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "viandes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-crevettes",
+      "label": "Crevettes",
+      "value": 20.35,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/crevettes"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-moules",
+      "label": "Moules",
+      "value": 5.328,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/moules"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-huitres",
+      "label": "Huitres",
+      "value": 5.328,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/huitres"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cabillaud",
+      "label": "Cabillaud (cru)",
+      "value": 12.09,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/cabillaud"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-lieu",
+      "label": "Lieu jaune ou colin (cru)",
+      "value": 12.09,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/lieu"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-dorade",
+      "label": "Dorade royale",
+      "value": 11.19,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/dorade"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-saumon",
+      "label": "Saumon ou truite d'élevage (cru)",
+      "value": 5.557,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/saumon"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-thon",
+      "label": "Thon (cru)",
+      "value": 4.983,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/thon"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-sardines",
+      "label": "Sardines",
+      "value": 2.276,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/sardines"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "poissons et fruits de mer",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-beurre",
+      "label": "Beurre",
+      "value": 7.913,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/beurre"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fromagedure",
+      "label": "Fromage à pâte dure",
+      "value": 6.278,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/fromagedure"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-feta",
+      "label": "Fêta (brebis)",
+      "value": 6.306,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/feta"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fromagemolle",
+      "label": "Fromage à pâte molle",
+      "value": 5.144,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/fromagemolle"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-mozarella",
+      "label": "Mozarella",
+      "value": 4.715,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/mozarella"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fromagebleu",
+      "label": "Fromage bleu",
+      "value": 6.165,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/fromagebleu"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-oeuf",
+      "label": "Oeufs",
+      "value": 1.878,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/oeuf"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-matieregrasse",
+      "label": "Matière grasse végétale",
+      "value": 2.585,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/matieregrasse"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-yaourt",
+      "label": "Yaourt nature ou yaourt à la grecque",
+      "value": 1.895,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/yaourt"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fromageblanc",
+      "label": "Fromage blanc 0%",
+      "value": 1.81,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/fromageblanc"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "oeufs et produits laitiers",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-riz",
+      "label": "Riz",
+      "value": 2.015,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/riz"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "céréales et légumineuses",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pates",
+      "label": "Pâtes (sèches)",
+      "value": 1.98,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/pates"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "céréales et légumineuses",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ble",
+      "label": "Blé",
+      "value": 1.226,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/ble"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "céréales et légumineuses",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-boulgour",
+      "label": "Boulgour",
+      "value": 0.9499,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/boulgour"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "céréales et légumineuses",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-poischiches",
+      "label": "Pois chiches",
+      "value": 0.8985,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/poischiches"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "céréales et légumineuses",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-haricotsrouges",
+      "label": "Haricots rouges",
+      "value": 0.8585,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/haricotsrouges"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "céréales et légumineuses",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-lentilles",
+      "label": "Lentilles (blondes, vertes, corail)",
+      "value": 0.5815,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/lentilles"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "céréales et légumineuses",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cheeseburger",
+      "label": "Cheeseburger",
+      "value": 18.83,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/cheeseburger"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "plats préparés",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-kebab",
+      "label": "Kebab",
+      "value": 12.81,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/kebab"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "plats préparés",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-burgerpoulet",
+      "label": "Burger au poulet",
+      "value": 4.361,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/burgerpoulet"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "plats préparés",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pizza",
+      "label": "Pizza quatre fromages",
+      "value": 3.599,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/pizza"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "plats préparés",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-sushis",
+      "label": "Sushis ou makis",
+      "value": 2.669,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/sushis"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "plats préparés",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-burgervegetarien",
+      "label": "Burger végétarien",
+      "value": 2.708,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/burgervegetarien"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "plats préparés",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-frites",
+      "label": "Frites (friteuse)",
+      "value": 1.457,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/frites"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "plats préparés",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tofu",
+      "label": "Tofu nature",
+      "value": 1.004,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/tofu"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "alternatives végétariennes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-boucheechocolat",
+      "label": "Rocher au chocolat",
+      "value": 10.52,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/boucheechocolat"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pateatartiner",
+      "label": "Pâte à tartiner à la noisette",
+      "value": 9.117,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/pateatartiner"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-brownie",
+      "label": "Brownie au chocolat",
+      "value": 8.357,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/brownie"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-painauchocolat",
+      "label": "Pain au chocolat ou chocolatine",
+      "value": 5.729,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/painauchocolat"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cookie",
+      "label": "Cookie au pépites de chocolat",
+      "value": 6.273,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/cookie"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-madeleine",
+      "label": "Madeleine",
+      "value": 2.243,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/madeleine"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-painauxraisins",
+      "label": "Pain aux raisins",
+      "value": 2.564,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/painauxraisins"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chaussonauxpommes",
+      "label": "Chausson aux pommes",
+      "value": 2.044,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/chaussonauxpommes"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-croissant",
+      "label": "Croissant au beurre",
+      "value": 2.943,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/croissant"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-paindemie",
+      "label": "Pain de mie",
+      "value": 1.559,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/paindemie"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-bonbons",
+      "label": "Bonbons gélifiés",
+      "value": 1.487,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/bonbons"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-baguette",
+      "label": "Baguette tradition",
+      "value": 0.7767,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/baguette"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "en-cas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pommedeterre",
+      "label": "Pomme de terre nouvelle",
+      "value": 0.7063,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/pommedeterre"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-boulettesvegetales",
+      "label": "Boulettes végétales",
+      "value": 2.278,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/boulettesvegetales"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "alternatives végétariennes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-galettefromage",
+      "label": "Galette au fromage",
+      "value": 2.171,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/galettefromage"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "alternatives végétariennes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-galettevegetale",
+      "label": "Galette végétale",
+      "value": 1.659,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/galettevegetale"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "alternatives végétariennes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-hachevegetal",
+      "label": "Haché végétal",
+      "value": 2.052,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/hachevegetal"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "alternatives végétariennes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-nuggetsvegetaux",
+      "label": "Nuggets végétaux",
+      "value": 1.77,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/nuggetsvegetaux"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "alternatives végétariennes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-saucissevegetale",
+      "label": "Saucisse végétale",
+      "value": 2.213,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/saucissevegetale"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "alternatives végétariennes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fraise",
+      "label": "Fraise",
+      "value": 0.5111,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/fraise"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pomme",
+      "label": "Pomme",
+      "value": 0.4082,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/pomme"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-orange",
+      "label": "Orange",
+      "value": 0.6777,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/orange"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-citron",
+      "label": "Citron",
+      "value": 0.7636,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/citron"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ail",
+      "label": "Ail",
+      "value": 0.3835,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/ail"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-artichaut",
+      "label": "Artichaut",
+      "value": 2.556,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/artichaut"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-asperge",
+      "label": "Asperge",
+      "value": 1.639,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/asperge"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-betterave",
+      "label": "Betterave",
+      "value": 0.4074,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/betterave"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-blette",
+      "label": "Blette",
+      "value": 0.5811,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/blette"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-carotte",
+      "label": "Carotte",
+      "value": 0.3961,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/carotte"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-celeri",
+      "label": "Céleri",
+      "value": 0.7157,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/celeri"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-champignonmorille",
+      "label": "Champignon (morille crue)",
+      "value": 6.175,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/champignonmorille"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chou",
+      "label": "Chou",
+      "value": 0.8476,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/chou"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-choudebruxelles",
+      "label": "Chou de Bruxelles",
+      "value": 0.5621,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/choudebruxelles"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-choufleur",
+      "label": "Chou-fleur",
+      "value": 0.7207,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/choufleur"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-concombre",
+      "label": "Concombre",
+      "value": 0.5123,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/concombre"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-courge",
+      "label": "Courge",
+      "value": 0.6382,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/courge"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-courgette",
+      "label": "Courgette",
+      "value": 0.4985,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/courgette"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cresson",
+      "label": "Cresson",
+      "value": 0.8681,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/cresson"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-echalote",
+      "label": "Échalote",
+      "value": 0.3936,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/echalote"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-endive",
+      "label": "Endive",
+      "value": 0.861,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/endive"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-epinard",
+      "label": "Épinard",
+      "value": 0.4226,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/epinard"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-mangue",
+      "label": "Mangue (importée par avion)",
+      "value": 11.66,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/mangue"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-manguebateau",
+      "label": "Mangue (importée par bateau)",
+      "value": 0.7275,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/manguebateau"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fenouil",
+      "label": "Fenouil",
+      "value": 1.018,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/fenouil"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-haricotvert",
+      "label": "Haricot vert (cru)",
+      "value": 0.4465,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/haricotvert"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-laitue",
+      "label": "Laitue",
+      "value": 0.8681,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/laitue"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-mache",
+      "label": "Mâche",
+      "value": 0.8681,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/mache"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-navet",
+      "label": "Navet",
+      "value": 0.3961,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/navet"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-mais",
+      "label": "Maïs",
+      "value": 0.5688,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/mais"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-oignon",
+      "label": "Oignon",
+      "value": 0.4205,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/oignon"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-panais",
+      "label": "Panais",
+      "value": 0.4943,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/panais"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-petitpois",
+      "label": "Petit pois",
+      "value": 0.7018,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/petitpois"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-poireau",
+      "label": "Poireau",
+      "value": 0.6114,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/poireau"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-poivron",
+      "label": "Poivron",
+      "value": 0.7154,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/poivron"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-potiron",
+      "label": "Potiron",
+      "value": 0.6382,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/potiron"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-radis",
+      "label": "Radis",
+      "value": 0.3847,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/radis"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-salsifis",
+      "label": "Salsifis",
+      "value": 0.4943,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/salsifis"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-topinambour",
+      "label": "Topinambour",
+      "value": 0.4913,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/topinambour"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cassis",
+      "label": "Cassis",
+      "value": 1.904,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/cassis"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chataigne",
+      "label": "Châtaigne",
+      "value": 1.944,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/chataigne"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-clementine",
+      "label": "Clémentine",
+      "value": 1.302,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/clementine"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pamplemousse",
+      "label": "Pamplemousse",
+      "value": 0.9256,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/pamplemousse"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-coing",
+      "label": "Coing",
+      "value": 0.5615,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/coing"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-figue",
+      "label": "Figue",
+      "value": 0.6115,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/figue"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-groseille",
+      "label": "Groseille",
+      "value": 1.895,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/groseille"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-kiwi",
+      "label": "Kiwi",
+      "value": 1.002,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/kiwi"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-mandarine",
+      "label": "Mandarine",
+      "value": 0.4684,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/mandarine"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-melon",
+      "label": "Melon",
+      "value": 0.9783,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/melon"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-mure",
+      "label": "Mûre",
+      "value": 1.248,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/mure"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-nectarine",
+      "label": "Nectarine",
+      "value": 0.6136,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/nectarine"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-myrtille",
+      "label": "Myrtille",
+      "value": 0.9216,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/myrtille"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-noisette",
+      "label": "Noisette",
+      "value": 4.811,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/noisette"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-noix",
+      "label": "Noix",
+      "value": 4.114,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/noix"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-prune",
+      "label": "Prune",
+      "value": 1.035,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/prune"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-reineclaude",
+      "label": "Reine claude",
+      "value": 1.044,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/reineclaude"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-rhubarbe",
+      "label": "Rhubarbe",
+      "value": 0.7015,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/rhubarbe"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-peche",
+      "label": "Pêche",
+      "value": 0.5905,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/peche"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cerise",
+      "label": "Cerise",
+      "value": 1.745,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/cerise"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-abricot",
+      "label": "Abricot",
+      "value": 1.452,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/abricot"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-framboise",
+      "label": "Framboise",
+      "value": 1.543,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/framboise"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-poire",
+      "label": "Poire",
+      "value": 0.3873,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/poire"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-raisin",
+      "label": "Raisin",
+      "value": 0.5093,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/raisin"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-aubergine",
+      "label": "Aubergine",
+      "value": 0.472,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/aubergine"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-brocoli",
+      "label": "Brocoli",
+      "value": 0.9507,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/brocoli"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tomate",
+      "label": "Tomate",
+      "value": 0.6256,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/tomate"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ananas",
+      "label": "Ananas",
+      "value": 1.361,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/ananas"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-banane",
+      "label": "Banane",
+      "value": 0.9085,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/banane"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-avocat",
+      "label": "Avocat",
+      "value": 1.553,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/avocat"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-carambole",
+      "label": "Carambole",
+      "value": 0.5535,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/carambole"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-datte",
+      "label": "Datte",
+      "value": 2.893,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/datte"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fruitdelapassion",
+      "label": "Fruit de la passion",
+      "value": 0.9376,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/fruitdelapassion"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-grenade",
+      "label": "Grenade",
+      "value": 0.4985,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/grenade"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-kaki",
+      "label": "Kaki",
+      "value": 0.9495,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/kaki"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-noixdecoco",
+      "label": "Noix de coco",
+      "value": 2.411,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/noixdecoco"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pasteque",
+      "label": "Pastèque",
+      "value": 0.6805,
+      "unit": "kg",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/fruitsetlegumes/pasteque"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "alimentation",
+      "family": "fruits et légumes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-eaudurobinet",
+      "label": "Eau du robinet",
+      "value": 0.000132,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/eaudurobinet"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-eauenbouteille",
+      "label": "Eau en bouteille",
+      "value": 0.3207,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/eauenbouteille"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-soda",
+      "label": "Soda",
+      "value": 0.4933,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/soda"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-biere",
+      "label": "Bière",
+      "value": 1.347,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/biere"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-vin",
+      "label": "Vin",
+      "value": 1.269,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/vin"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-laitdevache",
+      "label": "Lait de vache",
+      "value": 1.151,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/laitdevache"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-soja",
+      "label": "Boisson au soja",
+      "value": 0.4272,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/soja"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-the",
+      "label": "Thé",
+      "value": 0.04359,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/the"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cafe",
+      "label": "Café",
+      "value": 0.6355,
+      "unit": "L",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/boisson/cafe"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "boissons",
+      "family": "boissons",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-jeans",
+      "label": "Jeans",
+      "value": 23.84,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/jeans"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "hauts et bas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-polo",
+      "label": "Polo",
+      "value": 8.744,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/polo"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "hauts et bas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tshirtencoton",
+      "label": "T-shirt en coton",
+      "value": 5.45,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/tshirtencoton"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "hauts et bas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tshirtenpolyester",
+      "label": "T-shirt en polyester",
+      "value": 5.672,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/tshirtenpolyester"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "hauts et bas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-sweatencoton",
+      "label": "Sweat en coton",
+      "value": 28.92,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/sweatencoton"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "pulls",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chemiseencoton",
+      "label": "Chemise en coton",
+      "value": 11.66,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/chemiseencoton"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "hauts et bas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chemiseenviscose",
+      "label": "Chemise en viscose",
+      "value": 10.66,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/chemiseenviscose"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "hauts et bas",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chaussuresencuir",
+      "label": "Paire de chaussures en cuir",
+      "value": 14.95,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/chaussuresencuir"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "chaussures",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chaussuresentissu",
+      "label": "Paire de chaussures en tissu",
+      "value": 18.52,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/chaussuresentissu"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "chaussures",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chaussuresdesport",
+      "label": "Paire de chaussures de sport",
+      "value": 20.13,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/chaussuresdesport"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "chaussures",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-robeencoton",
+      "label": "Robe en coton",
+      "value": 51.09,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/robeencoton"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "robes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-robeenpolyester",
+      "label": "Robe en polyester",
+      "value": 53.43,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/robeenpolyester"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "robes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-robeenviscose",
+      "label": "Robe en viscose",
+      "value": 47.29,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/robeenviscose"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "robes",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pullenlaine",
+      "label": "Pull en laine",
+      "value": 54.18,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/pullenlaine"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "pulls",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pullenacrylique",
+      "label": "Pull en acrylique",
+      "value": 26.51,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/pullenacrylique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "pulls",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pullencotonrecycle",
+      "label": "Pull en coton recyclé",
+      "value": 9.616,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/pullencotonrecycle"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "pulls",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-manteau",
+      "label": "Manteau",
+      "value": 88.2,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/manteau"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "vestes et manteaux",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-vesteimpermeable",
+      "label": "Veste imperméable",
+      "value": 39.35,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/vesteimpermeable"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "vestes et manteaux",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-vestesimilicuir",
+      "label": "Veste simili-cuir",
+      "value": 24.88,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/vestesimilicuir"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "vetements",
+      "family": "vestes et manteaux",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-smartphone",
+      "label": "Smartphone",
+      "value": 79.52,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/smartphone"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ordinateurfixeparticulier",
+      "label": "Ordinateur fixe sans écran (particulier)",
+      "value": 268.6,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/ordinateurfixeparticulier"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ordinateurfixeprofessionnel",
+      "label": "Ordinateur fixe sans écran (professionnel)",
+      "value": 211.5,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/ordinateurfixeprofessionnel"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ecran",
+      "label": "Écran d'ordinateur",
+      "value": 69.84,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/ecran"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tabletteclassique",
+      "label": "Tablette",
+      "value": 84.29,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/tabletteclassique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-television",
+      "label": "Télévision",
+      "value": 340.2,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/television"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ordinateurportable",
+      "label": "Ordinateur portable",
+      "value": 185.1,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/ordinateurportable"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-enceintebluetooth",
+      "label": "Enceinte connectée",
+      "value": 20.5,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/enceintebluetooth"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-telephonebasique",
+      "label": "Téléphone basique",
+      "value": 23.4,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/telephonebasique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-casquevr",
+      "label": "Casque de réalité virtuelle",
+      "value": 72.4,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/casquevr"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-alimentationordinateur",
+      "label": "Alimentation externe pour ordinateur portable",
+      "value": 4.192,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/alimentationordinateur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-alimentationsmartphone",
+      "label": "Alimentation externe pour smartphone ou tablette",
+      "value": 0.4153,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/alimentationsmartphone"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-disquedur",
+      "label": "Disque dur externe",
+      "value": 11.9,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/disquedur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ssd",
+      "label": "SSD externe",
+      "value": 135.1,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/ssd"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-clefusb",
+      "label": "Clef usb",
+      "value": 5.18,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/clefusb"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-box",
+      "label": "Box",
+      "value": 63.04,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/box"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-videoprojecteur",
+      "label": "Vidéoprojecteur",
+      "value": 43.78,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/videoprojecteur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-bouilloire",
+      "label": "Bouilloire",
+      "value": 6.167,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/bouilloire"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cafetieredosette",
+      "label": "Cafetière à dosettes",
+      "value": 62.15,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/cafetieredosette"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cafetierefiltre",
+      "label": "Cafetière filtre",
+      "value": 55.41,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/cafetierefiltre"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-cafetiereexpresso",
+      "label": "Cafetière expresso",
+      "value": 72.01,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/cafetiereexpresso"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-fourelectrique",
+      "label": "Four électrique",
+      "value": 197,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/fourelectrique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-lavevaisselle",
+      "label": "Lave-vaisselle",
+      "value": 241.8,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/lavevaisselle"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-lavelinge",
+      "label": "Lave-linge",
+      "value": 296.5,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/lavelinge"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-refrigirateur",
+      "label": "Réfrigérateur",
+      "value": 250.4,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/refrigirateur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-aspirateur",
+      "label": "Aspirateur",
+      "value": 43.57,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/aspirateur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-climatiseur",
+      "label": "Climatiseur",
+      "value": 312.2,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/climatiseur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-microondes",
+      "label": "Micro-ondes",
+      "value": 91.95,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/electromenager/microondes"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
+      "category": "electromenager",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-canapeconvertible",
+      "label": "Canapé convertible",
+      "value": 197.5,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/mobilier/canapeconvertible"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "mobilier",
+      "family": "meubles",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chaiseenbois",
+      "label": "Chaise en bois",
+      "value": 18.63,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/mobilier/chaiseenbois"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "mobilier",
+      "family": "meubles",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tableenbois",
+      "label": "Table en bois",
+      "value": 80.22,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/mobilier/tableenbois"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "mobilier",
+      "family": "meubles",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-canapetextile",
+      "label": "Canapé en textile",
+      "value": 179.1,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/mobilier/canapetextile"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "mobilier",
+      "family": "meubles",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-armoire",
+      "label": "Armoire",
+      "value": 906.9,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/mobilier/armoire"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "mobilier",
+      "family": "meubles",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-lit",
+      "label": "Lit",
+      "value": 443.8,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/mobilier/lit"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "mobilier",
+      "family": "meubles",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-avion-courtcourrier",
+      "label": "Avion trajet court",
+      "value": 0.2246,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/avion-courtcourrier"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-avion-moyencourrier",
+      "label": "Avion trajet moyen",
+      "value": 0.1847,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/avion-moyencourrier"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-avion-moyenlongcourrier",
+      "label": "Avion trajet moyen à long",
+      "value": 0.1668,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/avion-moyenlongcourrier"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-avion-longcourrier",
+      "label": "Avion trajet long",
+      "value": 0.1779,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/avion-longcourrier"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tgv",
+      "label": "TGV",
+      "value": 0.00293,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/tgv"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-intercites",
+      "label": "Intercités",
+      "value": 0.00898,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/intercites"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-voiturethermique",
+      "label": "Voiture thermique",
+      "value": 0.1423,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/voiturethermique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-voitureelectrique",
+      "label": "Voiture électrique",
+      "value": 0.06737,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/voitureelectrique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-autocar",
+      "label": "Autocar thermique",
+      "value": 0.03756,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/autocar"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-velo",
+      "label": "Vélo mécanique",
+      "value": 0.00017,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/velo"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-veloelectrique",
+      "label": "Vélo à assistance électrique",
+      "value": 0.01095,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/veloelectrique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-busthermique",
+      "label": "Bus thermique",
+      "value": 0.1224,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/busthermique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-tramway",
+      "label": "Tramway",
+      "value": 0.00428,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/tramway"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-metro",
+      "label": "Métro",
+      "value": 0.00444,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/metro"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-scooter",
+      "label": "Scooter thermique",
+      "value": 0.0763,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/scooter"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-moto",
+      "label": "Moto thermique",
+      "value": 0.2147,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/moto"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-rer",
+      "label": "RER ou Transilien",
+      "value": 0.00978,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/rer"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ter",
+      "label": "TER",
+      "value": 0.02769,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/ter"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-buselectrique",
+      "label": "Bus électrique",
+      "value": 0.0217,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/buselectrique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-trottinette",
+      "label": "Trottinette à assistance électrique",
+      "value": 0.0249,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/trottinette"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-campingcar",
+      "label": "Camping-car",
+      "value": 0.4938,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/campingcar"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-scooterelectrique",
+      "label": "Scooter électrique",
+      "value": 0.0593,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/scooterelectrique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-triporteurelectrique",
+      "label": "Vélo cargo triporteur",
+      "value": 0.01483,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/triporteurelectrique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-van",
+      "label": "Van",
+      "value": 0.3246,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/van"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-voiturehybride",
+      "label": "Voiture hybride",
+      "value": 0.1466,
+      "unit": "km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/voiturehybride"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
+      "category": "transport",
+      "family": "déplacements",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chauffagegaz",
+      "label": "Chaudière à gaz",
+      "value": 17.84,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/chauffagegaz"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chauffagefioul",
+      "label": "Chaudière au fioul",
+      "value": 34.97,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/chauffagefioul"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chauffageelectrique",
+      "label": "Chaudière ou convecteur électrique",
+      "value": 2.145,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/chauffageelectrique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-pompeachaleur",
+      "label": "Pompe à chaleur",
+      "value": 1.209,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/pompeachaleur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-poeleagranule",
+      "label": "Poêle à granulés",
+      "value": 5.917,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/poeleagranule"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-poeleabois",
+      "label": "Poêle à bûches",
+      "value": 8.506,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/poeleabois"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-reseaudechaleur",
+      "label": "Réseau de chaleur",
+      "value": 11.08,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/reseaudechaleur"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chaudiereagranule",
+      "label": "Chaudière à granulés",
+      "value": 3.965,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/chaudiereagranule"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-chaudiereabois",
+      "label": "Chaudière à bûches",
+      "value": 5.7,
+      "unit": "m² chauffé pendant 1 an",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/chaudiereabois"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "energie",
+      "family": "chauffage",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-email",
+      "label": "Email",
+      "value": 0.002462,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/email"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "numerique",
+      "family": "usages",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-spam",
+      "label": "Spam",
+      "value": 0.003739,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/spam"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "numerique",
+      "family": "usages",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-stockagedonnee",
+      "label": "Go de données (1 an de stockage dans le cloud)",
+      "value": 0.0002353,
+      "unit": "Go",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/stockagedonnee"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "numerique",
+      "family": "usages",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-rechercheweb",
+      "label": "Recherche sur le web",
+      "value": 0.00123,
+      "unit": "unité",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/rechercheweb"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "numerique",
+      "family": "usages",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-streamingvideo",
+      "label": "Streaming vidéo",
+      "value": 0.06402,
+      "unit": "h",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/streamingvideo"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "numerique",
+      "family": "usages",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-visioconference",
+      "label": "Visioconférence",
+      "value": 0.05706,
+      "unit": "h",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/visioconference"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "numerique",
+      "family": "usages",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-telechargement",
+      "label": "Go de données (téléchargement)",
+      "value": 0.009505,
+      "unit": "Go",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/telechargement"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "numerique",
+      "family": "usages",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-ski",
+      "label": "Journée au ski",
+      "value": 48.9,
+      "unit": "journée",
+      "source": {
+        "name": "Impact CO2 (ADEME)",
+        "url": "https://impactco2.fr/outils/caspratiques/ski"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "loisirs",
+      "family": "sorties",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-hotel",
+      "label": "Nuit dans un hôtel",
+      "value": 4.3,
+      "unit": "nuit",
+      "source": {
+        "name": "Impact CO2 (ADEME)",
+        "url": "https://impactco2.fr/outils/caspratiques/hotel"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "loisirs",
+      "family": "hébergement",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-camping",
+      "label": "Nuit au camping",
+      "value": 1.4,
+      "unit": "nuit",
+      "source": {
+        "name": "Impact CO2 (ADEME)",
+        "url": "https://impactco2.fr/outils/caspratiques/camping"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "loisirs",
+      "family": "hébergement",
+      "kind": "article"
+    },
+    {
+      "id": "ico2-location",
+      "label": "Nuit dans une location saisonnière",
+      "value": 5.2,
+      "unit": "nuit",
+      "source": {
+        "name": "Impact CO2 (ADEME)",
+        "url": "https://impactco2.fr/outils/caspratiques/location"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Année de la donnée non précisée par la source.",
+      "category": "loisirs",
+      "family": "hébergement",
+      "kind": "article"
+    },
+    {
+      "id": "bc-essence",
+      "label": "Essence (SP95, SP95-E10, SP98)",
+      "value": 2.69,
+      "unit": "L",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 25763",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2021,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "energie",
+      "family": "carburants",
+      "kind": "article"
+    },
+    {
+      "id": "bc-gazole",
+      "label": "Gazole routier (B7)",
+      "value": 3.1,
+      "unit": "L",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 25775",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2021,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "energie",
+      "family": "carburants",
+      "kind": "article"
+    },
+    {
+      "id": "bc-electricite",
+      "label": "Électricité (mix moyen France 2024)",
+      "value": 0.0519,
+      "unit": "kWh",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43642",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2024,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "energie",
+      "family": "électricité et gaz",
+      "kind": "article"
+    },
+    {
+      "id": "bc-gaz-naturel",
+      "label": "Gaz naturel (kWh PCS, comme sur la facture)",
+      "value": 0.215,
+      "unit": "kWh",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 37133",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2022,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "category": "energie",
+      "family": "électricité et gaz",
+      "kind": "article"
+    },
+    {
+      "id": "bc-ratio-alimentation-43410",
+      "label": "Produits alimentaires (estimation par le prix)",
+      "value": 0.54,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43410",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Produits des industries alimentaires, boissons et produits à base de tabac - 2023 » : 540 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "alimentation",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-boissons-43410",
+      "label": "Boissons (estimation par le prix)",
+      "value": 0.54,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43410",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Produits des industries alimentaires, boissons et produits à base de tabac - 2023 » : 540 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "boissons",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-vetements-43405",
+      "label": "Vêtements, chaussures, cuir (estimation par le prix)",
+      "value": 0.271,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43405",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Produits de l'industrie textile, articles d'habillement, cuir et articles en cuir - 2023 » : 271 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "vetements",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-electronique-43420",
+      "label": "Produits électroniques et informatiques (estimation par le prix)",
+      "value": 0.216,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43420",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Produits informatiques, électroniques et optiques - 2023 » : 216 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "electronique",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-mobilier-43360",
+      "label": "Meubles (estimation par le prix)",
+      "value": 0.231,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43360",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Meubles  - 2023 » : 231 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "mobilier",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-transport-43570",
+      "label": "Transport terrestre : train, bus, taxi… (estimation par le prix)",
+      "value": 0.319,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43570",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Transports terrestres et transports par conduites - 2023 » : 319 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "transport",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-transport-43565",
+      "label": "Transport aérien (estimation par le prix)",
+      "value": 0.914,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43565",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Transports aériens - 2023 » : 914 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "transport",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-numerique-43510",
+      "label": "Abonnements télécom : mobile, box (estimation par le prix)",
+      "value": 0.136,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43510",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Services de télécommunications - 2023 » : 136 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "numerique",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-numerique-43375",
+      "label": "Cinéma, TV, musique, streaming (estimation par le prix)",
+      "value": 0.156,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43375",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Cinéma, TV, musique, enregistrement / Programmation, diffusion – 2023 » : 156 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "numerique",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-loisirs-43555",
+      "label": "Sport et loisirs (estimation par le prix)",
+      "value": 0.191,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43555",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Services sportifs, récréatifs et de loisirs - 2023 » : 191 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "loisirs",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-loisirs-43460",
+      "label": "Spectacles, musées, culture (estimation par le prix)",
+      "value": 0.104,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43460",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Arts, spectacles, musées, bibliothèques / Jeux de hasard – 2023 » : 104 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "loisirs",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-loisirs-43345",
+      "label": "Livres, presse, édition (estimation par le prix)",
+      "value": 0.096,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43345",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Edition - 2023 » : 96 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "loisirs",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "bc-ratio-loisirs-43525",
+      "label": "Hôtels et restaurants (estimation par le prix)",
+      "value": 0.25,
+      "unit": "€",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 43525",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2023,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "note": "Ratio monétaire « Services d'hébergement et de restauration - 2023 » : 250 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
+      "category": "loisirs",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "todo-ratio-electromenager",
+      "label": "Électroménager (estimation par le prix)",
+      "value": null,
+      "unit": "€",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Aucun ratio monétaire 2023 « équipements électriques » dans la Base Carbone V23.6.",
+      "category": "electromenager",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "todo-ratio-energie",
+      "label": "Énergie (estimation par le prix)",
+      "value": null,
+      "unit": "€",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Aucun ratio monétaire 2023 « électricité, gaz » dans la Base Carbone V23.6.",
+      "category": "energie",
+      "family": "ratios monétaires",
+      "kind": "monetaire"
+    },
+    {
+      "id": "todo-livre",
+      "label": "Livre",
+      "value": null,
+      "unit": "unité",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Facteur par unité à sourcer.",
+      "category": "loisirs",
+      "family": "culture",
+      "kind": "article"
+    },
+    {
+      "id": "todo-console",
+      "label": "Console de jeux",
+      "value": null,
+      "unit": "unité",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Absent de l’API Impact CO2 ; à sourcer.",
+      "category": "electronique",
+      "family": "appareils",
+      "kind": "article"
+    },
+    {
+      "id": "todo-velo",
+      "label": "Vélo neuf",
+      "value": null,
+      "unit": "unité",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Fabrication d’un vélo : facteur à sourcer.",
+      "category": "transport",
+      "family": "véhicules",
+      "kind": "article"
+    },
+    {
+      "id": "todo-cinema",
+      "label": "Place de cinéma",
+      "value": null,
+      "unit": "unité",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Facteur par séance à sourcer.",
+      "category": "loisirs",
+      "family": "sorties",
+      "kind": "article"
+    }
+  ]
+}
