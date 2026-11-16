@@ -515,6 +515,39 @@ input[type='range'] { accent-color: var(--accent); width: 100%; min-height: 44px
   animation: scan-line 2s steps(12) infinite;
 }
 
+/* ---------- Ticket de caisse ---------- */
+.receipt-row {
+  display: grid;
+  gap: 0.75rem;
+  margin: var(--px);
+  padding: 0.75rem;
+  background: var(--panel);
+  box-shadow:
+    0 calc(-1 * var(--px)) 0 0 var(--line),
+    0 var(--px) 0 0 var(--line),
+    calc(-1 * var(--px)) 0 0 0 var(--line),
+    var(--px) 0 0 0 var(--line);
+}
+.receipt-row--off { opacity: 0.55; }
+/* Libellé sur toute la largeur, puis les champs courts deux par deux : moins de défilement sur mobile. */
+.receipt-row__grid { display: grid; gap: 0.75rem 0.5rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; }
+.receipt-row__grid > :first-child { grid-column: 1 / -1; }
+.check { display: flex; align-items: center; gap: 0.6rem; min-height: 44px; cursor: pointer; }
+.check input { width: 24px; height: 24px; accent-color: var(--accent); }
+.progress {
+  height: 24px;
+  margin: var(--px);
+  padding: 4px;
+  background: var(--ink-dark);
+  box-shadow:
+    0 calc(-1 * var(--px)) 0 0 var(--line),
+    0 var(--px) 0 0 var(--line),
+    calc(-1 * var(--px)) 0 0 0 var(--line),
+    var(--px) 0 0 0 var(--line);
+}
+.progress__bar { height: 100%; background: var(--accent); }
+.raw-text { white-space: pre-wrap; font-family: ui-monospace, monospace; font-size: 0.75rem; overflow-x: auto; }
+
 /* Accessibilité : on coupe tout mouvement si demandé. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

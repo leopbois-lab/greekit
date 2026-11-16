@@ -1,8 +1,4 @@
-import { PixelButton, PixelFrame, PixelLink } from '../ui/components';
-
-const LATER = [
-  { title: 'Ticket de caisse', step: 4, text: 'Prends ton ticket en photo, vérifie les lignes, enregistre.' },
-];
+import { PixelFrame, PixelLink } from '../ui/components';
 
 export function AddScreen() {
   return (
@@ -20,14 +16,12 @@ export function AddScreen() {
           <PixelLink to="/ajouter/scan">Scanner</PixelLink>
         </div>
       </PixelFrame>
-      {LATER.map((m) => (
-        <PixelFrame key={m.title} title={m.title}>
-          <p className="mt-2">{m.text}</p>
-          <div className="mt-3">
-            <PixelButton disabled sfx={null}>Étape {m.step} — bientôt</PixelButton>
-          </div>
-        </PixelFrame>
-      ))}
+      <PixelFrame title="Ticket de caisse" accent>
+        <p className="mt-2">Prends ton ticket en photo, vérifie les lignes, enregistre tout d’un coup.</p>
+        <div className="mt-3">
+          <PixelLink to="/ajouter/ticket">Lire un ticket</PixelLink>
+        </div>
+      </PixelFrame>
     </div>
   );
 }

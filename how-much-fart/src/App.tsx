@@ -3,6 +3,7 @@ import { Link, NavLink, Route, Routes, useLocation } from 'react-router';
 import { planetStateFromHealth } from './engine/planet';
 import { HistoryScreen } from './screens/HistoryScreen';
 import { ManualScreen } from './screens/ManualScreen';
+import { ReceiptScreen } from './screens/ReceiptScreen';
 import { ResultScreen } from './screens/ResultScreen';
 import { ScanScreen } from './screens/ScanScreen';
 import { AddScreen } from './screens/AddScreen';
@@ -93,6 +94,7 @@ export function App() {
             <Route path="/ajouter" element={<AddScreen />} />
             <Route path="/ajouter/manuel" element={<ManualScreen />} />
             <Route path="/ajouter/scan" element={<ScanScreen />} />
+            <Route path="/ajouter/ticket" element={<ReceiptScreen />} />
             <Route path="/resultat/:id" element={<ResultScreen />} />
             <Route path="/historique" element={<HistoryScreen />} />
             <Route

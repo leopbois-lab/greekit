@@ -28,6 +28,8 @@ Tous les sprites sont faits maison (grilles de pixels dans `src/ui/sprites.ts`).
 
 | Bibliothèque | Usage | Licence |
 | --- | --- | --- |
+| Tesseract.js 7 et tesseract.js-core | Lecture du texte des tickets de caisse (OCR), dans le navigateur | Apache-2.0 |
+| @tesseract.js-data/fra (modèle de langue français de Tesseract) | Données de reconnaissance du français | Paquet npm : MIT ; modèles Tesseract : Apache-2.0 |
 | zxing-wasm (zxing-cpp compilé en WebAssembly) | Lecture des codes-barres quand le navigateur n'a pas `BarcodeDetector` (Safari) | MIT (zxing-cpp : Apache-2.0) |
 
 Chaque entrée de `src/data/*.json` porte sa source, son année et sa date de récupération.

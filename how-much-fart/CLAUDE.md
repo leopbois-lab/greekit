@@ -88,7 +88,7 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 
 - [x] 1. Squelette + design system pixel : navigation, palette, polices, galerie de composants, sons et bouton muet.
 - [x] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
-- [ ] 3. Code-barres.
+- [x] 3. Code-barres.
 - [ ] 4. Ticket de caisse.
 - [ ] 5. Gamification, alternatives, statistiques.
 - [ ] 6. PWA (manifest, service worker, hors-ligne), export/import, passe accessibilité, README (installation, sources de données, limites).
@@ -117,3 +117,10 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Tous les produits n'ont pas de bloc Agribalyse (ex. Coca-Cola 5449000000996) : bascule vers la saisie manuelle.
 - `BarcodeDetector` est absent de Safari et de Chromium sous Linux : le repli ZXing (`zxing-wasm`, fichier .wasm servi par l'app) est le chemin réellement utilisé sur iPhone. Testé ici avec une caméra simulée ; à confirmer sur appareil réel.
 - Boissons : `co2_total` est par kg ; un volume est converti à 1 kg par litre et le résultat reste « estimé ».
+
+## Constats de l'étape 4 (16/11/2026)
+
+- OCR : Tesseract.js 7 derrière l'interface `OcrProvider` (`src/services/ocr.ts`). Le worker, le moteur WebAssembly (variantes « LSTM seul ») et le modèle français (`@tesseract.js-data/fra`, version `4.0.0_best_int`) sont copiés dans `public/ocr/` par `scripts/copy-ocr-assets.mjs` (lancé avant `dev` et `build`, dossier non versionné) : aucun appel à un CDN.
+- Mode de segmentation « bloc unique » (PSM 6) pour garder libellé et prix sur la même ligne.
+- La lecture du texte (`src/engine/receipt.ts`) est heuristique : lignes « libellé + prix », libellé seul suivi d'une ligne de quantité, exclusion des totaux, paiements, TVA et remises. Vérifiée sur une image de ticket générée ; à confirmer sur de vraies photos de tickets.
+- `public/ocr/` pèse environ 12 Mo (trois variantes du moteur, une seule est téléchargée par appareil) : à l'étape 6, ne pas tout mettre en pré-cache du service worker.
