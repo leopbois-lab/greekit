@@ -1,27 +1,30 @@
-import { PixelFrame, PixelLink } from '../ui/components';
+import { ButtonLink, Card } from '../ui/components';
+import { Icon, type IconName } from '../ui/icons';
+
+const MODES: Array<{ to: string; icon: IconName; title: string; text: string; action: string; primary?: boolean }> = [
+  { to: '/ajouter/scan', icon: 'barcode', title: 'Code-barres', text: 'Scanne un produit alimentaire avec la caméra : le plus précis.', action: 'Scanner', primary: true },
+  { to: '/ajouter/ticket', icon: 'receipt', title: 'Ticket de caisse', text: 'Prends ton ticket en photo, vérifie les lignes, enregistre tout d’un coup.', action: 'Lire un ticket' },
+  { to: '/ajouter/manuel', icon: 'pencil', title: 'Saisie manuelle', text: 'Choisis une catégorie, un article, une quantité ou un poids.', action: 'Commencer' },
+];
 
 export function AddScreen() {
   return (
-    <div className="flex flex-col gap-7">
-      <h1>Ajouter un achat</h1>
-      <PixelFrame title="Saisie manuelle" accent>
-        <p className="mt-2">Choisis une catégorie, un article, une quantité ou un poids.</p>
-        <div className="mt-3">
-          <PixelLink to="/ajouter/manuel">Commencer</PixelLink>
-        </div>
-      </PixelFrame>
-      <PixelFrame title="Code-barres" accent>
-        <p className="mt-2">Scanne un produit alimentaire avec la caméra : le plus précis.</p>
-        <div className="mt-3">
-          <PixelLink to="/ajouter/scan">Scanner</PixelLink>
-        </div>
-      </PixelFrame>
-      <PixelFrame title="Ticket de caisse" accent>
-        <p className="mt-2">Prends ton ticket en photo, vérifie les lignes, enregistre tout d’un coup.</p>
-        <div className="mt-3">
-          <PixelLink to="/ajouter/ticket">Lire un ticket</PixelLink>
-        </div>
-      </PixelFrame>
+    <div className="flex flex-col gap-4">
+      <h1 className="mb-2">Ajouter un achat</h1>
+      {MODES.map((m) => (
+        <Card key={m.to}>
+          <div className="option-card">
+            <span className="icon-tile"><Icon name={m.icon} /></span>
+            <div>
+              <h2 className="card__title">{m.title}</h2>
+              <p className="muted mt-1">{m.text}</p>
+              <div className="mt-3">
+                <ButtonLink to={m.to} variant={m.primary ? 'primary' : 'secondary'}>{m.action}</ButtonLink>
+              </div>
+            </div>
+          </div>
+        </Card>
+      ))}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Purchase } from '../engine/types';
-import { addPurchase, deletePurchase, listPurchases } from '../services/storage';
+import { addPurchase, deletePurchase, listNoPurchaseDays, listPurchases, setNoPurchaseDay } from '../services/storage';
 
 export type Theme = 'auto' | 'clair' | 'sombre';
 
@@ -14,6 +14,9 @@ interface SettingsState {
   /** Budget mensuel personnalisé en kg CO2e ; `null` = moyenne française ÷ 12. */
   customMonthlyBudgetKg: number | null;
   setCustomMonthlyBudgetKg: (kg: number | null) => void;
+  /** Dernier niveau déjà fêté : sert à ne célébrer un passage de niveau qu'une fois. */
+  lastSeenLevel: number | null;
+  setLastSeenLevel: (level: number) => void;
 }
 
 /** Réglages mémorisés sur l'appareil (le bouton muet survit au rechargement). */
@@ -26,6 +29,8 @@ export const useSettings = create<SettingsState>()(
       setTheme: (theme) => set({ theme }),
       customMonthlyBudgetKg: null,
       setCustomMonthlyBudgetKg: (customMonthlyBudgetKg) => set({ customMonthlyBudgetKg }),
+      lastSeenLevel: null,
+      setLastSeenLevel: (lastSeenLevel) => set({ lastSeenLevel }),
     }),
     { name: 'hmf-settings' },
   ),
@@ -44,6 +49,9 @@ export const usePlanet = create<PlanetStore>()((set) => ({
 
 interface PurchasesStore {
   purchases: Purchase[];
+  /** Journées « rien acheté aujourd'hui » validées (AAAA-MM-JJ). */
+  noPurchaseDays: string[];
+  setNoPurchase: (date: string, on: boolean) => Promise<void>;
   loaded: boolean;
   error: string | null;
   load: () => Promise<void>;
@@ -53,11 +61,18 @@ interface PurchasesStore {
 
 export const usePurchases = create<PurchasesStore>()((set, get) => ({
   purchases: [],
+  noPurchaseDays: [],
+  setNoPurchase: async (date, on) => {
+    await setNoPurchaseDay(date, on);
+    const rest = get().noPurchaseDays.filter((d) => d !== date);
+    set({ noPurchaseDays: on ? [...rest, date] : rest });
+  },
   loaded: false,
   error: null,
   load: async () => {
     try {
-      set({ purchases: await listPurchases(), loaded: true, error: null });
+      const [purchases, noPurchaseDays] = await Promise.all([listPurchases(), listNoPurchaseDays()]);
+      set({ purchases, noPurchaseDays, loaded: true, error: null });
     } catch {
       set({ loaded: true, error: 'Le stockage de cet appareil est indisponible : les achats ne seront pas mémorisés.' });
     }

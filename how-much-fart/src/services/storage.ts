@@ -31,11 +31,14 @@ interface CachedProduct {
 class AppDb extends Dexie {
   purchases!: Table<Purchase, number>;
   products!: Table<CachedProduct, string>;
+  days!: Table<{ date: string }, string>;
   constructor() {
     super('how-much-fart');
     this.version(1).stores({ purchases: '++id, date, category' });
     // v2 : cache des produits scannés (clé = code-barres).
     this.version(2).stores({ purchases: '++id, date, category', products: 'barcode' });
+    // v3 : journées « rien acheté aujourd'hui » validées (clé = date AAAA-MM-JJ).
+    this.version(3).stores({ purchases: '++id, date, category', products: 'barcode', days: 'date' });
   }
 }
 
@@ -74,3 +77,15 @@ export const productCache: ProductCache = {
     await getDb().products.put({ barcode: product.barcode, product, fetchedAt });
   },
 };
+
+const DATE_KEY = /^\d{4}-\d{2}-\d{2}$/;
+
+export async function listNoPurchaseDays(): Promise<string[]> {
+  const rows = await getDb().days.toArray();
+  return rows.map((r) => r.date).filter((d) => typeof d === 'string' && DATE_KEY.test(d));
+}
+
+export async function setNoPurchaseDay(date: string, on: boolean): Promise<void> {
+  if (on) await getDb().days.put({ date });
+  else await getDb().days.delete(date);
+}

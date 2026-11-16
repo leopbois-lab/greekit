@@ -1,8 +1,12 @@
 import { useParams } from 'react-router';
+import { FACTORS } from '../data';
+import { findAlternatives } from '../engine/alternatives';
 import { formatCount, formatDate, formatKg } from '../engine/format';
 import { CATEGORY_LABELS, CONFIDENCE_LABELS } from '../engine/types';
-import { PixelFrame, PixelLink } from '../ui/components';
+import { Card, ButtonLink } from '../ui/components';
+import { percent } from '../ui/charts';
 import { EquivalenceCards } from '../ui/EquivalenceCards';
+import { Icon } from '../ui/icons';
 import { usePurchases } from '../ui/store';
 import { ComingSoon } from './ComingSoon';
 
@@ -15,6 +19,8 @@ export function ResultScreen() {
   if (!purchase) return <ComingSoon title="Achat introuvable">Cet achat n’existe pas ou a été supprimé.</ComingSoon>;
 
   const confidence = CONFIDENCE_LABELS[purchase.confidence];
+  const alternatives = findAlternatives(purchase, FACTORS);
+  const best = alternatives[0];
   return (
     <div className="flex flex-col gap-7">
       <header>
@@ -29,7 +35,7 @@ export function ResultScreen() {
         <h1 className="mt-1">{purchase.label}</h1>
       </header>
 
-      <PixelFrame>
+      <Card>
         <p className="small muted">Empreinte de cet achat</p>
         <p className="big-number tnum mt-1">{formatKg(purchase.kgCO2e)}</p>
         <p className="muted mt-2">
@@ -45,7 +51,39 @@ export function ResultScreen() {
           {purchase.dataYear ? ` — donnée ${purchase.dataYear}` : ''}
         </p>
         {purchase.note && <p className="small muted mt-1">{purchase.note}</p>}
-      </PixelFrame>
+      </Card>
+
+      {best && (
+        <Card title="Une piste pour la prochaine fois">
+          <div className="alt mt-3">
+            <span className="icon-tile"><Icon name="leaf" /></span>
+            <div>
+              <p>
+                Avec <strong>{best.factor.label}</strong> à la place, la même quantité pèserait{' '}
+                <strong>{formatKg(best.kgCO2e)}</strong> au lieu de {formatKg(purchase.kgCO2e)}, soit{' '}
+                {percent(best.savedShare)} de moins.
+              </p>
+              <p className="small muted mt-1">
+                Source : <a href={best.factor.source!.url} target="_blank" rel="noreferrer">{best.factor.source!.name}</a>
+              </p>
+              {alternatives.length > 1 && (
+                <details className="mt-2">
+                  <summary className="cursor-pointer small muted">
+                    {alternatives.length - 1} autre{alternatives.length > 2 ? 's' : ''} option{alternatives.length > 2 ? 's' : ''} plus légère{alternatives.length > 2 ? 's' : ''}
+                  </summary>
+                  <ul className="mt-1 list-disc pl-5 small">
+                    {alternatives.slice(1, 6).map((a) => (
+                      <li key={a.factor.id}>
+                        {a.factor.label} : {formatKg(a.kgCO2e)} ({percent(a.savedShare)} de moins)
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </div>
+          </div>
+        </Card>
+      )}
 
       <section aria-labelledby="eq-title">
         <h2 id="eq-title" className="mb-4">C’est comme…</h2>
@@ -53,8 +91,8 @@ export function ResultScreen() {
       </section>
 
       <div className="flex flex-wrap gap-2">
-        <PixelLink to="/ajouter">Ajouter un autre achat</PixelLink>
-        <PixelLink to="/historique" variant="secondary">Historique</PixelLink>
+        <ButtonLink to="/ajouter">Ajouter un autre achat</ButtonLink>
+        <ButtonLink to="/historique" variant="secondary">Historique</ButtonLink>
       </div>
     </div>
   );

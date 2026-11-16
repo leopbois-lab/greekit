@@ -8,7 +8,7 @@ import { CONFIDENCE_LABELS } from '../engine/types';
 import { getBarcodeReader } from '../services/barcode';
 import { createProductLookup } from '../services/openFoodFacts';
 import { productCache } from '../services/storage';
-import { PixelButton, PixelFrame, PixelLink } from '../ui/components';
+import { Button, Card, ButtonLink } from '../ui/components';
 import { playSfx } from '../ui/sound';
 import { usePurchases } from '../ui/store';
 import type { ManualPrefill } from './ManualScreen';
@@ -214,11 +214,11 @@ export function ScanScreen() {
     return (
       <div className="flex flex-col gap-7">
         <h1>{productLabel(product)}</h1>
-        <PixelFrame title="Produit trouvé" accent>
+        <Card title="Produit trouvé">
           <p className="mt-2">
             <strong>{formatKg(product.co2PerKg ?? 0)}</strong> par kg de produit
           </p>
-          <p className="mt-1 text-sm text-ink-dim">
+          <p className="mt-1 small muted">
             Source : Open Food Facts — Agribalyse {product.agribalyseVersion ?? ''}
             {product.agribalyseName ? `, référence « ${product.agribalyseName} »` : ''}. Code {product.barcode}
             {phase.fromCache ? ' (fiche gardée en mémoire sur cet appareil)' : ''}.
@@ -237,7 +237,7 @@ export function ScanScreen() {
               </label>
               <input
                 id="grams"
-                className="px-input"
+                className="input"
                 inputMode="decimal"
                 autoComplete="off"
                 value={grams}
@@ -248,7 +248,7 @@ export function ScanScreen() {
                   setSaveError(null);
                 }}
               />
-              <p id="grams-help" className="mt-1 text-sm text-ink-dim">
+              <p id="grams-help" className="mt-1 small muted">
                 {product.packWeight
                   ? `Pré-rempli avec le contenu indiqué sur la fiche (${product.quantityText ?? packGrams}). Modifie-le si tu en as acheté plusieurs.`
                   : 'La fiche n’indique pas la quantité : regarde sur l’emballage.'}
@@ -259,7 +259,7 @@ export function ScanScreen() {
               <input
                 id="scan-date"
                 type="date"
-                className="px-input"
+                className="input"
                 value={date}
                 max={toDateKey(new Date())}
                 onChange={(e) => setDate(e.target.value || toDateKey(new Date()))}
@@ -273,13 +273,13 @@ export function ScanScreen() {
                 </>
               )}
             </p>
-            {saveError && <p role="alert" className="text-[var(--yellow)]">{saveError}</p>}
+            {saveError && <p role="alert" className="field-error">{saveError}</p>}
             <div className="flex flex-wrap gap-2">
-              <PixelButton type="submit" big sfx={null} disabled={saving}>Enregistrer</PixelButton>
-              <PixelButton variant="secondary" onClick={reset}>Scanner un autre</PixelButton>
+              <Button type="submit" big sfx={null} disabled={saving}>Enregistrer</Button>
+              <Button variant="secondary" onClick={reset}>Scanner un autre</Button>
             </div>
           </form>
-        </PixelFrame>
+        </Card>
       </div>
     );
   }
@@ -289,13 +289,13 @@ export function ScanScreen() {
     return (
       <div className="flex flex-col gap-7">
         <h1>Code-barres</h1>
-        <PixelFrame title="Plan B">
+        <Card title="Plan B">
           <p className="mt-2" role="status">{phase.message}</p>
           <div className="mt-4 flex flex-wrap gap-2">
-            <PixelLink to="/ajouter/manuel" state={phase.prefill}>Saisie manuelle</PixelLink>
-            <PixelButton variant="secondary" onClick={reset}>Scanner un autre</PixelButton>
+            <ButtonLink to="/ajouter/manuel" state={phase.prefill}>Saisie manuelle</ButtonLink>
+            <Button variant="secondary" onClick={reset}>Scanner un autre</Button>
           </div>
-        </PixelFrame>
+        </Card>
       </div>
     );
   }
@@ -306,7 +306,7 @@ export function ScanScreen() {
   return (
     <div className="flex flex-col gap-7">
       <h1>Code-barres</h1>
-      <PixelFrame title="Caméra" accent>
+      <Card title="Caméra">
         {/* La vidéo reste montée pour pouvoir y brancher le flux ; muette et « inline » pour iOS. */}
         <div className="scan-view mt-3" hidden={!cameraOn}>
           <video ref={videoRef} playsInline muted aria-label="Aperçu de la caméra" />
@@ -318,17 +318,17 @@ export function ScanScreen() {
           {phase.name === 'scanning' && 'Place le code-barres dans le cadre, bien à plat.'}
           {phase.name === 'looking-up' && `Code ${phase.barcode} lu ! Recherche du produit…`}
         </p>
-        {cameraError && <p role="alert" className="mt-2 text-[var(--yellow)]">{cameraError}</p>}
+        {cameraError && <p role="alert" className="mt-2 field-error">{cameraError}</p>}
         <div className="mt-3 flex flex-wrap gap-2">
           {cameraOn ? (
-            <PixelButton variant="secondary" onClick={reset}>Arrêter la caméra</PixelButton>
+            <Button variant="secondary" onClick={reset}>Arrêter la caméra</Button>
           ) : (
-            <PixelButton big disabled={busy} onClick={() => void startCamera()}>Activer la caméra</PixelButton>
+            <Button big disabled={busy} onClick={() => void startCamera()}>Activer la caméra</Button>
           )}
         </div>
-      </PixelFrame>
+      </Card>
 
-      <PixelFrame title="Autres moyens">
+      <Card title="Autres moyens">
         <form
           className="mt-2 flex flex-col gap-3"
           noValidate
@@ -347,7 +347,7 @@ export function ScanScreen() {
             <label className="field-label" htmlFor="barcode">Saisir les chiffres du code</label>
             <input
               id="barcode"
-              className="px-input"
+              className="input"
               inputMode="numeric"
               autoComplete="off"
               placeholder="ex. 3017620422003"
@@ -360,9 +360,9 @@ export function ScanScreen() {
               }}
             />
           </div>
-          {typedError && <p id="barcode-error" role="alert" className="text-[var(--yellow)]">{typedError}</p>}
+          {typedError && <p id="barcode-error" role="alert" className="field-error">{typedError}</p>}
           <div>
-            <PixelButton type="submit" variant="secondary" disabled={busy}>Chercher</PixelButton>
+            <Button type="submit" variant="secondary" disabled={busy}>Chercher</Button>
           </div>
         </form>
         <div className="mt-4">
@@ -372,7 +372,7 @@ export function ScanScreen() {
             type="file"
             accept="image/*"
             capture="environment"
-            className="px-input"
+            className="input"
             disabled={busy}
             onChange={(e) => {
               void readPhoto(e.target.files?.[0]);
@@ -380,7 +380,7 @@ export function ScanScreen() {
             }}
           />
         </div>
-      </PixelFrame>
+      </Card>
     </div>
   );
 }

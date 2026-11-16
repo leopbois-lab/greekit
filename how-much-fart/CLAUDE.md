@@ -91,7 +91,7 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - [x] 1. Squelette + design system : navigation, palette, polices, galerie de composants, sons et bouton muet.
 - [x] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
 - [x] 3. Code-barres.
-- [ ] 4. Ticket de caisse.
+- [x] 4. Ticket de caisse.
 - [ ] 5. Gamification, alternatives, statistiques.
 - [ ] 6. PWA (manifest, service worker, hors-ligne), export/import, passe accessibilité, README (installation, sources de données, limites).
 
@@ -132,3 +132,13 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Police : Atkinson Hyperlegible Next (variable, graisses 200 à 800, OFL 1.1), auto-hébergée via `@fontsource-variable/atkinson-hyperlegible-next`. Accents français complets ; « ₂ » et « ≈ » absents (repli sur la police système).
 - Couleurs des catégories, dans l'ordre d'affichage des graphiques : vêtements, alimentation, transport, électronique, énergie, numérique, mobilier, électroménager, boissons, loisirs. Cet ordre passe le validateur (voisins distinguables en vision normale et simulée daltonienne, en clair et en sombre). Avec dix catégories, deux paires voisines restent proches pour un daltonien et trois couleurs sont peu contrastées sur fond clair : chaque graphique doit donc porter des libellés directs ou une légende.
 - Les couleurs d'état de la planète (`--state-*`) et de confiance (`--conf-*`) sont réservées à ces usages et toujours accompagnées d'un libellé.
+
+## Constats de l'étape 5 (16/11/2026)
+
+- Tout l'état du jeu se déduit de l'historique (`computeGame` dans `src/engine/game.ts`) : rien n'est stocké à part, sauf les journées « rien acheté » (table `days`) et le dernier niveau fêté (réglages).
+- Jour sobre : jour saisi dont le total reste sous le budget du jour (budget du mois ÷ nombre de jours du mois). Combo : jours sobres consécutifs ; un jour non saisi le casse.
+- XP : 10 par achat, 5 par journée sans achat validée, 15 par jour sobre, 50 par quête, 30 par succès, 200 par boss. Niveaux à 0, 100, 300, 600, 1000… XP.
+- Quêtes : trois par semaine (lundi → dimanche), « 3 jours sans bœuf » toujours présente, les deux autres tournent.
+- Boss du mois (« le Gros Nuage ») : battu si le mois se termine sous le budget avec au moins 8 jours saisis.
+- Alternatives : seulement dans les familles où les articles sont interchangeables (pas pour les appareils, les meubles, les fruits et légumes, ni les estimations par le prix ou les produits scannés). Transport : modes longue distance pour l'avion et les trajets de plus de 80 km, modes du quotidien sinon.
+- Graphiques : barres classées par catégorie avec libellés directs ; colonnes empilées dans le temps limitées aux 5 plus grosses catégories de la période + « Autres », avec légende, infobulle au survol, au toucher et au clavier, et tableau des valeurs.

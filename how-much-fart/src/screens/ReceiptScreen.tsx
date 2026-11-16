@@ -14,7 +14,7 @@ import {
 import { searchFactors } from '../engine/search';
 import { CATEGORY_LABELS, CONFIDENCE_LABELS } from '../engine/types';
 import { getOcrProvider } from '../services/ocr';
-import { PixelButton, PixelFrame, PixelLink } from '../ui/components';
+import { Button, Card, ButtonLink } from '../ui/components';
 import { playSfx } from '../ui/sound';
 import { usePurchases } from '../ui/store';
 
@@ -118,15 +118,15 @@ export function ReceiptScreen() {
     return (
       <div className="flex flex-col gap-7">
         <h1>Ticket de caisse</h1>
-        <PixelFrame title="Lecture" accent>
+        <Card title="Lecture">
           <p className="mt-2" role="status">
             {pct === 0 ? 'Préparation de la lecture (un peu plus long la première fois)…' : `Lecture du ticket… ${pct} %`}
           </p>
           <div className="progress mt-3" role="progressbar" aria-label="Lecture du ticket" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}>
             <div className="progress__bar" style={{ width: `${pct}%` }} />
           </div>
-          <p className="mt-3 text-sm text-ink-dim">Tout se passe sur ton appareil : la photo n’est envoyée nulle part.</p>
-        </PixelFrame>
+          <p className="mt-3 small muted">Tout se passe sur ton appareil : la photo n’est envoyée nulle part.</p>
+        </Card>
       </div>
     );
   }
@@ -163,17 +163,17 @@ export function ReceiptScreen() {
                 <div className="receipt-row__grid">
                   <div>
                     <label className="field-label" htmlFor={id('label')}>Libellé</label>
-                    <input id={id('label')} className="px-input" value={row.label} onChange={(e) => update(row.key, { label: e.target.value })} />
+                    <input id={id('label')} className="input" value={row.label} onChange={(e) => update(row.key, { label: e.target.value })} />
                   </div>
                   <div>
                     <label className="field-label" htmlFor={id('price')}>Prix (€)</label>
-                    <input id={id('price')} className="px-input" inputMode="decimal" value={row.price} onChange={(e) => update(row.key, { price: e.target.value })} />
+                    <input id={id('price')} className="input" inputMode="decimal" value={row.price} onChange={(e) => update(row.key, { price: e.target.value })} />
                   </div>
                   <div>
                     <label className="field-label" htmlFor={id('cat')}>Catégorie</label>
                     <select
                       id={id('cat')}
-                      className="px-select"
+                      className="select"
                       value={row.category}
                       onChange={(e) => {
                         const category = e.target.value as CategoryId;
@@ -189,7 +189,7 @@ export function ReceiptScreen() {
                     <label className="field-label" htmlFor={id('article')}>Article (facultatif)</label>
                     <select
                       id={id('article')}
-                      className="px-select"
+                      className="select"
                       value={row.articleId}
                       onChange={(e) => update(row.key, { articleId: e.target.value, quantity: '' })}
                     >
@@ -204,7 +204,7 @@ export function ReceiptScreen() {
                       <label className="field-label" htmlFor={id('qty')}>Quantité ({article.unit})</label>
                       <input
                         id={id('qty')}
-                        className="px-input"
+                        className="input"
                         inputMode="decimal"
                         placeholder={article.unit === 'kg' ? 'ex. 0,35' : ''}
                         value={row.quantity}
@@ -213,7 +213,7 @@ export function ReceiptScreen() {
                     </div>
                   )}
                 </div>
-                <p aria-live="polite" className="text-sm">
+                <p aria-live="polite" className="small">
                   {result.ok ? (
                     <>
                       ≈ <strong>{formatKg(result.purchase.kgCO2e)}</strong> ·{' '}
@@ -222,11 +222,11 @@ export function ReceiptScreen() {
                       </span>
                     </>
                   ) : result.error === 'facteur-a-completer' && !ratio ? (
-                    <span className="text-[var(--yellow)]">
+                    <span className="field-error">
                       Pas d’estimation par le prix sourcée pour cette catégorie : choisis un article et sa quantité, ou décoche la ligne.
                     </span>
                   ) : (
-                    <span className="text-[var(--yellow)]">Indique un prix supérieur à zéro (ex. 1,25), ou décoche la ligne.</span>
+                    <span className="field-error">Indique un prix supérieur à zéro (ex. 1,25), ou décoche la ligne.</span>
                   )}
                 </p>
               </li>
@@ -235,8 +235,8 @@ export function ReceiptScreen() {
         </ul>
 
         <div className="flex flex-wrap gap-2">
-          <PixelButton variant="secondary" onClick={() => setRows((rs) => [...rs, newRow()])}>+ Ajouter une ligne</PixelButton>
-          <PixelButton
+          <Button variant="secondary" onClick={() => setRows((rs) => [...rs, newRow()])}>+ Ajouter une ligne</Button>
+          <Button
             variant="secondary"
             onClick={() => {
               setRows([]);
@@ -244,12 +244,12 @@ export function ReceiptScreen() {
             }}
           >
             Autre photo
-          </PixelButton>
+          </Button>
         </div>
 
-        <PixelFrame title="Bilan du ticket" accent>
+        <Card title="Bilan du ticket">
           <p className="big-number mt-3" aria-live="polite">{formatKg(totalKg)}</p>
-          <p className="mt-1 text-ink-dim">
+          <p className="mt-1 muted">
             {kept.length} ligne{kept.length > 1 ? 's' : ''} gardée{kept.length > 1 ? 's' : ''}, {priceText(sumPrices)} € au total
             {printedTotal !== null ? ` (total lu sur le ticket : ${priceText(printedTotal)} €)` : ''}.
           </p>
@@ -258,28 +258,28 @@ export function ReceiptScreen() {
             <input
               id="receipt-date"
               type="date"
-              className="px-input"
+              className="input"
               value={date}
               max={toDateKey(new Date())}
               onChange={(e) => setDate(e.target.value || toDateKey(new Date()))}
             />
           </div>
           {invalid > 0 && (
-            <p role="alert" className="mt-3 text-[var(--yellow)]">
+            <p role="alert" className="mt-3 field-error">
               {invalid} ligne{invalid > 1 ? 's' : ''} à corriger ou à décocher avant d’enregistrer.
             </p>
           )}
-          {error && <p role="alert" className="mt-3 text-[var(--yellow)]">{error}</p>}
+          {error && <p role="alert" className="mt-3 field-error">{error}</p>}
           <div className="mt-4">
-            <PixelButton big sfx={null} disabled={saving || kept.length === 0 || invalid > 0} onClick={() => void save()}>
+            <Button big sfx={null} disabled={saving || kept.length === 0 || invalid > 0} onClick={() => void save()}>
               Enregistrer {kept.length} achat{kept.length > 1 ? 's' : ''}
-            </PixelButton>
+            </Button>
           </div>
-        </PixelFrame>
+        </Card>
 
         {rawText && (
           <details>
-            <summary className="cursor-pointer text-ink-dim">Voir le texte lu sur la photo</summary>
+            <summary className="cursor-pointer muted">Voir le texte lu sur la photo</summary>
             <p className="raw-text mt-2">{rawText}</p>
           </details>
         )}
@@ -291,7 +291,7 @@ export function ReceiptScreen() {
   return (
     <div className="flex flex-col gap-7">
       <h1>Ticket de caisse</h1>
-      <PixelFrame title="Photo du ticket" accent>
+      <Card title="Photo du ticket">
         <p className="mt-2">
           Prends le ticket en photo (ou choisis une photo existante). Bien à plat, bien éclairé, cadré serré : c’est là que
           la lecture marche le mieux.
@@ -302,20 +302,20 @@ export function ReceiptScreen() {
             id="receipt-photo"
             type="file"
             accept="image/*"
-            className="px-input"
+            className="input"
             onChange={(e) => {
               void readPhoto(e.target.files?.[0]);
               e.target.value = '';
             }}
           />
         </div>
-        {error && <p role="alert" className="mt-3 text-[var(--yellow)]">{error}</p>}
-        <p className="mt-3 text-sm text-ink-dim">
+        {error && <p role="alert" className="mt-3 field-error">{error}</p>}
+        <p className="mt-3 small muted">
           La lecture se fait sur ton appareil, sans envoyer la photo. Tu vérifies et corriges chaque ligne avant d’enregistrer.
         </p>
-      </PixelFrame>
+      </Card>
       <div className="flex flex-wrap gap-2">
-        <PixelButton
+        <Button
           variant="secondary"
           onClick={() => {
             setRows([newRow()]);
@@ -325,8 +325,8 @@ export function ReceiptScreen() {
           }}
         >
           Saisir les lignes à la main
-        </PixelButton>
-        <PixelLink to="/ajouter" variant="secondary">Retour</PixelLink>
+        </Button>
+        <ButtonLink to="/ajouter" variant="secondary">Retour</ButtonLink>
       </div>
     </div>
   );

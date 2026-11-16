@@ -6,7 +6,7 @@ import { computePurchase, parseQuantity } from '../engine/compute';
 import { formatKg, toDateKey } from '../engine/format';
 import { pendingFactors, searchFactors } from '../engine/search';
 import { CATEGORY_LABELS, CONFIDENCE_LABELS } from '../engine/types';
-import { PixelButton, PixelFrame } from '../ui/components';
+import { Button, Card } from '../ui/components';
 import { playSfx } from '../ui/sound';
 import { usePurchases } from '../ui/store';
 
@@ -79,8 +79,8 @@ export function ManualScreen() {
     return (
       <div className="flex flex-col gap-7">
         <h1>{factor.label}</h1>
-        <PixelFrame title={factor.kind === 'monetaire' ? 'Par le prix' : 'Quantité'} accent>
-          <p className="mt-2 text-ink-dim">
+        <Card title={factor.kind === 'monetaire' ? 'Par le prix' : 'Quantité'}>
+          <p className="mt-2 muted">
             {perUnit(factor)} — source : {factor.source?.name}
           </p>
           {factor.kind === 'monetaire' && (
@@ -100,7 +100,7 @@ export function ManualScreen() {
               <label className="field-label" htmlFor="quantity">{hint}</label>
               <input
                 id="quantity"
-                className="px-input"
+                className="input"
                 inputMode="decimal"
                 autoComplete="off"
                 autoFocus
@@ -118,7 +118,7 @@ export function ManualScreen() {
               <input
                 id="date"
                 type="date"
-                className="px-input"
+                className="input"
                 value={date}
                 max={toDateKey(new Date())}
                 onChange={(e) => setDate(e.target.value || toDateKey(new Date()))}
@@ -132,10 +132,10 @@ export function ManualScreen() {
                 </>
               )}
             </p>
-            {error && <p id="quantity-error" role="alert" className="text-[var(--yellow)]">{error}</p>}
+            {error && <p id="quantity-error" role="alert" className="field-error">{error}</p>}
             <div className="flex flex-wrap gap-2">
-              <PixelButton type="submit" big sfx={null} disabled={saving}>Enregistrer</PixelButton>
-              <PixelButton
+              <Button type="submit" big sfx={null} disabled={saving}>Enregistrer</Button>
+              <Button
                 variant="secondary"
                 onClick={() => {
                   setFactor(null);
@@ -144,10 +144,10 @@ export function ManualScreen() {
                 }}
               >
                 Retour
-              </PixelButton>
+              </Button>
             </div>
           </form>
-        </PixelFrame>
+        </Card>
       </div>
     );
   }
@@ -158,19 +158,19 @@ export function ManualScreen() {
       <div className="flex flex-col gap-7">
         <h1>{CATEGORY_LABELS[category]}</h1>
         {prefill.notice && <p role="status">{prefill.notice}</p>}
-        <PixelFrame title="Quel article ?">
+        <Card title="Quel article ?">
           <div className="mt-2">
             <label className="field-label" htmlFor="search">Rechercher</label>
             <input
               id="search"
               type="search"
-              className="px-input"
+              className="input"
               placeholder="ex. bœuf, jeans, TGV…"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
             />
           </div>
-          <p className="mt-3 text-sm text-ink-dim" aria-live="polite">
+          <p className="mt-3 small muted" aria-live="polite">
             {items.length} article{items.length > 1 ? 's' : ''}
           </p>
           <ul className="item-list mt-1">
@@ -191,9 +191,9 @@ export function ManualScreen() {
             ))}
           </ul>
           {items.length === 0 && <p className="mt-2">Rien trouvé. Essaie un autre mot, ou passe par le prix ci-dessous.</p>}
-        </PixelFrame>
+        </Card>
 
-        <PixelFrame title="Pas dans la liste ?">
+        <Card title="Pas dans la liste ?">
           {ratios.length > 0 ? (
             <>
               <p className="mt-2">En dernier recours, estime par le prix (très approximatif) :</p>
@@ -219,13 +219,13 @@ export function ManualScreen() {
             <p className="mt-2">Pas encore d’estimation par le prix sourcée pour cette catégorie.</p>
           )}
           {pending.length > 0 && (
-            <p className="mt-3 text-sm text-ink-dim">
+            <p className="mt-3 small muted">
               En attente d’une source fiable : {pending.map((f) => f.label.replace(' (estimation par le prix)', ' par le prix')).join(', ')}.
             </p>
           )}
-        </PixelFrame>
+        </Card>
         <div>
-          <PixelButton
+          <Button
             variant="secondary"
             onClick={() => {
               setCategory(null);
@@ -233,7 +233,7 @@ export function ManualScreen() {
             }}
           >
             Changer de catégorie
-          </PixelButton>
+          </Button>
         </div>
       </div>
     );
@@ -244,15 +244,15 @@ export function ManualScreen() {
     <div className="flex flex-col gap-7">
       <h1>Saisie manuelle</h1>
       {prefill.notice && <p role="status">{prefill.notice}</p>}
-      <PixelFrame title="Quelle catégorie ?">
+      <Card title="Quelle catégorie ?">
         <div className="cat-grid mt-3">
           {CATEGORY_IDS.map((c) => (
-            <PixelButton key={c} variant="secondary" onClick={() => setCategory(c)}>
+            <Button key={c} variant="secondary" onClick={() => setCategory(c)}>
               {CATEGORY_LABELS[c]}
-            </PixelButton>
+            </Button>
           ))}
         </div>
-      </PixelFrame>
+      </Card>
     </div>
   );
 }

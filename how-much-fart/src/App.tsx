@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router';
 import { planetStateFromHealth } from './engine/planet';
 import { HistoryScreen } from './screens/HistoryScreen';
@@ -10,12 +10,15 @@ import { AddScreen } from './screens/AddScreen';
 import { GalleryScreen } from './screens/GalleryScreen';
 import { HomeScreen } from './screens/HomeScreen';
 import { ComingSoon } from './screens/ComingSoon';
+import { QuestsScreen } from './screens/QuestsScreen';
+import { StatsScreen } from './screens/StatsScreen';
 import { SettingsScreen } from './screens/SettingsScreen';
-import { MuteButton } from './ui/components';
+import { LevelUp, MuteButton } from './ui/components';
 import { playSfx } from './ui/sound';
 import { Icon, type IconName } from './ui/icons';
 import { usePurchases, useSettings } from './ui/store';
 import { useBudget } from './ui/useBudget';
+import { useGame } from './ui/useGame';
 
 interface NavItem {
   to: string;
@@ -66,6 +69,21 @@ export function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // Passage de niveau : fêté une seule fois, jamais au premier chargement.
+  const game = useGame();
+  const loaded = usePurchases((s) => s.loaded);
+  const lastSeenLevel = useSettings((s) => s.lastSeenLevel);
+  const setLastSeenLevel = useSettings((s) => s.setLastSeenLevel);
+  const [celebration, setCelebration] = useState(0);
+  useEffect(() => {
+    if (!loaded) return;
+    if (lastSeenLevel !== null && game.level > lastSeenLevel) {
+      setCelebration((n) => n + 1);
+      playSfx('levelUp');
+    }
+    if (lastSeenLevel !== game.level) setLastSeenLevel(game.level);
+  }, [loaded, game.level, lastSeenLevel, setLastSeenLevel]);
+
   return (
     <div className="app">
       <nav className="sidebar" aria-label="Menu principal">
@@ -84,7 +102,7 @@ export function App() {
           <MuteButton />
           <Link
             to="/reglages"
-            className="px-btn px-btn--secondary px-btn--icon only-mobile"
+            className="btn btn--secondary btn--icon only-mobile"
             aria-label="Réglages"
             onClick={() => playSfx('click')}
           >
@@ -103,22 +121,8 @@ export function App() {
             <Route path="/ajouter/ticket" element={<ReceiptScreen />} />
             <Route path="/resultat/:id" element={<ResultScreen />} />
             <Route path="/historique" element={<HistoryScreen />} />
-            <Route
-              path="/stats"
-              element={
-                <ComingSoon title="Statistiques" step={5}>
-                  Des graphiques par catégorie et par période pour voir où ça se joue.
-                </ComingSoon>
-              }
-            />
-            <Route
-              path="/quetes"
-              element={
-                <ComingSoon title="Quêtes et succès" step={5}>
-                  Quêtes hebdomadaires, succès, combos de jours sobres et boss de fin de mois.
-                </ComingSoon>
-              }
-            />
+            <Route path="/stats" element={<StatsScreen />} />
+            <Route path="/quetes" element={<QuestsScreen />} />
             <Route path="/reglages" element={<SettingsScreen />} />
             <Route path="/galerie" element={<GalleryScreen />} />
             <Route
@@ -130,6 +134,8 @@ export function App() {
           </Routes>
         </div>
       </main>
+
+      <LevelUp trigger={celebration} level={game.level} />
 
       <nav className="tabbar" aria-label="Navigation">
         {TABS.map((item) => (

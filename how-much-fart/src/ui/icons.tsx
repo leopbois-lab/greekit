@@ -29,6 +29,28 @@ const PATHS = {
       <path d="M16 9.2a4 4 0 0 1 0 5.6M18.6 6.6a7.6 7.6 0 0 1 0 10.8" />
     </>
   ),
+  trash: <path d="M5 7h14M10 7V4.5h4V7M7 7l1 12.5h8L17 7M10.5 11v5M13.5 11v5" />,
+  pencil: <path d="M4 20l1-4.5L16 4.5l3.5 3.5-11 11zM14 6.5l3.5 3.5" />,
+  barcode: <path d="M4 6v12M7.5 6v12M11 6v12M13.5 6v12M17 6v12M20 6v12" />,
+  receipt: <path d="M6 3.5h12v17l-3-2-3 2-3-2-3 2zM9 8.5h6M9 12.5h6" />,
+  flame: <path d="M12 3c1 4 6 6 6 11a6 6 0 0 1-12 0c0-3 2-4.5 3-7 1 1.5 2 2 2.5 2.5C11.5 8 11.5 5.5 12 3z" />,
+  star: <path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.200-2.8-5.200 2.8 1-5.8-4.3-4.1 5.9-.9z" />,
+  calendar: <path d="M5 6.5h14V20H5zM5 10.5h14M8.5 4v4M15.5 4v4" />,
+  compass: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M15.5 8.5l-2 5-5 2 2-5z" />
+    </>
+  ),
+  flag: <path d="M6 21V4M6 5h11l-2 3.5 2 3.5H6" />,
+  leaf: <path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14zM5 19l7-7" />,
+  check: <path d="M5 12.5l4.5 4.5L19 7.5" strokeWidth="2.6" />,
+  lock: (
+    <>
+      <rect x="5.5" y="10.5" width="13" height="9.5" rx="2" />
+      <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" />
+    </>
+  ),
   soundOff: (
     <>
       <path d="M4 10v4h3.5l5 4V6l-5 4z" />

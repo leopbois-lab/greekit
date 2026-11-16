@@ -1,4 +1,6 @@
+import type { BossStatus } from '../engine/game';
 import type { PlanetState } from '../engine/planet';
+import { Icon, type IconName } from './icons';
 
 /**
  * Illustrations vectorielles faites maison : aplats de couleurs vives, formes simples, pas de contour.
@@ -365,3 +367,84 @@ export function EquivalenceArt({ name }: { name: string }) {
 }
 
 export const EQUIVALENCE_ART_NAMES = Object.keys(ART);
+
+/* ------------------------------------------------------------------ */
+/* Boss de fin de mois, succès, écrans vides                           */
+/* ------------------------------------------------------------------ */
+
+/** Le Gros Nuage : le boss du mois. Menaçant tant qu'il est en jeu, tout petit une fois battu. */
+export function BossArt({ status }: { status: BossStatus }) {
+  const beaten = status === 'victoire';
+  const body = beaten ? '#c9ced8' : status === 'defaite' ? '#5b5470' : '#7a7391';
+  return (
+    <svg viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+      <ellipse cx="80" cy="108" rx="46" ry="6" fill="#000" opacity="0.08" />
+      <g transform={beaten ? 'translate(24 30) scale(0.7)' : undefined}>
+        <circle cx="52" cy="62" r="26" fill={body} />
+        <circle cx="84" cy="46" r="32" fill={body} />
+        <circle cx="114" cy="64" r="24" fill={body} />
+        <rect x="30" y="60" width="106" height="32" rx="16" fill={body} />
+        <circle cx="72" cy="34" r="9" fill="#fff" opacity="0.14" />
+        {beaten ? (
+          <>
+            <path d="M62 58l10 10M72 58l-10 10M94 58l10 10M104 58l-10 10" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+            <path d="M72 80q11-8 22 0" stroke={INK} strokeWidth="4" strokeLinecap="round" fill="none" />
+          </>
+        ) : (
+          <>
+            <path d="M56 50l20 8M110 50l-20 8" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+            <circle cx="68" cy="64" r="6" fill="#fff" />
+            <circle cx="98" cy="64" r="6" fill="#fff" />
+            <circle cx="69.5" cy="65" r="3" fill={INK} />
+            <circle cx="96.5" cy="65" r="3" fill={INK} />
+            <path d={status === 'defaite' ? 'M70 80q13 12 26 0z' : 'M72 82q11-7 22 0'} stroke={INK} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill={status === 'defaite' ? INK : 'none'} />
+          </>
+        )}
+      </g>
+      {beaten && (
+        <>
+          <path d="m124 24 4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#ffd23f" />
+          <path d="m34 34 3 6 6 3-6 3-3 6-3-6-6-3 6-3z" fill="#ffd23f" />
+          <path d="m136 76 2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#2fc46b" />
+        </>
+      )}
+    </svg>
+  );
+}
+
+const MEDAL_COLORS = ['#f0503c', '#2f7fe6', '#2fc46b', '#f2a516', '#6c5ce7', '#f0457a', '#0e8fa8', '#eb6834'];
+
+/** Médaille de succès : vive une fois débloquée, neutre et cadenassée avant. */
+export function MedalArt({ icon, index, unlocked }: { icon: IconName; index: number; unlocked: boolean }) {
+  const color = unlocked ? MEDAL_COLORS[index % MEDAL_COLORS.length] : 'var(--surface-2)';
+  return (
+    <div className="medal" style={{ '--medal': color } as React.CSSProperties} data-unlocked={unlocked}>
+      <svg viewBox="0 0 72 84" aria-hidden="true" focusable="false">
+        <path d="M22 44 12 78l14-6 8 12 6-30zM50 44l10 34-14-6-8 12-6-30z" fill="var(--medal)" opacity="0.55" />
+        <circle cx="36" cy="34" r="30" fill="var(--medal)" />
+        <circle cx="36" cy="34" r="22" fill="#fff" opacity={unlocked ? 0.22 : 0} />
+      </svg>
+      <span className="medal__icon">
+        <Icon name={unlocked ? icon : 'lock'} size={26} />
+      </span>
+    </div>
+  );
+}
+
+/** Écran vide : un carnet tout neuf qui n'attend que d'être rempli. */
+export function EmptyArt() {
+  return (
+    <svg viewBox="0 0 200 150" aria-hidden="true" focusable="false">
+      <ellipse cx="100" cy="134" rx="62" ry="8" fill="#000" opacity="0.07" />
+      <rect x="52" y="22" width="96" height="108" rx="12" fill="#3b4ce8" />
+      <rect x="60" y="30" width="80" height="92" rx="7" fill="#fff" />
+      <rect x="70" y="46" width="44" height="7" rx="3.5" fill="#dfe3f5" />
+      <rect x="70" y="62" width="60" height="7" rx="3.5" fill="#dfe3f5" />
+      <rect x="70" y="78" width="36" height="7" rx="3.5" fill="#dfe3f5" />
+      <circle cx="140" cy="108" r="22" fill="#2fc46b" />
+      <path d="M140 97v22M129 108h22" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
+      <path d="m40 44 3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#ffd23f" />
+      <path d="m166 30 2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#f0457a" />
+    </svg>
+  );
+}
