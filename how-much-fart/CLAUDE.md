@@ -87,7 +87,7 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 ## Étapes
 
 - [x] 1. Squelette + design system pixel : navigation, palette, polices, galerie de composants, sons et bouton muet.
-- [ ] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
+- [x] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
 - [ ] 3. Code-barres.
 - [ ] 4. Ticket de caisse.
 - [ ] 5. Gamification, alternatives, statistiques.
@@ -109,3 +109,11 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Base Carbone V23.6 : Licence Ouverte confirmée sur data.ademe.fr. Ratios monétaires 2023 en kg CO2e/k€ hors taxes, incertitude 80 %. Pas de ratio pour l'électroménager ni pour l'énergie.
 - Budget : 8,3 t CO2e par personne en 2025 confirmé (Insee Première n° 2130, octobre 2026).
 - Achats d'équipements et de vêtements : phase d'usage retirée du facteur Impact CO2 (fabrication + fin de vie seulement).
+
+## Constats de l'étape 3 (16/11/2026)
+
+- Open Food Facts : `GET https://world.openfoodfacts.org/api/v3.1/product/{code}?fields=…`, sans clé, CORS ouvert (`access-control-allow-origin: *`). Produit inconnu : HTTP 404 avec un corps JSON `product_not_found`. Base sous licence ODbL (contenus : DbCL).
+- Champs confirmés sur de vrais produits : `environmental_score_data.agribalyse.co2_total` (kg CO2e/kg), `name_fr`, `version` (« 3.2 »), `is_beverage` ; `product_quantity` + `product_quantity_unit` (g ou ml). `ecoscore_data` n'est plus renvoyé : le repli reste en place.
+- Tous les produits n'ont pas de bloc Agribalyse (ex. Coca-Cola 5449000000996) : bascule vers la saisie manuelle.
+- `BarcodeDetector` est absent de Safari et de Chromium sous Linux : le repli ZXing (`zxing-wasm`, fichier .wasm servi par l'app) est le chemin réellement utilisé sur iPhone. Testé ici avec une caméra simulée ; à confirmer sur appareil réel.
+- Boissons : `co2_total` est par kg ; un volume est converti à 1 kg par litre et le résultat reste « estimé ».

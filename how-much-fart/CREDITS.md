@@ -22,5 +22,12 @@ Tous les sprites sont faits maison (grilles de pixels dans `src/ui/sprites.ts`).
 | Base Carbone V23.6 (ADEME) — https://data.ademe.fr/datasets/base-carboner | Carburants, électricité, gaz, ratios monétaires 2023 | Licence Ouverte / Open Licence (Etalab) |
 | Insee Première n° 2130 (Insee / SDES, octobre 2026) | Empreinte moyenne par personne (budget) | Réutilisation libre avec mention de la source |
 | Notz & Stroeve, Science 354 (2016) | Équivalence « banquise » | Citation d'un résultat publié |
+| Open Food Facts — https://world.openfoodfacts.org | Fiches produit lues au scan (nom, poids, `co2_total` Agribalyse) | Open Database License (ODbL) pour la base, Database Contents License pour les contenus |
+
+## Bibliothèques notables
+
+| Bibliothèque | Usage | Licence |
+| --- | --- | --- |
+| zxing-wasm (zxing-cpp compilé en WebAssembly) | Lecture des codes-barres quand le navigateur n'a pas `BarcodeDetector` (Safari) | MIT (zxing-cpp : Apache-2.0) |
 
 Chaque entrée de `src/data/*.json` porte sa source, son année et sa date de récupération.

@@ -1,7 +1,6 @@
 import { PixelButton, PixelFrame, PixelLink } from '../ui/components';
 
 const LATER = [
-  { title: 'Code-barres', step: 3, text: 'Scanne un produit alimentaire avec la caméra.' },
   { title: 'Ticket de caisse', step: 4, text: 'Prends ton ticket en photo, vérifie les lignes, enregistre.' },
 ];
 
@@ -13,6 +12,12 @@ export function AddScreen() {
         <p className="mt-2">Choisis une catégorie, un article, une quantité ou un poids.</p>
         <div className="mt-3">
           <PixelLink to="/ajouter/manuel">Commencer</PixelLink>
+        </div>
+      </PixelFrame>
+      <PixelFrame title="Code-barres" accent>
+        <p className="mt-2">Scanne un produit alimentaire avec la caméra : le plus précis.</p>
+        <div className="mt-3">
+          <PixelLink to="/ajouter/scan">Scanner</PixelLink>
         </div>
       </PixelFrame>
       {LATER.map((m) => (

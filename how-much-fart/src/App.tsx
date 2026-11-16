@@ -4,6 +4,7 @@ import { planetStateFromHealth } from './engine/planet';
 import { HistoryScreen } from './screens/HistoryScreen';
 import { ManualScreen } from './screens/ManualScreen';
 import { ResultScreen } from './screens/ResultScreen';
+import { ScanScreen } from './screens/ScanScreen';
 import { AddScreen } from './screens/AddScreen';
 import { GalleryScreen } from './screens/GalleryScreen';
 import { HomeScreen } from './screens/HomeScreen';
@@ -91,6 +92,7 @@ export function App() {
             <Route path="/" element={<HomeScreen />} />
             <Route path="/ajouter" element={<AddScreen />} />
             <Route path="/ajouter/manuel" element={<ManualScreen />} />
+            <Route path="/ajouter/scan" element={<ScanScreen />} />
             <Route path="/resultat/:id" element={<ResultScreen />} />
             <Route path="/historique" element={<HistoryScreen />} />
             <Route

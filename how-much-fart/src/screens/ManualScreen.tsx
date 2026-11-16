@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import { FACTORS } from '../data';
 import { CATEGORY_IDS, type CategoryId, type Factor } from '../data/schema';
 import { computePurchase, parseQuantity } from '../engine/compute';
@@ -28,11 +28,19 @@ function perUnit(f: Factor): string {
   return f.value === null ? '' : `${formatKg(f.value)} / ${f.unit}`;
 }
 
+/** Pré-remplissage quand on arrive d'un scan sans donnée exploitable. */
+export interface ManualPrefill {
+  category?: CategoryId;
+  query?: string;
+  notice?: string;
+}
+
 export function ManualScreen() {
   const navigate = useNavigate();
+  const prefill = (useLocation().state ?? {}) as ManualPrefill;
   const add = usePurchases((s) => s.add);
-  const [category, setCategory] = useState<CategoryId | null>(null);
-  const [query, setQuery] = useState('');
+  const [category, setCategory] = useState<CategoryId | null>(prefill.category ?? null);
+  const [query, setQuery] = useState(prefill.query ?? '');
   const [factor, setFactor] = useState<Factor | null>(null);
   const [quantity, setQuantity] = useState('');
   const [date, setDate] = useState(() => toDateKey(new Date()));
@@ -149,6 +157,7 @@ export function ManualScreen() {
     return (
       <div className="flex flex-col gap-7">
         <h1>{CATEGORY_LABELS[category]}</h1>
+        {prefill.notice && <p role="status">{prefill.notice}</p>}
         <PixelFrame title="Quel article ?">
           <div className="mt-2">
             <label className="field-label" htmlFor="search">Rechercher</label>
@@ -234,6 +243,7 @@ export function ManualScreen() {
   return (
     <div className="flex flex-col gap-7">
       <h1>Saisie manuelle</h1>
+      {prefill.notice && <p role="status">{prefill.notice}</p>}
       <PixelFrame title="Quelle catégorie ?">
         <div className="cat-grid mt-3">
           {CATEGORY_IDS.map((c) => (

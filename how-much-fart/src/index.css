@@ -487,6 +487,34 @@ input[type='range'] { accent-color: var(--accent); width: 100%; min-height: 44px
 .history-row:focus-visible { outline-offset: -4px; }
 .history-row__kg { font-family: var(--font-pixel); font-size: 0.6rem; color: var(--accent); text-align: right; }
 
+/* ---------- Scan de code-barres ---------- */
+.scan-view {
+  position: relative;
+  margin: var(--px);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 calc(-1 * var(--px)) 0 0 var(--accent),
+    0 var(--px) 0 0 var(--accent),
+    calc(-1 * var(--px)) 0 0 0 var(--accent),
+    var(--px) 0 0 0 var(--accent);
+}
+.scan-view video { width: 100%; height: 100%; object-fit: cover; display: block; }
+@keyframes scan-line {
+  0%, 100% { top: 20%; }
+  50% { top: 80%; }
+}
+.scan-view__line {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 50%;
+  height: 4px;
+  background: var(--red);
+  animation: scan-line 2s steps(12) infinite;
+}
+
 /* Accessibilité : on coupe tout mouvement si demandé. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
