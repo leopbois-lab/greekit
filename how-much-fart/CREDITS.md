@@ -12,3 +12,15 @@ Textes de licence : `node_modules/@fontsource/*/LICENSE`.
 ## Sprites et sons
 
 Tous les sprites sont faits maison (grilles de pixels dans `src/ui/sprites.ts`). Les sons sont générés en Web Audio (`src/ui/sound.ts`). Aucun asset externe.
+
+## Données
+
+| Source | Usage | Licence |
+| --- | --- | --- |
+| Impact CO2 (ADEME) — https://impactco2.fr | Facteurs par article (alimentation, boissons, vêtements, électronique, électroménager, mobilier, transport, chauffage, usages numériques, loisirs) et plusieurs équivalences | Réutilisation non commerciale et pédagogique autorisée avec mention de l'ADEME (https://impactco2.fr/mentions-legales) |
+| Agribalyse 3.2 (ADEME, INRAE), via Impact CO2 | Alimentation et boissons | Licence Ouverte / Open Licence (Etalab) |
+| Base Carbone V23.6 (ADEME) — https://data.ademe.fr/datasets/base-carboner | Carburants, électricité, gaz, ratios monétaires 2023 | Licence Ouverte / Open Licence (Etalab) |
+| Insee Première n° 2130 (Insee / SDES, octobre 2026) | Empreinte moyenne par personne (budget) | Réutilisation libre avec mention de la source |
+| Notz & Stroeve, Science 354 (2016) | Équivalence « banquise » | Citation d'un résultat publié |
+
+Chaque entrée de `src/data/*.json` porte sa source, son année et sa date de récupération.

@@ -1,9 +1,12 @@
+import { formatKg } from '../engine/format';
 import { PLANET_LABELS, planetStateFromHealth } from '../engine/planet';
 import { HealthBar, PixelFrame, PixelLink, Planet } from '../ui/components';
-import { usePlanet } from '../ui/store';
+import { usePurchases } from '../ui/store';
+import { useBudget } from '../ui/useBudget';
 
 export function HomeScreen() {
-  const health = usePlanet((s) => s.health);
+  const { health, emittedKg, budgetKg } = useBudget();
+  const error = usePurchases((s) => s.error);
   const label = PLANET_LABELS[planetStateFromHealth(health)];
   return (
     <div className="flex flex-col items-stretch gap-6">
@@ -18,9 +21,9 @@ export function HomeScreen() {
         </div>
         <p className="mt-3">{label.message}</p>
         <p className="mt-1 text-ink-dim text-sm">
-          Aucun achat enregistré pour l’instant : la barre se branchera sur ton budget carbone aux
-          étapes 2 et 5.
+          {formatKg(emittedKg)} ce mois-ci sur un budget de {formatKg(budgetKg)}.
         </p>
+        {error && <p role="alert" className="mt-2 text-sm">{error}</p>}
       </PixelFrame>
       <div className="flex justify-center">
         <PixelLink to="/ajouter" big>+ Ajouter un achat</PixelLink>

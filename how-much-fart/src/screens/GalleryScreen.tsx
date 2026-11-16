@@ -13,6 +13,8 @@ import { SFX_NAMES, type SfxName } from '../ui/sound';
 import { Sprite } from '../ui/Sprite';
 import { COIN, HEART, ICONS, planetSprite, type IconName } from '../ui/sprites';
 import { usePlanet } from '../ui/store';
+import { useBudget } from '../ui/useBudget';
+import { EquivalenceCards } from '../ui/EquivalenceCards';
 
 const SWATCHES = [
   ['Vert', '--green'], ['Cyan', '--cyan'], ['Jaune', '--yellow'], ['Orange', '--orange'],
@@ -25,13 +27,13 @@ const SFX_LABELS: Record<SfxName, string> = {
 };
 
 export function GalleryScreen() {
-  const health = usePlanet((s) => s.health);
-  const setHealth = usePlanet((s) => s.setHealth);
+  const { health } = useBudget();
+  const setHealth = usePlanet((s) => s.setPreview);
   const [burst, setBurst] = useState(0);
   const [level, setLevel] = useState(0);
 
   // L'aperçu ne doit pas « abîmer » la planète en quittant la galerie.
-  useEffect(() => () => setHealth(1), [setHealth]);
+  useEffect(() => () => setHealth(null), [setHealth]);
 
   const state = planetStateFromHealth(health);
 
@@ -116,6 +118,11 @@ export function GalleryScreen() {
         <p className="mt-2 text-sm text-ink-dim">
           Grilles de pixels faites maison, rendues en SVG, agrandies par multiples entiers.
         </p>
+      </PixelFrame>
+
+      <PixelFrame title="Cartes d’équivalence">
+        <p className="mt-2 mb-4">Exemple pour 100 kg CO2e :</p>
+        <EquivalenceCards kgCO2e={100} />
       </PixelFrame>
 
       <PixelFrame title="Sons chiptune">

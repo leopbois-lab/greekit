@@ -106,3 +106,31 @@ export function planetSprite(state: PlanetState): SpriteDef {
     palette: { ...PLANET_PALETTES[state], K: '#10142c' },
   };
 }
+
+/* ---------- Sprites des cartes d'équivalence (8×8, faits maison) ---------- */
+
+const P = {
+  R: '#ff4d5e', D: '#b3243a', W: '#f4f1de', K: '#10142c', G: '#b9bedb', B: '#41c7f5', N: '#2a6fd0',
+  Y: '#ffd23f', O: '#ff8a3c', V: '#5ee66a', T: '#8a5a3a', M: '#ff9ec4',
+};
+const col = (rows: string[]): SpriteDef => ({ rows, palette: P });
+
+export const EQUIVALENCE_SPRITES: Record<string, SpriteDef> = {
+  car: col(['........', '..RRRR..', '.RBRRBR.', 'RRRRRRRR', 'RRRRRRRR', 'RGGRRGGR', '.GG..GG.', '........']),
+  train: col(['........', '.BBBBBB.', 'BWWBWWBB', 'BWWBWWBB', 'BBBBBBBB', 'YBBBBBBY', 'BBBBBBBB', '.G.GG.G.']),
+  plane: col(['...W....', '...WW...', 'W..WWW..', 'WWWWWWWB', 'WWWWWWWB', 'W..WWW..', '...WW...', '...W....']),
+  cow: col(['G......G', '.WWWWWW.', '.WKWWKW.', '.WWWWWW.', '..MMMM..', '..MKKM..', '..MMMM..', '........']),
+  steak: col(['........', '..RRRR..', '.RRRRRW.', 'RRDRRRWW', 'RRRRDRRW', '.RRRRRR.', '..RRRR..', '........']),
+  screen: col(['GGGGGGGG', 'GNNNNNNG', 'GNNWNNNG', 'GNNWWNNG', 'GNNWNNNG', 'GGGGGGGG', '...GG...', '..GGGG..']),
+  battery: col(['..GGGG..', '.GGGGGG.', '.GVVVVG.', '.GVVVVG.', '.GVVVVG.', '.GVVVVG.', '.GGGGGG.', '........']),
+  phone: col(['..GGGG..', '..GBBG..', '..GBBG..', '..GBBG..', '..GBBG..', '..GBBG..', '..GGGG..', '........']),
+  jeans: col(['.NNNNNN.', '.NYNNYN.', '.NNNNNN.', '.NNN.NNN', '.NN..NN.', '.NN..NN.', '.NN..NN.', '........']),
+  shower: col(['..GGGG..', '.G......', '.G.GGG..', '...GGG..', '..B.B.B.', '........', '..B.B.B.', '........']),
+  flame: col(['...O....', '..OO....', '..OOO.O.', '.OOYOOO.', '.OYYYOO.', '.OYYYYO.', '..OYYO..', '........']),
+  fuel: col(['...OO...', '...OO...', '..OOOO..', '.OOOOOO.', '.OYOOOO.', '.OYOOOO.', '..OOOO..', '........']),
+  tree: col(['..VVVV..', '.VVVVVV.', 'VVVVVVVV', 'VVVVVVVV', '.VVVVVV.', '...TT...', '...TT...', '..TTTT..']),
+  ice: col(['........', '...WW...', '..WWWW..', '.WWBWWW.', 'WWWWWBWW', 'NNNNNNNN', 'N.NN.NNN', '........']),
+  balloon: col(['..RRRR..', '.RWRRRR.', '.RWRRRR.', '.RRRRRR.', '..RRRR..', '...RR...', '...G....', '....G...']),
+  target: col(['..RRRR..', '.RWWWWR.', 'RWRRRRWR', 'RWRWWRWR', 'RWRWWRWR', 'RWRRRRWR', '.RWWWWR.', '..RRRR..']),
+  flag: col(['GNNWWRR.', 'GNNWWRR.', 'GNNWWRR.', 'GNNWWRR.', 'G.......', 'G.......', 'G.......', 'G.......']),
+};

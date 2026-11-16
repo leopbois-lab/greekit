@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-16",
+  "budget": {
+    "annualKgPerPerson": 8300,
+    "dataYear": 2025,
+    "publishedYear": 2026,
+    "source": {
+      "name": "Insee Première n° 2130 (Insee / SDES, octobre 2026)",
+      "url": "https://www.insee.fr/fr/statistiques/9074153"
+    },
+    "retrievedAt": "2026-11-16",
+    "note": "Estimation provisoire, révisée chaque année."
+  },
+  "equivalences": [
+    {
+      "id": "km-voiture",
+      "label": "km en voiture thermique",
+      "value": 0.1423,
+      "unit": "kg CO2e par km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/voiturethermique"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "car",
+      "hypothesis": "Une personne seule à bord, construction du véhicule incluse."
+    },
+    {
+      "id": "km-tgv",
+      "label": "km en TGV",
+      "value": 0.00293,
+      "unit": "kg CO2e par km",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/transport/tgv"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "train",
+      "hypothesis": "Par passager."
+    },
+    {
+      "id": "vol-paris-new-york",
+      "label": "aller-retour Paris – New York en avion",
+      "value": 2060,
+      "unit": "kg CO2e par aller-retour",
+      "source": {
+        "name": "Impact CO2 (ADEME)",
+        "url": "https://impactco2.fr/outils/caspratiques/avion-pny"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "plane",
+      "hypothesis": "11 600 km au total, par passager, traînées de condensation incluses."
+    },
+    {
+      "id": "pets-de-vache",
+      "label": "pets de vache",
+      "value": null,
+      "unit": "kg CO2e",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Pas de source fiable pour le méthane émis par « pet » : chiffre non forcé.",
+      "mode": "ratio",
+      "sprite": "cow",
+      "tooltip": "En vrai, les vaches émettent leur méthane surtout par des rots !"
+    },
+    {
+      "id": "steaks",
+      "label": "steaks de bœuf de 100 g",
+      "value": 2.801,
+      "unit": "kg CO2e par steak",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Agribalyse 3.2",
+        "url": "https://impactco2.fr/outils/alimentation/boeuf"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "steak",
+      "hypothesis": "Facteur du bœuf (par kg) appliqué à un steak de 100 g."
+    },
+    {
+      "id": "streaming",
+      "label": "heures de streaming vidéo",
+      "value": 0.06402,
+      "unit": "kg CO2e par heure",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/usagenumerique/streamingvideo"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "screen"
+    },
+    {
+      "id": "recharges-smartphone",
+      "label": "recharges de smartphone",
+      "value": null,
+      "unit": "kg CO2e",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Énergie d’une recharge complète : pas de source vérifiée.",
+      "mode": "ratio",
+      "sprite": "battery"
+    },
+    {
+      "id": "smartphones",
+      "label": "smartphones fabriqués",
+      "value": 79.27,
+      "unit": "kg CO2e par smartphone",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/numerique/smartphone"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "phone",
+      "hypothesis": "Fabrication et distribution seules, sans l’usage."
+    },
+    {
+      "id": "jeans",
+      "label": "jeans",
+      "value": 23.84,
+      "unit": "kg CO2e par jean",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/habillement/jeans"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "jeans",
+      "hypothesis": "Fabrication et fin de vie, sans les lavages."
+    },
+    {
+      "id": "douches",
+      "label": "douches chaudes",
+      "value": null,
+      "unit": "kg CO2e",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "Dépend du volume d’eau, de la température et du chauffe-eau : pas de source vérifiée.",
+      "mode": "ratio",
+      "sprite": "shower"
+    },
+    {
+      "id": "jours-chauffage",
+      "label": "jours de chauffage au gaz",
+      "value": 3.079,
+      "unit": "kg CO2e par jour",
+      "source": {
+        "name": "Impact CO2 (ADEME) — données Base Empreinte",
+        "url": "https://impactco2.fr/outils/chauffage/chauffagegaz"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "flame",
+      "hypothesis": "Logement de 63 m² (surface moyenne retenue par Impact CO2), émissions annuelles réparties sur 365 jours."
+    },
+    {
+      "id": "litres-essence",
+      "label": "litres d’essence",
+      "value": 2.69,
+      "unit": "kg CO2e par litre",
+      "source": {
+        "name": "Base Carbone V23.6 (ADEME), élément 25763",
+        "url": "https://data.ademe.fr/datasets/base-carboner"
+      },
+      "dataYear": 2021,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "fuel",
+      "hypothesis": "Combustion et production du carburant."
+    },
+    {
+      "id": "arbres",
+      "label": "arbres pour absorber ça en un an",
+      "value": null,
+      "unit": "kg CO2e",
+      "source": null,
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "à compléter",
+      "note": "L’absorption annuelle d’un arbre varie énormément selon l’espèce, l’âge et le lieu : chiffre non forcé.",
+      "mode": "ratio",
+      "sprite": "tree"
+    },
+    {
+      "id": "banquise",
+      "label": "m² de banquise arctique fondue",
+      "value": 333.3,
+      "unit": "kg CO2 par m²",
+      "source": {
+        "name": "Notz & Stroeve, Science 354 (2016)",
+        "url": "https://doi.org/10.1126/science.aag2345"
+      },
+      "dataYear": 2016,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "ice",
+      "hypothesis": "Relation observée entre 1953 et 2015 : 3 m² (± 0,3) de banquise de septembre perdus par tonne de CO2. Ordre de grandeur, établi pour le CO2 seul."
+    },
+    {
+      "id": "ballons",
+      "label": "ballons de baudruche remplis de CO2",
+      "value": 0.02103,
+      "unit": "kg CO2 par ballon",
+      "source": {
+        "name": "Calcul : loi des gaz parfaits (constantes CODATA/NIST)",
+        "url": "https://physics.nist.gov/cgi-bin/cuu/Value?r"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "ratio",
+      "sprite": "balloon",
+      "hypothesis": "Ballon sphérique de 28 cm de diamètre (11,5 litres) rempli de CO2 pur à 20 °C et à pression atmosphérique."
+    },
+    {
+      "id": "budget-2t",
+      "label": "% du budget annuel de 2 t CO2e",
+      "value": 2000,
+      "unit": "kg CO2e par an",
+      "source": {
+        "name": "Impact CO2 (ADEME)",
+        "url": "https://impactco2.fr/outils/caspratiques/2050"
+      },
+      "dataYear": null,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "pourcentage",
+      "sprite": "target",
+      "hypothesis": "Objectif par personne pour 2050."
+    },
+    {
+      "id": "moyenne-francaise",
+      "label": "% de l’empreinte annuelle moyenne en France",
+      "value": 8300,
+      "unit": "kg CO2e par an",
+      "source": {
+        "name": "Insee Première n° 2130 (Insee / SDES, octobre 2026)",
+        "url": "https://www.insee.fr/fr/statistiques/9074153"
+      },
+      "dataYear": 2025,
+      "retrievedAt": "2026-11-16",
+      "status": "ok",
+      "mode": "pourcentage",
+      "sprite": "flag",
+      "hypothesis": "8,3 t CO2e par personne en 2025 (estimation provisoire)."
+    }
+  ]
+}

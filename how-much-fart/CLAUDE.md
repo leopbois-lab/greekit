@@ -86,7 +86,7 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 
 ## Étapes
 
-- [ ] 1. Squelette + design system pixel : navigation, palette, polices, galerie de composants, sons et bouton muet.
+- [x] 1. Squelette + design system pixel : navigation, palette, polices, galerie de composants, sons et bouton muet.
 - [ ] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
 - [ ] 3. Code-barres.
 - [ ] 4. Ticket de caisse.
@@ -100,3 +100,12 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Débloquer l'`AudioContext` au premier geste de l'utilisateur.
 - Demander `navigator.storage.persist()` et rappeler l'export JSON régulièrement.
 - Tester la caméra dans Safari et dans la PWA installée.
+
+## Constats de l'étape 2 (16/11/2026)
+
+- Commandes : `npm test`, `npm run build`, `npm run build:factors` (régénère les JSON ; réseau requis).
+- Impact CO2 : l'API répond sans clé (avec un avertissement) ; clé facultative via `IMPACTCO2_API_KEY`. Réutilisation « non commerciale et pédagogique » avec mention de l'ADEME (mentions légales du site). Les unités ne sont pas dans l'API : le script les vérifie sur les fiches du site.
+- Agribalyse : la version servie par Impact CO2 et data.ademe.fr est la 3.2 (Licence Ouverte). Agribalyse 4 existe sur data.ademe.fr mais sans licence déclarée : non utilisée.
+- Base Carbone V23.6 : Licence Ouverte confirmée sur data.ademe.fr. Ratios monétaires 2023 en kg CO2e/k€ hors taxes, incertitude 80 %. Pas de ratio pour l'électroménager ni pour l'énergie.
+- Budget : 8,3 t CO2e par personne en 2025 confirmé (Insee Première n° 2130, octobre 2026).
+- Achats d'équipements et de vêtements : phase d'usage retirée du facteur Impact CO2 (fabrication + fin de vie seulement).

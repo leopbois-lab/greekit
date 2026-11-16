@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router';
 import { planetStateFromHealth } from './engine/planet';
+import { HistoryScreen } from './screens/HistoryScreen';
+import { ManualScreen } from './screens/ManualScreen';
+import { ResultScreen } from './screens/ResultScreen';
 import { AddScreen } from './screens/AddScreen';
 import { GalleryScreen } from './screens/GalleryScreen';
 import { HomeScreen } from './screens/HomeScreen';
@@ -10,7 +13,8 @@ import { MuteButton } from './ui/components';
 import { playSfx } from './ui/sound';
 import { Sprite } from './ui/Sprite';
 import { ICONS, type IconName } from './ui/sprites';
-import { usePlanet } from './ui/store';
+import { usePurchases } from './ui/store';
+import { useBudget } from './ui/useBudget';
 
 interface NavItem {
   to: string;
@@ -38,7 +42,12 @@ function Logo() {
 
 export function App() {
   const location = useLocation();
-  const health = usePlanet((s) => s.health);
+  const { health } = useBudget();
+  const load = usePurchases((s) => s.load);
+
+  useEffect(() => {
+    void load();
+  }, [load]);
 
   // Les teintes de l'interface suivent l'état de la planète.
   useEffect(() => {
@@ -54,7 +63,7 @@ export function App() {
       <nav className="sidebar" aria-label="Menu principal">
         <Logo />
         {SIDE.map((item) => (
-          <NavLink key={item.to} to={item.to} end className="side-link" onClick={() => playSfx('click')}>
+          <NavLink key={item.to} to={item.to} end={item === HOME} className="side-link" onClick={() => playSfx('click')}>
             <Sprite sprite={ICONS[item.icon]} scale={2} />
             {item.label}
           </NavLink>
@@ -81,23 +90,9 @@ export function App() {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/ajouter" element={<AddScreen />} />
-            <Route
-              path="/resultat"
-              element={
-                <ComingSoon title="Fiche résultat" step={2}>
-                  Ici s’affichera l’empreinte de chaque achat, sa source, son niveau de confiance et ses
-                  équivalences en cartes animées.
-                </ComingSoon>
-              }
-            />
-            <Route
-              path="/historique"
-              element={
-                <ComingSoon title="Historique" step={2}>
-                  Tous tes achats, filtrables par catégorie et par période.
-                </ComingSoon>
-              }
-            />
+            <Route path="/ajouter/manuel" element={<ManualScreen />} />
+            <Route path="/resultat/:id" element={<ResultScreen />} />
+            <Route path="/historique" element={<HistoryScreen />} />
             <Route
               path="/stats"
               element={
@@ -131,7 +126,7 @@ export function App() {
           <NavLink
             key={item.to}
             to={item.to}
-            end
+            end={item === HOME}
             className={`tab ${item === ADD ? 'tab--add' : ''}`}
             onClick={() => playSfx('click')}
           >
