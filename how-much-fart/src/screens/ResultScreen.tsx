@@ -6,6 +6,7 @@ import { CATEGORY_LABELS, CONFIDENCE_LABELS } from '../engine/types';
 import { Card, ButtonLink } from '../ui/components';
 import { percent } from '../ui/charts';
 import { EquivalenceCards } from '../ui/EquivalenceCards';
+import { TreeTime } from '../ui/TreeTime';
 import { Icon } from '../ui/icons';
 import { usePurchases } from '../ui/store';
 import { ComingSoon } from './ComingSoon';
@@ -52,6 +53,8 @@ export function ResultScreen() {
         </p>
         {purchase.note && <p className="small muted mt-1">{purchase.note}</p>}
       </Card>
+
+      <TreeTime kgCO2e={purchase.kgCO2e} />
 
       {best && (
         <Card title="Une piste pour la prochaine fois">

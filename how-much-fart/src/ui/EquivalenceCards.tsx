@@ -5,7 +5,8 @@ import { EquivalenceArt } from './illustrations';
 
 /** Cartes animées : un total converti en équivalences sourcées. */
 export function EquivalenceCards({ kgCO2e }: { kgCO2e: number }) {
-  const { results, pending } = computeEquivalences(kgCO2e, EQUIVALENCES);
+  // Les durées (temps de l'arbre) ont leur propre carte ; les équivalences sans source ne sont pas affichées.
+  const results = computeEquivalences(kgCO2e, EQUIVALENCES).results.filter((r) => r.equivalence.mode !== 'duree');
   return (
     <>
       <ul className="eq-grid list-none p-0">
@@ -30,19 +31,6 @@ export function EquivalenceCards({ kgCO2e }: { kgCO2e: number }) {
           </li>
         ))}
       </ul>
-      {pending.length > 0 && (
-        <div className="mt-5 small muted">
-          <p>En attente d’une source fiable (on ne force pas un chiffre) :</p>
-          <ul className="mt-1 list-disc pl-5">
-            {pending.map((e) => (
-              <li key={e.id}>
-                {e.label}
-                {e.tooltip ? ` — ${e.tooltip}` : ''}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </>
   );
 }

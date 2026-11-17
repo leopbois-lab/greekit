@@ -4,7 +4,8 @@
  *
  * Les facteurs viennent des API ci-dessous, jamais d'une valeur écrite en dur. Seules exceptions,
  * saisies à la main depuis une publication et signalées dans le code : le budget annuel moyen
- * (Insee/SDES), la sensibilité de la banquise (Notz & Stroeve 2016) et les constantes physiques
+ * (Insee/SDES), la sensibilité de la banquise (Notz & Stroeve 2016), l'absorption d'un arbre
+ * (Agence européenne pour l'environnement, 2011) et les constantes physiques
  * du calcul des ballons. Ce qui n'a pas de source vérifiable sort « à compléter », valeur nulle.
  *
  * Sources (vérifiées le 16/11/2026) :
@@ -373,7 +374,16 @@ function buildEquivalences(raw: Map<string, IcoItem>, essence: BcRow): Equivalen
     todo('douches', 'douches chaudes', 'shower', 'Dépend du volume d’eau, de la température et du chauffe-eau : pas de source vérifiée.'),
     { ...ok, id: 'jours-chauffage', label: 'jours de chauffage au gaz', sprite: 'flame', value: round((gas.ecv * 63) / 365), unit: 'kg CO2e par jour', source: ico('chauffage', 'chauffagegaz', EMPREINTE), dataYear: null, hypothesis: 'Logement de 63 m² (surface moyenne retenue par Impact CO2), émissions annuelles réparties sur 365 jours.' },
     { ...ok, id: 'litres-essence', label: 'litres d’essence', sprite: 'fuel', value: essence.Total_poste_non_décomposé, unit: 'kg CO2e par litre', source: bcSource('25763'), dataYear: bcYear(essence), hypothesis: 'Combustion et production du carburant.' },
-    todo('arbres', 'arbres pour absorber ça en un an', 'tree', 'L’absorption annuelle d’un arbre varie énormément selon l’espèce, l’âge et le lieu : chiffre non forcé.'),
+    {
+      // Durée : total ÷ 22 kg CO2 par an = nombre d'années pour un arbre adulte.
+      ...ok, mode: 'duree', id: 'temps-arbre', label: 'pour qu’un arbre adulte absorbe ce CO2', sprite: 'tree',
+      // Chiffre saisi à la main depuis le rapport, vérifié dans le PDF le 17/11/2026 :
+      // « over one year a mature tree will take up about 22 kilograms of carbon dioxide from the atmosphere ».
+      value: 22, unit: 'kg CO2 absorbés par arbre et par an',
+      source: { name: 'Agence européenne pour l’environnement, « Forests, health and climate change » (2011)', url: 'https://www.eea.europa.eu/en/analysis/publications/forests-health-and-climate-change' },
+      dataYear: 2011,
+      hypothesis: 'Un arbre adulte absorbe environ 22 kg de CO2 par an. Ordre de grandeur : cela varie beaucoup selon l’espèce, l’âge et le climat, et ce chiffre porte sur le CO2 seul.',
+    },
     { ...ok, id: 'banquise', label: 'm² de banquise arctique fondue', sprite: 'ice', value: round(1000 / 3), unit: 'kg CO2 par m²', source: { name: 'Notz & Stroeve, Science 354 (2016)', url: 'https://doi.org/10.1126/science.aag2345' }, dataYear: 2016, hypothesis: 'Relation observée entre 1953 et 2015 : 3 m² (± 0,3) de banquise de septembre perdus par tonne de CO2. Ordre de grandeur, établi pour le CO2 seul.' },
     { ...ok, id: 'ballons', label: 'ballons de baudruche remplis de CO2', sprite: 'balloon', value: round(co2Density * balloonVolume), unit: 'kg CO2 par ballon', source: { name: 'Calcul : loi des gaz parfaits (constantes CODATA/NIST)', url: 'https://physics.nist.gov/cgi-bin/cuu/Value?r' }, dataYear: null, hypothesis: 'Ballon sphérique de 28 cm de diamètre (11,5 litres) rempli de CO2 pur à 20 °C et à pression atmosphérique.' },
     { ...ok, mode: 'pourcentage', id: 'budget-2t', label: '% du budget annuel de 2 t CO2e', sprite: 'target', value: item('2050').ecv, unit: 'kg CO2e par an', source: ico('caspratiques', '2050'), dataYear: null, hypothesis: 'Objectif par personne pour 2050.' },

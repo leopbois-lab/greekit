@@ -42,7 +42,7 @@ const SIDE = [HOME, ADD, HISTORY, STATS, QUESTS, SETTINGS];
 
 function Logo() {
   return (
-    <Link to="/" className="app__logo">How much fart</Link>
+    <Link to="/" className="app__logo">The carbon quest</Link>
   );
 }
 
@@ -77,7 +77,7 @@ export function App() {
       '/reglages': 'Réglages', '/galerie': 'Galerie', '/installer': 'Installer l’app',
     };
     const page = location.pathname.startsWith('/resultat') ? 'Résultat' : titles[location.pathname];
-    document.title = page ? `${page} · How much fart` : 'How much fart';
+    document.title = page ? `${page} · The carbon quest` : 'The carbon quest';
   }, [location.pathname]);
 
   // Passage de niveau : fêté une seule fois, jamais au premier chargement.

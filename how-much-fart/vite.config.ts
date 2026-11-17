@@ -16,8 +16,8 @@ export default defineConfig({
       // Les icônes et le favicon sont déjà pris par globPatterns : on évite les doublons.
       includeManifestIcons: false,
       manifest: {
-        name: 'How much fart',
-        short_name: 'How much fart',
+        name: 'The carbon quest',
+        short_name: 'The carbon quest',
         description: 'L’empreinte carbone de tes achats, avec une planète à garder en forme.',
         lang: 'fr',
         dir: 'ltr',

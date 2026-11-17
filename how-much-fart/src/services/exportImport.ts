@@ -7,6 +7,7 @@ import { purchaseSchema } from './storage';
  * L'import est validé avec Zod et fusionne sans doublon : il ne supprime jamais rien.
  */
 
+// Identifiant interne des sauvegardes : inchangé depuis l'ancien nom, pour que les anciennes sauvegardes restent lisibles.
 export const EXPORT_APP = 'how-much-fart';
 export const EXPORT_VERSION = 1;
 
@@ -48,7 +49,7 @@ export function buildExport(
 
 export function exportFileName(now: Date): string {
   const p = (n: number) => String(n).padStart(2, '0');
-  return `how-much-fart-${now.getFullYear()}-${p(now.getMonth() + 1)}-${p(now.getDate())}.json`;
+  return `the-carbon-quest-${now.getFullYear()}-${p(now.getMonth() + 1)}-${p(now.getDate())}.json`;
 }
 
 export type ParseResult = { ok: true; data: ExportFile } | { ok: false; error: string };
@@ -63,7 +64,7 @@ export function parseExport(text: string): ParseResult {
   }
   const app = (json as { app?: unknown } | null)?.app;
   if (app !== EXPORT_APP) {
-    return { ok: false, error: 'Ce fichier ne vient pas de How much fart.' };
+    return { ok: false, error: 'Ce fichier ne vient pas de The carbon quest.' };
   }
   const version = (json as { version?: unknown }).version;
   if (typeof version === 'number' && version > EXPORT_VERSION) {

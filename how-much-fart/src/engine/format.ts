@@ -23,6 +23,21 @@ export function formatKg(kg: number): string {
   return `${TWO.format(kg / 1000)} t CO2e`;
 }
 
+/** Durée lisible à partir d'un nombre d'années : jours, mois ou ans, arrondie (c'est un ordre de grandeur). */
+export function formatYears(years: number): string {
+  if (!Number.isFinite(years) || years <= 0) return 'moins d’un jour';
+  const days = years * 365;
+  if (days < 1) return 'moins d’un jour';
+  if (days < 45) {
+    const d = Math.round(days);
+    return `${d} jour${d > 1 ? 's' : ''}`;
+  }
+  const months = years * 12;
+  if (months < 23.5) return `${Math.round(months)} mois`;
+  if (years < 10) return `${ONE.format(Math.round(years * 2) / 2)} ans`;
+  return `${INT.format(Math.round(years))} ans`;
+}
+
 /** Date AAAA-MM-JJ en heure locale. */
 export function toDateKey(d: Date): string {
   const p = (n: number) => String(n).padStart(2, '0');

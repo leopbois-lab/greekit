@@ -606,6 +606,11 @@ a.pill:hover { background: var(--surface-2); }
 .data-table th:first-child, .data-table td:first-child { text-align: left; }
 .data-table th { color: var(--ink-2); font-weight: 650; }
 
+/* ---------- Temps de l'arbre ---------- */
+.tree-time { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem; align-items: center; }
+.tree-time__art .eq-card__art { border-radius: var(--radius-sm); aspect-ratio: 1; }
+.tree-time__value { font-size: 1.9rem; font-weight: 750; letter-spacing: -0.02em; line-height: 1.15; }
+
 /* ---------- Alternative ---------- */
 .alt { display: flex; gap: 0.9rem; align-items: flex-start; }
 .alt .icon-tile { background: color-mix(in srgb, var(--state-verdoyante) 16%, var(--surface)); color: var(--state-verdoyante); }

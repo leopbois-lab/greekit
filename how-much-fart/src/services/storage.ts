@@ -33,6 +33,7 @@ class AppDb extends Dexie {
   products!: Table<CachedProduct, string>;
   days!: Table<{ date: string }, string>;
   constructor() {
+    // Nom de base inchangé depuis l'ancien nom de l'app : le renommer effacerait les données des utilisateurs.
     super('how-much-fart');
     this.version(1).stores({ purchases: '++id, date, category' });
     // v2 : cache des produits scannés (clé = code-barres).
