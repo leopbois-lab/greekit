@@ -1,0 +1,62 @@
+{
+  "code": "3124480191182",
+  "errors": [],
+  "product": {
+    "brands": "Oasis, Orangina Schweppes France",
+    "categories_tags": [
+      "en:beverages-and-beverages-preparations",
+      "en:plant-based-foods-and-beverages",
+      "en:beverages",
+      "en:plant-based-beverages",
+      "en:fruit-based-beverages",
+      "en:sweetened-beverages",
+      "en:Aliments-et-boissons-a-base-de-vegetaux",
+      "en:Boissons-a-base-de-vegetaux",
+      "en:Boissons-avec-sucre-ajoute",
+      "fr:Aromatisé",
+      "fr:Boisson-rafraichissante-aux-fruits-et-à-l'eau-de-source"
+    ],
+    "code": "3124480191182",
+    "environmental_score_data": {
+      "status": "known",
+      "grade": "c",
+      "score": 53,
+      "agribalyse": {
+        "agribalyse_proxy_food_code": "18309",
+        "co2_agriculture": 0.19,
+        "co2_consumption": 0.00683,
+        "co2_distribution": 0.0363,
+        "co2_packaging": 0.138,
+        "co2_processing": 0.000242,
+        "co2_total": 0.566,
+        "co2_transportation": 0.195,
+        "code": "18309",
+        "dqr": "2.72496138872992",
+        "ef_agriculture": 0.0354,
+        "ef_consumption": 0.00259,
+        "ef_distribution": 0.00932,
+        "ef_packaging": 0.0229,
+        "ef_processing": 0.0000733,
+        "ef_total": 0.0848,
+        "ef_transportation": 0.0145,
+        "is_beverage": 1,
+        "name_en": "Fruit soft drink, still (fruit juice content unspecified), with sugar",
+        "name_fr": "Boisson plate aux fruits (teneur en jus non spécifiée), sucrée",
+        "score": 69,
+        "version": "3.2"
+      }
+    },
+    "product_name": "PET 2L OASIS TROPICAL",
+    "product_name_fr": "PET 2L OASIS TROPICAL",
+    "product_quantity": 2000,
+    "product_quantity_unit": "ml",
+    "quantity": "2 L"
+  },
+  "result": {
+    "id": "product_found",
+    "lc_name": "Product found",
+    "name": "Product found"
+  },
+  "status": "success",
+  "warnings": []
+}

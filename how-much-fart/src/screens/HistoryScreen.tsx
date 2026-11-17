@@ -4,7 +4,9 @@ import { CATEGORY_IDS } from '../data/schema';
 import { formatDate, formatKg } from '../engine/format';
 import { filterPurchases, totalKg, type HistoryFilter, type Period } from '../engine/history';
 import { CATEGORY_LABELS, CONFIDENCE_LABELS } from '../engine/types';
-import { PixelButton, PixelFrame, PixelLink } from '../ui/components';
+import { categoryColor } from '../ui/charts';
+import { Button, ButtonLink, Card, EmptyState } from '../ui/components';
+import { Icon } from '../ui/icons';
 import { playSfx } from '../ui/sound';
 import { usePurchases } from '../ui/store';
 
@@ -18,12 +20,12 @@ export function HistoryScreen() {
   const rows = filterPurchases(purchases, filter, new Date());
 
   return (
-    <div className="flex flex-col gap-7">
+    <div className="flex flex-col gap-6">
       <h1>Historique</h1>
       {error && <p role="alert">{error}</p>}
 
-      <PixelFrame title="Filtres">
-        <div className="chips mt-2" role="group" aria-label="Période">
+      <div className="flex flex-col gap-3">
+        <div className="chips" role="group" aria-label="Période">
           {PERIODS.map(([p, label]) => (
             <button
               key={p}
@@ -39,11 +41,11 @@ export function HistoryScreen() {
             </button>
           ))}
         </div>
-        <div className="mt-3">
+        <div>
           <label className="field-label" htmlFor="cat">Catégorie</label>
           <select
             id="cat"
-            className="px-select"
+            className="select"
             value={filter.category}
             onChange={(e) => setFilter({ ...filter, category: e.target.value as HistoryFilter['category'] })}
           >
@@ -53,60 +55,61 @@ export function HistoryScreen() {
             ))}
           </select>
         </div>
-      </PixelFrame>
+      </div>
 
-      <PixelFrame title="Total" accent>
-        <p className="big-number mt-3" aria-live="polite">{formatKg(totalKg(rows))}</p>
-        <p className="mt-1 text-ink-dim">
-          {rows.length} achat{rows.length > 1 ? 's' : ''} sur la sélection
+      <Card>
+        <p className="small muted">Total de la sélection (les lignes ci-dessous sont en CO2e)</p>
+        <p className="big-number mt-1" aria-live="polite">{formatKg(totalKg(rows))}</p>
+        <p className="muted mt-1">
+          {rows.length} achat{rows.length > 1 ? 's' : ''}
         </p>
-      </PixelFrame>
+      </Card>
 
       {loaded && rows.length === 0 && (
-        <div className="flex flex-col items-start gap-3">
-          <p>Rien ici pour l’instant. Ajoute un achat pour commencer l’aventure !</p>
-          <PixelLink to="/ajouter">+ Ajouter un achat</PixelLink>
-        </div>
+        <EmptyState title="Rien ici pour l’instant" action={<ButtonLink to="/ajouter">Ajouter un achat</ButtonLink>}>
+          Ajoute un achat pour commencer l’aventure, ou élargis la période.
+        </EmptyState>
       )}
 
       <ul className="item-list">
         {rows.map((p) => (
           <li key={p.id}>
-            <Link to={`/resultat/${p.id}`} className="history-row" onClick={() => playSfx('click')}>
-              <span>
-                <strong>{p.label}</strong>
-                <br />
-                <small className="text-ink-dim">
-                  {formatDate(p.date)} · {CATEGORY_LABELS[p.category]} · {CONFIDENCE_LABELS[p.confidence].name.toLowerCase()}
-                </small>
-              </span>
-              <span className="history-row__kg">{formatKg(p.kgCO2e)}</span>
-            </Link>
-            <div className="flex flex-wrap items-center justify-end gap-1 bg-[var(--panel)] px-2 py-1">
-              {confirmId === p.id ? (
-                <>
-                  <span className="text-sm">Supprimer cet achat ?</span>
-                  <PixelButton
-                    variant="danger"
-                    onClick={() => {
-                      void remove(p.id!);
-                      setConfirmId(null);
-                    }}
-                  >
-                    Oui
-                  </PixelButton>
-                  <PixelButton variant="secondary" onClick={() => setConfirmId(null)}>Non</PixelButton>
-                </>
-              ) : (
-                <PixelButton
-                  variant="secondary"
-                  aria-label={`Supprimer ${p.label} du ${formatDate(p.date)}`}
-                  onClick={() => setConfirmId(p.id!)}
+            <div className="history-item">
+              <Link to={`/resultat/${p.id}`} className="history-row" onClick={() => playSfx('click')}>
+                <span className="cat-dot" style={{ background: categoryColor(p.category) }} aria-hidden="true" />
+                <span>
+                  <strong>{p.label}</strong>
+                  <br />
+                  <span className="small muted">
+                    {formatDate(p.date)} · {CATEGORY_LABELS[p.category]} · {CONFIDENCE_LABELS[p.confidence].name.toLowerCase()}
+                  </span>
+                </span>
+                <span className="history-row__kg">{formatKg(p.kgCO2e).replace(' CO2e', '')}</span>
+              </Link>
+              <button
+                type="button"
+                className="btn btn--icon"
+                aria-label={`Supprimer ${p.label} du ${formatDate(p.date)}`}
+                onClick={() => setConfirmId(confirmId === p.id ? null : p.id!)}
+              >
+                <Icon name="trash" size={22} />
+              </button>
+            </div>
+            {confirmId === p.id && (
+              <div className="history-confirm">
+                <span className="small">Supprimer cet achat ?</span>
+                <Button
+                  variant="danger"
+                  onClick={() => {
+                    void remove(p.id!);
+                    setConfirmId(null);
+                  }}
                 >
                   Supprimer
-                </PixelButton>
-              )}
-            </div>
+                </Button>
+                <Button variant="secondary" onClick={() => setConfirmId(null)}>Garder</Button>
+              </div>
+            )}
           </li>
         ))}
       </ul>

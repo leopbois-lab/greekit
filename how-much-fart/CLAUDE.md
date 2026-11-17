@@ -1,6 +1,6 @@
 # How much fart
 
-Web app installable (PWA, responsive PC + mobile) qui calcule l'empreinte carbone (kg CO2e) des achats de l'utilisateur et la rend fun avec une ambiance jeu vidéo pixel art. Interface en français. Pas de backend, pas de compte.
+Web app installable (PWA, responsive PC + mobile) qui calcule l'empreinte carbone (kg CO2e) des achats de l'utilisateur et la rend fun avec une planète-mascotte à garder en forme, dans une interface moderne et épurée. Interface en français. Pas de backend, pas de compte.
 
 ## Règles permanentes
 
@@ -25,7 +25,7 @@ src/
   engine/     calcul, confiance, équivalences, règles de jeu (TS pur, testé)
   data/       factors.v1.json, equivalences.v1.json
   services/   openFoodFacts, barcode, ocr (interface OcrProvider), storage, exportImport
-  ui/         design system pixel : cadres, boutons, barre de vie, sprites, sons
+  ui/         design system : cartes, boutons, barre de vie, icônes, illustrations SVG, sons
   screens/    les 7 écrans
 scripts/
   build-factors.ts   génère les JSON depuis les sources (lancé en dev, jamais par l'app)
@@ -58,19 +58,21 @@ Chaque achat propose une alternative moins émettrice (facteur sourcé plus bas 
 
 ## Équivalences
 
-Chaque total s'affiche en cartes animées avec sprite : km en voiture thermique, km en TGV, vols Paris–New York, pets de vache (info-bulle : en vrai ce sont surtout des rots), steaks de bœuf, heures de streaming, recharges de smartphone, smartphones fabriqués, jeans, douches chaudes, jours de chauffage, litres d'essence, arbres pour absorber ça en un an, m² de banquise fondue, ballons remplis de CO2, % du budget annuel de 2 t CO2e, comparaison à la moyenne française.
+Chaque total s'affiche en cartes animées avec une illustration : km en voiture thermique, km en TGV, vols Paris–New York, pets de vache (info-bulle : en vrai ce sont surtout des rots), steaks de bœuf, heures de streaming, recharges de smartphone, smartphones fabriqués, jeans, douches chaudes, jours de chauffage, litres d'essence, arbres pour absorber ça en un an, m² de banquise fondue, ballons remplis de CO2, % du budget annuel de 2 t CO2e, comparaison à la moyenne française.
 
 Chaque conversion est sourcée comme un facteur. « Pets de vache », « arbres » et « banquise » sont les plus fragiles : ne pas forcer un chiffre. Pour les ballons, expliciter l'hypothèse de volume.
 
 ## Direction artistique
 
-Pixel art rétro 8/16 bits. La planète-mascotte et sa barre de vie sont l'élément fort ; le reste de l'interface reste sobre autour.
+Interface moderne et épurée (refonte du 16/11/2026 : le pixel art rétro est abandonné). La planète-mascotte et sa barre de vie restent l'élément fort ; tout le reste est sobre autour.
 
-- Palette limitée et très colorée sur fond de ciel spatial ; les teintes de l'interface suivent l'état de la planète (verdoyante → enfumée).
-- Titres en police pixel auto-hébergée avec tous les accents français ; texte courant dans une police lisible. Vérifier et lister les licences.
-- Sprites faits maison en grilles de pixels (SVG ou canvas), `image-rendering: pixelated`, agrandissement par multiples entiers. Tout asset externe doit être CC0 et listé.
-- Boutons et cadres façon console rétro. Animations : pièces, particules, transitions d'écran, « LEVEL UP ».
-- Sons chiptune courts générés en Web Audio (pas de fichiers), bouton muet mémorisé.
+- Beaucoup d'espace, fond neutre clair et mode sombre (automatique selon le système, forçable dans les réglages), coins et ombres discrets.
+- Une seule famille de police sans-serif très lisible, auto-hébergée, avec tous les accents français ; la hiérarchie passe par la taille et la graisse. Vérifier et lister les licences.
+- La couleur est réservée à ce qui compte : bouton principal, barre de vie (elle suit l'état de la planète, verdoyante → enfumée), illustrations, graphiques. Tout le reste est neutre.
+- Graphiques très colorés : une couleur fixe par catégorie, la même dans toute l'app (jetons `--cat-*` de `src/index.css`), contrastes vérifiés, légende lisible et libellés directs : la couleur ne porte jamais seule l'information.
+- Illustrations vectorielles (SVG) faites maison, en aplats de couleurs vives, pour la planète-mascotte, les cartes d'équivalences, les succès et les écrans vides. Tout asset externe doit être CC0 et listé.
+- Animations fluides et discrètes (transitions d'écran, apparition des cartes, passage de niveau), coupées avec `prefers-reduced-motion`.
+- Sons courts et doux générés en Web Audio (pas de fichiers), bouton muet mémorisé.
 
 ## Gamification
 
@@ -86,12 +88,12 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 
 ## Étapes
 
-- [x] 1. Squelette + design system pixel : navigation, palette, polices, galerie de composants, sons et bouton muet.
-- [ ] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
-- [ ] 3. Code-barres.
-- [ ] 4. Ticket de caisse.
-- [ ] 5. Gamification, alternatives, statistiques.
-- [ ] 6. PWA (manifest, service worker, hors-ligne), export/import, passe accessibilité, README (installation, sources de données, limites).
+- [x] 1. Squelette + design system : navigation, palette, polices, galerie de composants, sons et bouton muet.
+- [x] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
+- [x] 3. Code-barres.
+- [x] 4. Ticket de caisse.
+- [x] 5. Gamification, alternatives, statistiques.
+- [x] 6. PWA (manifest, service worker, hors-ligne), export/import, passe accessibilité, README (installation, sources de données, limites).
 
 ## Points d'attention iPhone (à vérifier sur appareil réel)
 
@@ -109,3 +111,45 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Base Carbone V23.6 : Licence Ouverte confirmée sur data.ademe.fr. Ratios monétaires 2023 en kg CO2e/k€ hors taxes, incertitude 80 %. Pas de ratio pour l'électroménager ni pour l'énergie.
 - Budget : 8,3 t CO2e par personne en 2025 confirmé (Insee Première n° 2130, octobre 2026).
 - Achats d'équipements et de vêtements : phase d'usage retirée du facteur Impact CO2 (fabrication + fin de vie seulement).
+
+## Constats de l'étape 3 (16/11/2026)
+
+- Open Food Facts : `GET https://world.openfoodfacts.org/api/v3.1/product/{code}?fields=…`, sans clé, CORS ouvert (`access-control-allow-origin: *`). Produit inconnu : HTTP 404 avec un corps JSON `product_not_found`. Base sous licence ODbL (contenus : DbCL).
+- Champs confirmés sur de vrais produits : `environmental_score_data.agribalyse.co2_total` (kg CO2e/kg), `name_fr`, `version` (« 3.2 »), `is_beverage` ; `product_quantity` + `product_quantity_unit` (g ou ml). `ecoscore_data` n'est plus renvoyé : le repli reste en place.
+- Tous les produits n'ont pas de bloc Agribalyse (ex. Coca-Cola 5449000000996) : bascule vers la saisie manuelle.
+- `BarcodeDetector` est absent de Safari et de Chromium sous Linux : le repli ZXing (`zxing-wasm`, fichier .wasm servi par l'app) est le chemin réellement utilisé sur iPhone. Testé ici avec une caméra simulée ; à confirmer sur appareil réel.
+- Boissons : `co2_total` est par kg ; un volume est converti à 1 kg par litre et le résultat reste « estimé ».
+
+## Constats de l'étape 4 (16/11/2026)
+
+- OCR : Tesseract.js 7 derrière l'interface `OcrProvider` (`src/services/ocr.ts`). Le worker, le moteur WebAssembly (variantes « LSTM seul ») et le modèle français (`@tesseract.js-data/fra`, version `4.0.0_best_int`) sont copiés dans `public/ocr/` par `scripts/copy-ocr-assets.mjs` (lancé avant `dev` et `build`, dossier non versionné) : aucun appel à un CDN.
+- Mode de segmentation « bloc unique » (PSM 6) pour garder libellé et prix sur la même ligne.
+- La lecture du texte (`src/engine/receipt.ts`) est heuristique : lignes « libellé + prix », libellé seul suivi d'une ligne de quantité, exclusion des totaux, paiements, TVA et remises. Vérifiée sur une image de ticket générée ; à confirmer sur de vraies photos de tickets.
+- `public/ocr/` pèse environ 12 Mo (trois variantes du moteur, une seule est téléchargée par appareil) : à l'étape 6, ne pas tout mettre en pré-cache du service worker.
+
+## Constats de la refonte graphique (16/11/2026)
+
+- Police : Atkinson Hyperlegible Next (variable, graisses 200 à 800, OFL 1.1), auto-hébergée via `@fontsource-variable/atkinson-hyperlegible-next`. Accents français complets ; « ₂ » et « ≈ » absents (repli sur la police système).
+- Couleurs des catégories, dans l'ordre d'affichage des graphiques : vêtements, alimentation, transport, électronique, énergie, numérique, mobilier, électroménager, boissons, loisirs. Cet ordre passe le validateur (voisins distinguables en vision normale et simulée daltonienne, en clair et en sombre). Avec dix catégories, deux paires voisines restent proches pour un daltonien et trois couleurs sont peu contrastées sur fond clair : chaque graphique doit donc porter des libellés directs ou une légende.
+- Les couleurs d'état de la planète (`--state-*`) et de confiance (`--conf-*`) sont réservées à ces usages et toujours accompagnées d'un libellé.
+
+## Constats de l'étape 5 (16/11/2026)
+
+- Tout l'état du jeu se déduit de l'historique (`computeGame` dans `src/engine/game.ts`) : rien n'est stocké à part, sauf les journées « rien acheté » (table `days`) et le dernier niveau fêté (réglages).
+- Jour sobre : jour saisi dont le total reste sous le budget du jour (budget du mois ÷ nombre de jours du mois). Combo : jours sobres consécutifs ; un jour non saisi le casse.
+- XP : 10 par achat, 5 par journée sans achat validée, 15 par jour sobre, 50 par quête, 30 par succès, 200 par boss. Niveaux à 0, 100, 300, 600, 1000… XP.
+- Quêtes : trois par semaine (lundi → dimanche), « 3 jours sans bœuf » toujours présente, les deux autres tournent.
+- Boss du mois (« le Gros Nuage ») : battu si le mois se termine sous le budget avec au moins 8 jours saisis.
+- Alternatives : seulement dans les familles où les articles sont interchangeables (pas pour les appareils, les meubles, les fruits et légumes, ni les estimations par le prix ou les produits scannés). Transport : modes longue distance pour l'avion et les trajets de plus de 80 km, modes du quotidien sinon.
+- Graphiques : barres classées par catégorie avec libellés directs ; colonnes empilées dans le temps limitées aux 5 plus grosses catégories de la période + « Autres », avec légende, infobulle au survol, au toucher et au clavier, et tableau des valeurs.
+
+## Constats de l'étape 6 (17/11/2026)
+
+- PWA : vite-plugin-pwa 2.0.0 (Workbox 7.4.1), `generateSW`, mise à jour au choix de l'utilisateur (bandeau « Mettre à jour »). Pré-cache d'environ 1,8 Mo : écrans, données, police, lecteur de codes-barres. Le moteur OCR (`ocr/`) est mis en cache à la première lecture d'un ticket, pas pré-chargé.
+- `npm audit` signale des vulnérabilités modérées dans `minimatch`, tiré par `workbox-build` : outil de build uniquement, rien n'est livré au navigateur.
+- Écrans lourds (scan, ticket, stats, quêtes, galerie, installation) chargés à la demande ; ils restent disponibles hors ligne grâce au pré-cache.
+- Export JSON (`src/services/exportImport.ts`) : achats sans identifiant local, journées « rien acheté », réglages. Import validé par Zod, fusion sans doublon (clé : date, facteur, libellé, quantité, CO2e, mode) et sans rien effacer. Sur iPhone, l'export passe par la feuille de partage.
+- `navigator.storage.persist()` demandé au premier achat et après un import ; l'état est affiché dans « Mes données ». Rappel de sauvegarde sur l'accueil au-delà de 5 achats, au plus une fois par mois.
+- Aide à l'installation : écran `/installer`, conseil sur l'accueil pour Safari iPhone hors app installée ; bouton natif quand le navigateur propose `beforeinstallprompt`.
+- Accessibilité : audit axe-core (règles WCAG 2.1 AA et bonnes pratiques) sur tous les écrans, en clair et en sombre : aucune violation après correction. Lien « Aller au contenu », titre de page par écran, liens soulignés dans le texte.
+- CI : `.github/workflows/how-much-fart-ci.yml` lance tests et build sur chaque pull request qui touche l'app.

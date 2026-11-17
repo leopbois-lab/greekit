@@ -2,33 +2,47 @@ import { useState } from 'react';
 import { BUDGET } from '../data';
 import { parseQuantity } from '../engine/compute';
 import { formatKg } from '../engine/format';
-import { MuteButton, PixelButton, PixelFrame, PixelLink } from '../ui/components';
-import { useSettings } from '../ui/store';
+import { MuteButton, Button, Card, ButtonLink } from '../ui/components';
+import { useSettings, type Theme } from '../ui/store';
+import { DataCard } from '../ui/DataCard';
 import { useBudget } from '../ui/useBudget';
 
 export function SettingsScreen() {
   const muted = useSettings((s) => s.muted);
   const setCustom = useSettings((s) => s.setCustomMonthlyBudgetKg);
   const { budgetKg, defaultBudgetKg, isCustom } = useBudget();
+  const theme = useSettings((s) => s.theme);
+  const setTheme = useSettings((s) => s.setTheme);
   const [value, setValue] = useState(String(Math.round(budgetKg)));
   const [message, setMessage] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-col gap-7">
+    <div className="flex flex-col gap-6">
       <h1>Réglages</h1>
-      <PixelFrame title="Son">
+      <Card title="Son">
         <div className="mt-2 flex items-center gap-3">
           <MuteButton />
           <p>{muted ? 'Son coupé.' : 'Son activé.'} Ce choix est mémorisé sur cet appareil.</p>
         </div>
-      </PixelFrame>
+      </Card>
 
-      <PixelFrame title="Budget mensuel">
+      <Card title="Apparence">
+        <div className="chips mt-3" role="group" aria-label="Apparence">
+          {([['auto', 'Automatique'], ['clair', 'Clair'], ['sombre', 'Sombre']] as Array<[Theme, string]>).map(([t, label]) => (
+            <button key={t} type="button" className="chip" aria-pressed={theme === t} onClick={() => setTheme(t)}>
+              {label}
+            </button>
+          ))}
+        </div>
+        <p className="small muted mt-2">« Automatique » suit le réglage clair ou sombre de ton appareil.</p>
+      </Card>
+
+      <Card title="Budget mensuel">
         <p className="mt-2">
           Par défaut : {formatKg(defaultBudgetKg)} par mois, soit la moyenne française de{' '}
           {formatKg(BUDGET.annualKgPerPerson)} par personne en {BUDGET.dataYear}, divisée par 12.
         </p>
-        <p className="mt-1 text-sm text-ink-dim">
+        <p className="mt-1 small muted">
           Source : <a href={BUDGET.source.url} target="_blank" rel="noreferrer">{BUDGET.source.name}</a>{' '}
           (publiée en {BUDGET.publishedYear}). {BUDGET.note}
         </p>
@@ -50,16 +64,16 @@ export function SettingsScreen() {
             <label className="field-label" htmlFor="budget">Mon budget (kg CO2e par mois)</label>
             <input
               id="budget"
-              className="px-input"
+              className="input"
               inputMode="decimal"
               value={value}
               onChange={(e) => setValue(e.target.value)}
             />
           </div>
           <div className="flex flex-wrap gap-2">
-            <PixelButton type="submit">Valider</PixelButton>
+            <Button type="submit">Valider</Button>
             {isCustom && (
-              <PixelButton
+              <Button
                 variant="secondary"
                 onClick={() => {
                   setCustom(null);
@@ -68,22 +82,33 @@ export function SettingsScreen() {
                 }}
               >
                 Valeur par défaut
-              </PixelButton>
+              </Button>
             )}
           </div>
-          <p aria-live="polite" className="min-h-6 text-sm">{message}</p>
+          <p aria-live="polite" className="min-h-6 small">{message}</p>
         </form>
-      </PixelFrame>
+      </Card>
 
-      <PixelFrame title="Données">
-        <p className="mt-2 text-ink-dim">Export et import JSON : étape 6.</p>
-      </PixelFrame>
-      <PixelFrame title="Design system">
-        <p className="mt-2">Tous les composants pixel, la palette, les polices et les sons.</p>
+      <DataCard />
+
+      <Card title="Installer l’app">
+        <p className="mt-2">Sur l’écran d’accueil, l’app s’ouvre en plein écran et marche hors ligne.</p>
         <div className="mt-3">
-          <PixelLink to="/galerie" variant="secondary">Ouvrir la galerie</PixelLink>
+          <ButtonLink to="/installer" variant="secondary">Voir comment faire</ButtonLink>
         </div>
-      </PixelFrame>
+      </Card>
+
+      <Card title="Composants">
+        <p className="mt-2">La palette, les illustrations, les icônes et les sons de l’app.</p>
+        <div className="mt-3">
+          <ButtonLink to="/galerie" variant="secondary">Ouvrir la galerie</ButtonLink>
+        </div>
+      </Card>
+
+      <p className="small muted">
+        Données : Impact CO2 et Base Carbone (ADEME), Agribalyse, Open Food Facts (ODbL), Insee. Détail des sources et des
+        limites dans le fichier README du projet.
+      </p>
     </div>
   );
 }

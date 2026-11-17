@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "ocr:assets": "node scripts/copy-ocr-assets.mjs",
+    "predev": "npm run ocr:assets",
     "dev": "vite",
+    "prebuild": "npm run ocr:assets",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "vitest run",
@@ -12,14 +15,16 @@
     "build:factors": "node scripts/build-factors.ts"
   },
   "dependencies": {
-    "@fontsource/atkinson-hyperlegible": "^5.3.0",
-    "@fontsource/press-start-2p": "^5.3.0",
+    "@fontsource-variable/atkinson-hyperlegible-next": "^5.3.0",
+    "@tesseract.js-data/fra": "^1.0.0",
     "dexie": "^4.4.7",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router": "^8.5.1",
+    "tesseract.js": "^7.0.0",
     "zod": "^4.6.7",
-    "zustand": "^5.1.0"
+    "zustand": "^5.1.0",
+    "zxing-wasm": "^3.1.7"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.5",
@@ -30,6 +35,7 @@
     "tailwindcss": "^4.3.5",
     "typescript": "^7.0.2",
     "vite": "^8.3.8",
+    "vite-plugin-pwa": "^2.0.0",
     "vitest": "^5.1.0"
   }
 }

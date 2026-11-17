@@ -1,0 +1,59 @@
+{
+  "code": "3017620422003",
+  "errors": [],
+  "product": {
+    "brands": "Ferrero, Nutella",
+    "categories_tags": [
+      "en:breakfasts",
+      "en:spreads",
+      "en:sweet-spreads",
+      "fr:pates-a-tartiner",
+      "en:hazelnut-spreads",
+      "en:confectionary-based-spreads",
+      "fr:Nutella"
+    ],
+    "code": "3017620422003",
+    "environmental_score_data": {
+      "status": "known",
+      "grade": "f",
+      "score": 12,
+      "agribalyse": {
+        "agribalyse_proxy_food_code": "31032",
+        "co2_agriculture": 8.05,
+        "co2_consumption": 0,
+        "co2_distribution": 0.0209,
+        "co2_packaging": 0.49,
+        "co2_processing": 0.261,
+        "co2_total": 9.11,
+        "co2_transportation": 0.295,
+        "code": "31032",
+        "dqr": "1.5573076014188938",
+        "ef_agriculture": 0.589,
+        "ef_consumption": 0,
+        "ef_distribution": 0.0049,
+        "ef_packaging": 0.0389,
+        "ef_processing": 0.0424,
+        "ef_total": 0.7,
+        "ef_transportation": 0.0245,
+        "is_beverage": 0,
+        "name_en": "Chocolate spread with hazelnuts",
+        "name_fr": "Pâte à tartiner chocolat et noisette",
+        "score": 42,
+        "version": "3.2"
+      }
+    },
+    "environmental_score_grade": "f",
+    "product_name": "Nutella",
+    "product_name_fr": "Nutella",
+    "product_quantity": 400,
+    "product_quantity_unit": "g",
+    "quantity": "400 g e"
+  },
+  "result": {
+    "id": "product_found",
+    "lc_name": "Product found",
+    "name": "Product found"
+  },
+  "status": "success",
+  "warnings": []
+}

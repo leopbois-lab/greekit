@@ -1,23 +1,18 @@
 import { useEffect, useState } from 'react';
 import { Link, type LinkProps } from 'react-router';
-import {
-  clampHealth,
-  filledSegments,
-  PLANET_LABELS,
-  planetStateFromHealth,
-} from '../engine/planet';
+import { clampHealth, PLANET_LABELS, planetStateFromHealth } from '../engine/planet';
+import { Icon } from './icons';
+import { EmptyArt, PlanetIllustration } from './illustrations';
 import { playSfx, type SfxName } from './sound';
-import { Sprite } from './Sprite';
-import { ICONS, planetSprite } from './sprites';
 import { useSettings } from './store';
 
 type Variant = 'primary' | 'secondary' | 'danger';
 
 function btnClass(variant: Variant, big?: boolean, extra = ''): string {
   return [
-    'px-btn',
-    variant !== 'primary' ? `px-btn--${variant}` : '',
-    big ? 'px-btn--big' : '',
+    'btn',
+    variant !== 'primary' ? `btn--${variant}` : '',
+    big ? 'btn--big' : '',
     extra,
   ]
     .filter(Boolean)
@@ -31,7 +26,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   sfx?: SfxName | null;
 }
 
-export function PixelButton({
+export function Button({
   variant = 'primary',
   big,
   sfx = 'click',
@@ -53,7 +48,7 @@ export function PixelButton({
   );
 }
 
-export function PixelLink({
+export function ButtonLink({
   variant = 'primary',
   big,
   className,
@@ -72,28 +67,26 @@ export function PixelLink({
   );
 }
 
-export function PixelFrame({
+export function Card({
   title,
-  accent,
   className = '',
   children,
 }: {
   title?: string;
-  accent?: boolean;
   className?: string;
   children: React.ReactNode;
 }) {
   return (
-    <section className={`px-frame ${accent ? 'px-frame--accent' : ''} ${className}`}>
-      {title && <h2 className="px-frame__title">{title}</h2>}
+    <section className={`card ${className}`}>
+      {title && <h2 className="card__title">{title}</h2>}
       {children}
     </section>
   );
 }
 
-export function HealthBar({ health, segments = 10 }: { health: number; segments?: number }) {
+/** Barre de vie : part du budget du mois encore disponible. Sa couleur suit l'état de la planète. */
+export function HealthBar({ health }: { health: number }) {
   const h = clampHealth(health);
-  const on = filledSegments(h, segments);
   const pct = Math.round(h * 100);
   return (
     <div
@@ -105,34 +98,21 @@ export function HealthBar({ health, segments = 10 }: { health: number; segments?
       aria-valuenow={pct}
       aria-valuetext={`${pct} % du budget du mois restant`}
     >
-      <span className="hp__label" aria-hidden="true">PV</span>
-      <div className="hp__track" aria-hidden="true">
-        {Array.from({ length: segments }, (_, i) => (
-          <span key={i} className={`hp__seg ${i < on ? 'hp__seg--on' : ''}`} />
-        ))}
+      <div className="hp__track">
+        {/* Tant qu'il reste de la vie, la barre reste visible. */}
+        <div className="hp__fill" style={{ width: h === 0 ? '0%' : `${Math.max(4, pct)}%` }} />
       </div>
-      <span className="hp__value" aria-hidden="true">{pct} %</span>
     </div>
   );
 }
 
-export function Planet({
-  health,
-  scale = 10,
-  float = true,
-}: {
-  health: number;
-  scale?: number;
-  float?: boolean;
-}) {
+/** Planète-mascotte : grande illustration vectorielle qui change avec la vie restante. */
+export function Planet({ health, size = 220, float = true }: { health: number; size?: number; float?: boolean }) {
   const state = planetStateFromHealth(health);
   return (
-    <Sprite
-      sprite={planetSprite(state)}
-      scale={scale}
-      label={`Planète ${PLANET_LABELS[state].name.toLowerCase()}`}
-      className={float ? 'anim-float' : ''}
-    />
+    <div className={`planet ${float ? 'anim-float' : ''}`} style={{ width: size, maxWidth: '100%' }}>
+      <PlanetIllustration state={state} title={`Planète ${PLANET_LABELS[state].name.toLowerCase()}`} />
+    </div>
   );
 }
 
@@ -142,7 +122,7 @@ export function MuteButton() {
   return (
     <button
       type="button"
-      className="px-btn px-btn--secondary px-btn--icon"
+      className="btn btn--secondary btn--icon"
       aria-pressed={muted}
       aria-label="Couper le son"
       title={muted ? 'Son coupé' : 'Son activé'}
@@ -152,34 +132,13 @@ export function MuteButton() {
         playSfx('toggle');
       }}
     >
-      <Sprite sprite={muted ? ICONS.soundOff : ICONS.soundOn} scale={3} />
+      <Icon name={muted ? 'soundOff' : 'soundOn'} />
     </button>
   );
 }
 
-const PARTICLE_COLORS = ['var(--yellow)', 'var(--cyan)', 'var(--green)', 'var(--red)', 'var(--purple)'];
-
-/** Gerbe de particules carrées ; se relance à chaque changement de `burst`. */
-export function Particles({ burst }: { burst: number }) {
-  if (burst === 0) return null;
-  return (
-    <span key={burst} aria-hidden="true">
-      {Array.from({ length: 12 }, (_, i) => {
-        const angle = (i / 12) * Math.PI * 2;
-        const dist = 40 + (i % 3) * 16;
-        const style = {
-          '--dx': `${Math.round(Math.cos(angle) * dist)}px`,
-          '--dy': `${Math.round(Math.sin(angle) * dist)}px`,
-          '--c': PARTICLE_COLORS[i % PARTICLE_COLORS.length],
-        } as React.CSSProperties;
-        return <span key={i} className="particle" style={style} />;
-      })}
-    </span>
-  );
-}
-
-/** Bandeau « LEVEL UP » ; s'affiche à chaque changement de `trigger` (> 0). */
-export function LevelUp({ trigger }: { trigger: number }) {
+/** Bandeau de passage de niveau ; s'affiche à chaque changement de `trigger` (> 0). */
+export function LevelUp({ trigger, level }: { trigger: number; level?: number }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     if (trigger === 0) return;
@@ -190,7 +149,46 @@ export function LevelUp({ trigger }: { trigger: number }) {
   if (!visible) return null;
   return (
     <div className="levelup" role="status">
-      <div key={trigger} className="levelup__text">LEVEL UP !</div>
+      <div key={trigger} className="levelup__text">{level ? `Niveau ${level} !` : 'Niveau supérieur !'}</div>
+    </div>
+  );
+}
+
+/** Jauge fine générique (XP, quêtes, boss). `tone` choisit la couleur du remplissage. */
+export function Meter({
+  value,
+  max,
+  label,
+  tone = 'brand',
+}: {
+  value: number;
+  max: number;
+  label: string;
+  tone?: 'brand' | 'good' | 'warn' | 'bad';
+}) {
+  const ratio = max > 0 ? Math.min(1, Math.max(0, value / max)) : 0;
+  return (
+    <div
+      className={`meter meter--${tone}`}
+      role="progressbar"
+      aria-label={label}
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={Math.round(ratio * 100)}
+    >
+      <div className="meter__fill" style={{ width: `${ratio * 100}%` }} />
+    </div>
+  );
+}
+
+/** Écran ou bloc vide : illustration, message encourageant, action. */
+export function EmptyState({ title, children, action }: { title: string; children?: React.ReactNode; action?: React.ReactNode }) {
+  return (
+    <div className="empty">
+      <div className="empty__art"><EmptyArt /></div>
+      <h2>{title}</h2>
+      {children && <p className="muted">{children}</p>}
+      {action}
     </div>
   );
 }

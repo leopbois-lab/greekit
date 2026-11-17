@@ -1,17 +1,16 @@
 # Crédits et licences
 
-## Polices (auto-hébergées via les paquets npm Fontsource)
+## Police (auto-hébergée via le paquet npm Fontsource)
 
 | Police | Usage | Licence | Vérifié |
 | --- | --- | --- | --- |
-| Press Start 2P (The Press Start 2P Project Authors) | Titres, boutons | SIL Open Font License 1.1 | Accents français complets (à â ç é è ê ë î ï ô ù û ü ÿ œ æ, majuscules, « » €) avec les sous-ensembles latin + latin-ext |
-| Atkinson Hyperlegible (Braille Institute of America) | Texte courant | SIL Open Font License 1.1 | Idem |
+| Atkinson Hyperlegible Next, variable 200–800 (The Atkinson Hyperlegible Next Project Authors) | Toute l'interface | SIL Open Font License 1.1 | Accents français complets (à â ç é è ê ë î ï ô ù û ü ÿ œ æ, majuscules, « » €) avec les sous-ensembles latin + latin-ext |
 
-Textes de licence : `node_modules/@fontsource/*/LICENSE`.
+Texte de licence : `node_modules/@fontsource-variable/atkinson-hyperlegible-next/LICENSE`.
 
-## Sprites et sons
+## Illustrations, icônes et sons
 
-Tous les sprites sont faits maison (grilles de pixels dans `src/ui/sprites.ts`). Les sons sont générés en Web Audio (`src/ui/sound.ts`). Aucun asset externe.
+Illustrations (planète-mascotte, cartes d'équivalence, boss, médailles, écrans vides), icônes et icône de l'app (`public/icons/`) faites maison en SVG : `src/ui/illustrations.tsx`, `src/ui/icons.tsx`. Les PNG de l'icône sont rendus depuis `public/icons/icon.svg`. Les sons sont générés en Web Audio (`src/ui/sound.ts`). Aucun asset externe.
 
 ## Données
 
@@ -22,5 +21,15 @@ Tous les sprites sont faits maison (grilles de pixels dans `src/ui/sprites.ts`).
 | Base Carbone V23.6 (ADEME) — https://data.ademe.fr/datasets/base-carboner | Carburants, électricité, gaz, ratios monétaires 2023 | Licence Ouverte / Open Licence (Etalab) |
 | Insee Première n° 2130 (Insee / SDES, octobre 2026) | Empreinte moyenne par personne (budget) | Réutilisation libre avec mention de la source |
 | Notz & Stroeve, Science 354 (2016) | Équivalence « banquise » | Citation d'un résultat publié |
+| Open Food Facts — https://world.openfoodfacts.org | Fiches produit lues au scan (nom, poids, `co2_total` Agribalyse) | Open Database License (ODbL) pour la base, Database Contents License pour les contenus |
+
+## Bibliothèques notables
+
+| Bibliothèque | Usage | Licence |
+| --- | --- | --- |
+| Tesseract.js 7 et tesseract.js-core | Lecture du texte des tickets de caisse (OCR), dans le navigateur | Apache-2.0 |
+| @tesseract.js-data/fra (modèle de langue français de Tesseract) | Données de reconnaissance du français | Paquet npm : MIT ; modèles Tesseract : Apache-2.0 |
+| vite-plugin-pwa et Workbox | Manifeste, service worker, fonctionnement hors ligne | MIT |
+| zxing-wasm (zxing-cpp compilé en WebAssembly) | Lecture des codes-barres quand le navigateur n'a pas `BarcodeDetector` (Safari) | MIT (zxing-cpp : Apache-2.0) |
 
 Chaque entrée de `src/data/*.json` porte sa source, son année et sa date de récupération.
