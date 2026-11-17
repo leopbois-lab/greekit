@@ -3,6 +3,7 @@ import { PLANET_LABELS, planetStateFromHealth } from '../engine/planet';
 import { Link } from 'react-router';
 import { ButtonLink, Card, HealthBar, Planet } from '../ui/components';
 import { Icon } from '../ui/icons';
+import { HomeNotice } from '../ui/HomeNotice';
 import { TodayToggle } from '../ui/TodayToggle';
 import { useGame } from '../ui/useGame';
 import { usePurchases } from '../ui/store';
@@ -45,6 +46,8 @@ export function HomeScreen() {
         <ButtonLink to="/ajouter" big>Ajouter un achat</ButtonLink>
         <TodayToggle />
       </div>
+
+      <HomeNotice />
 
       <div className="flex flex-wrap justify-center gap-2">
         <Link to="/quetes" className="pill">

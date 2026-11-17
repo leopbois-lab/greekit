@@ -89,3 +89,36 @@ export async function setNoPurchaseDay(date: string, on: boolean): Promise<void>
   if (on) await getDb().days.put({ date });
   else await getDb().days.delete(date);
 }
+
+/** Ajoute d'un coup des achats et des journées (import d'une sauvegarde), en une seule transaction. */
+export async function importData(purchases: readonly Purchase[], days: readonly string[]): Promise<Purchase[]> {
+  const db = getDb();
+  return db.transaction('rw', db.purchases, db.days, async () => {
+    const rows = purchases.map(({ id: _id, ...rest }) => rest);
+    const ids = await db.purchases.bulkAdd(rows, { allKeys: true });
+    await db.days.bulkPut(days.map((date) => ({ date })));
+    return rows.map((row, i) => ({ ...row, id: ids[i] }));
+  });
+}
+
+/**
+ * Demande au navigateur de ne pas effacer les données de l'app quand l'espace manque.
+ * Sur iPhone, Safari l'accorde surtout à une app installée sur l'écran d'accueil.
+ */
+export async function requestPersistence(): Promise<boolean | null> {
+  try {
+    if (!navigator.storage?.persist) return null;
+    if (await navigator.storage.persisted()) return true;
+    return await navigator.storage.persist();
+  } catch {
+    return null;
+  }
+}
+
+export async function isPersisted(): Promise<boolean | null> {
+  try {
+    return navigator.storage?.persisted ? await navigator.storage.persisted() : null;
+  } catch {
+    return null;
+  }
+}

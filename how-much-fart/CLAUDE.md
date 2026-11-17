@@ -92,8 +92,8 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - [x] 2. Saisie manuelle, `build-factors.ts`, moteur + tests, fiche résultat, équivalences, historique. Livrer la liste des facteurs « à compléter ».
 - [x] 3. Code-barres.
 - [x] 4. Ticket de caisse.
-- [ ] 5. Gamification, alternatives, statistiques.
-- [ ] 6. PWA (manifest, service worker, hors-ligne), export/import, passe accessibilité, README (installation, sources de données, limites).
+- [x] 5. Gamification, alternatives, statistiques.
+- [x] 6. PWA (manifest, service worker, hors-ligne), export/import, passe accessibilité, README (installation, sources de données, limites).
 
 ## Points d'attention iPhone (à vérifier sur appareil réel)
 
@@ -142,3 +142,14 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Boss du mois (« le Gros Nuage ») : battu si le mois se termine sous le budget avec au moins 8 jours saisis.
 - Alternatives : seulement dans les familles où les articles sont interchangeables (pas pour les appareils, les meubles, les fruits et légumes, ni les estimations par le prix ou les produits scannés). Transport : modes longue distance pour l'avion et les trajets de plus de 80 km, modes du quotidien sinon.
 - Graphiques : barres classées par catégorie avec libellés directs ; colonnes empilées dans le temps limitées aux 5 plus grosses catégories de la période + « Autres », avec légende, infobulle au survol, au toucher et au clavier, et tableau des valeurs.
+
+## Constats de l'étape 6 (17/11/2026)
+
+- PWA : vite-plugin-pwa 2.0.0 (Workbox 7.4.1), `generateSW`, mise à jour au choix de l'utilisateur (bandeau « Mettre à jour »). Pré-cache d'environ 1,8 Mo : écrans, données, police, lecteur de codes-barres. Le moteur OCR (`ocr/`) est mis en cache à la première lecture d'un ticket, pas pré-chargé.
+- `npm audit` signale des vulnérabilités modérées dans `minimatch`, tiré par `workbox-build` : outil de build uniquement, rien n'est livré au navigateur.
+- Écrans lourds (scan, ticket, stats, quêtes, galerie, installation) chargés à la demande ; ils restent disponibles hors ligne grâce au pré-cache.
+- Export JSON (`src/services/exportImport.ts`) : achats sans identifiant local, journées « rien acheté », réglages. Import validé par Zod, fusion sans doublon (clé : date, facteur, libellé, quantité, CO2e, mode) et sans rien effacer. Sur iPhone, l'export passe par la feuille de partage.
+- `navigator.storage.persist()` demandé au premier achat et après un import ; l'état est affiché dans « Mes données ». Rappel de sauvegarde sur l'accueil au-delà de 5 achats, au plus une fois par mois.
+- Aide à l'installation : écran `/installer`, conseil sur l'accueil pour Safari iPhone hors app installée ; bouton natif quand le navigateur propose `beforeinstallprompt`.
+- Accessibilité : audit axe-core (règles WCAG 2.1 AA et bonnes pratiques) sur tous les écrans, en clair et en sombre : aucune violation après correction. Lien « Aller au contenu », titre de page par écran, liens soulignés dans le texte.
+- CI : `.github/workflows/how-much-fart-ci.yml` lance tests et build sur chaque pull request qui touche l'app.

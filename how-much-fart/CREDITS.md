@@ -10,7 +10,7 @@ Texte de licence : `node_modules/@fontsource-variable/atkinson-hyperlegible-next
 
 ## Illustrations, icônes et sons
 
-Illustrations (planète-mascotte, cartes d'équivalence) et icônes faites maison en SVG : `src/ui/illustrations.tsx`, `src/ui/icons.tsx`. Les sons sont générés en Web Audio (`src/ui/sound.ts`). Aucun asset externe.
+Illustrations (planète-mascotte, cartes d'équivalence, boss, médailles, écrans vides), icônes et icône de l'app (`public/icons/`) faites maison en SVG : `src/ui/illustrations.tsx`, `src/ui/icons.tsx`. Les PNG de l'icône sont rendus depuis `public/icons/icon.svg`. Les sons sont générés en Web Audio (`src/ui/sound.ts`). Aucun asset externe.
 
 ## Données
 
@@ -29,6 +29,7 @@ Illustrations (planète-mascotte, cartes d'équivalence) et icônes faites maiso
 | --- | --- | --- |
 | Tesseract.js 7 et tesseract.js-core | Lecture du texte des tickets de caisse (OCR), dans le navigateur | Apache-2.0 |
 | @tesseract.js-data/fra (modèle de langue français de Tesseract) | Données de reconnaissance du français | Paquet npm : MIT ; modèles Tesseract : Apache-2.0 |
+| vite-plugin-pwa et Workbox | Manifeste, service worker, fonctionnement hors ligne | MIT |
 | zxing-wasm (zxing-cpp compilé en WebAssembly) | Lecture des codes-barres quand le navigateur n'a pas `BarcodeDetector` (Safari) | MIT (zxing-cpp : Apache-2.0) |
 
 Chaque entrée de `src/data/*.json` porte sa source, son année et sa date de récupération.

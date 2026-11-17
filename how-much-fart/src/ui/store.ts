@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Purchase } from '../engine/types';
-import { addPurchase, deletePurchase, listNoPurchaseDays, listPurchases, setNoPurchaseDay } from '../services/storage';
+import { addPurchase, deletePurchase, importData, listNoPurchaseDays, listPurchases, requestPersistence, setNoPurchaseDay } from '../services/storage';
 
 export type Theme = 'auto' | 'clair' | 'sombre';
 
@@ -16,7 +16,13 @@ interface SettingsState {
   setCustomMonthlyBudgetKg: (kg: number | null) => void;
   /** Dernier niveau déjà fêté : sert à ne célébrer un passage de niveau qu'une fois. */
   lastSeenLevel: number | null;
-  setLastSeenLevel: (level: number) => void;
+  setLastSeenLevel: (level: number | null) => void;
+  /** Date (ms) de la dernière sauvegarde exportée, ou du dernier rappel mis de côté. */
+  lastBackupAt: number | null;
+  setLastBackupAt: (t: number) => void;
+  /** Le conseil d'installation sur iPhone a été fermé. */
+  installTipDismissed: boolean;
+  dismissInstallTip: () => void;
 }
 
 /** Réglages mémorisés sur l'appareil (le bouton muet survit au rechargement). */
@@ -31,6 +37,10 @@ export const useSettings = create<SettingsState>()(
       setCustomMonthlyBudgetKg: (customMonthlyBudgetKg) => set({ customMonthlyBudgetKg }),
       lastSeenLevel: null,
       setLastSeenLevel: (lastSeenLevel) => set({ lastSeenLevel }),
+      lastBackupAt: null,
+      setLastBackupAt: (lastBackupAt) => set({ lastBackupAt }),
+      installTipDismissed: false,
+      dismissInstallTip: () => set({ installTipDismissed: true }),
     }),
     { name: 'hmf-settings' },
   ),
@@ -57,6 +67,7 @@ interface PurchasesStore {
   load: () => Promise<void>;
   add: (p: Purchase) => Promise<Purchase>;
   remove: (id: number) => Promise<void>;
+  importMany: (purchases: readonly Purchase[], days: readonly string[]) => Promise<void>;
 }
 
 export const usePurchases = create<PurchasesStore>()((set, get) => ({
@@ -79,8 +90,18 @@ export const usePurchases = create<PurchasesStore>()((set, get) => ({
   },
   add: async (p) => {
     const saved = await addPurchase(p);
+    // Premier achat : on demande au navigateur de protéger les données (au moment d'un geste de l'utilisateur).
+    if (get().purchases.length === 0) void requestPersistence();
     set({ purchases: [...get().purchases, saved] });
     return saved;
+  },
+  importMany: async (purchases, days) => {
+    const saved = await importData(purchases, days);
+    set({
+      purchases: [...get().purchases, ...saved],
+      noPurchaseDays: [...new Set([...get().noPurchaseDays, ...days])],
+    });
+    void requestPersistence();
   },
   remove: async (id) => {
     await deletePurchase(id);

@@ -160,7 +160,8 @@ h1 { font-size: 1.65rem; }
 h2 { font-size: 1.2rem; }
 h3 { font-size: 1rem; }
 p { margin: 0; }
-a { color: var(--brand); text-underline-offset: 3px; }
+/* Liens dans le texte : soulignés, pour ne pas reposer sur la seule couleur. */
+a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 strong { font-weight: 700; }
 
 :focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
@@ -178,7 +179,7 @@ strong { font-weight: 700; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-.card__title { font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; }
+.card__title { font-size: 1rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.3rem; }
 
 /* ---------- Boutons ---------- */
 .btn {
@@ -621,6 +622,67 @@ a.pill:hover { background: var(--surface-2); }
 .art-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; }
 @media (min-width: 640px) { .art-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 .art-grid .eq-card__art { border-radius: var(--radius-sm); aspect-ratio: 1; }
+
+/* ---------- PWA : bandeaux, conseils, installation ---------- */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 650;
+  text-decoration: none;
+}
+.skip-link:focus { top: calc(0.5rem + env(safe-area-inset-top)); }
+.app__main:focus { outline: none; }
+
+.offline-bar {
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: 0.88rem;
+}
+.toast {
+  /* Centré par les marges, pas par une transformation : l'animation d'apparition en utilise une. */
+  position: fixed;
+  z-index: 40;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: calc(6.2rem + env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 0.7rem;
+  align-items: center;
+  width: min(30rem, calc(100% - 2rem));
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-raised);
+  animation: rise 0.3s var(--ease) both;
+}
+.toast__actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-end; }
+@media (min-width: 900px) { .toast { bottom: 1.5rem; left: auto; right: 1.5rem; margin: 0; } }
+
+.notice {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+.notice > svg { margin-top: 0.15rem; color: var(--brand); }
+.notice__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.6rem; }
+
+.steps { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.6rem; list-style: decimal; }
+.steps li::marker { font-weight: 700; color: var(--ink-2); }
+.inline-icon { display: inline-flex; vertical-align: -0.25em; color: var(--brand); }
 
 /* ---------- Animations : fluides et discrètes ---------- */
 .screen { animation: rise 0.28s var(--ease) both; }

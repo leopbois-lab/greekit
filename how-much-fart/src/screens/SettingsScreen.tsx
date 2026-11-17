@@ -4,6 +4,7 @@ import { parseQuantity } from '../engine/compute';
 import { formatKg } from '../engine/format';
 import { MuteButton, Button, Card, ButtonLink } from '../ui/components';
 import { useSettings, type Theme } from '../ui/store';
+import { DataCard } from '../ui/DataCard';
 import { useBudget } from '../ui/useBudget';
 
 export function SettingsScreen() {
@@ -16,7 +17,7 @@ export function SettingsScreen() {
   const [message, setMessage] = useState<string | null>(null);
 
   return (
-    <div className="flex flex-col gap-7">
+    <div className="flex flex-col gap-6">
       <h1>Réglages</h1>
       <Card title="Son">
         <div className="mt-2 flex items-center gap-3">
@@ -88,15 +89,26 @@ export function SettingsScreen() {
         </form>
       </Card>
 
-      <Card title="Données">
-        <p className="mt-2 muted">Export et import JSON : étape 6.</p>
+      <DataCard />
+
+      <Card title="Installer l’app">
+        <p className="mt-2">Sur l’écran d’accueil, l’app s’ouvre en plein écran et marche hors ligne.</p>
+        <div className="mt-3">
+          <ButtonLink to="/installer" variant="secondary">Voir comment faire</ButtonLink>
+        </div>
       </Card>
-      <Card title="Design system">
-        <p className="mt-2">Tous les composants pixel, la palette, les polices et les sons.</p>
+
+      <Card title="Composants">
+        <p className="mt-2">La palette, les illustrations, les icônes et les sons de l’app.</p>
         <div className="mt-3">
           <ButtonLink to="/galerie" variant="secondary">Ouvrir la galerie</ButtonLink>
         </div>
       </Card>
+
+      <p className="small muted">
+        Données : Impact CO2 et Base Carbone (ADEME), Agribalyse, Open Food Facts (ODbL), Insee. Détail des sources et des
+        limites dans le fichier README du projet.
+      </p>
     </div>
   );
 }
