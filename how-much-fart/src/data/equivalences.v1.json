@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16",
+  "generatedAt": "2026-11-17",
   "budget": {
     "annualKgPerPerson": 8300,
     "dataYear": 2025,
@@ -9,7 +9,7 @@
       "name": "Insee Première n° 2130 (Insee / SDES, octobre 2026)",
       "url": "https://www.insee.fr/fr/statistiques/9074153"
     },
-    "retrievedAt": "2026-11-16",
+    "retrievedAt": "2026-11-17",
     "note": "Estimation provisoire, révisée chaque année."
   },
   "equivalences": [
@@ -23,7 +23,7 @@
         "url": "https://impactco2.fr/outils/transport/voiturethermique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "car",
@@ -39,7 +39,7 @@
         "url": "https://impactco2.fr/outils/transport/tgv"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "train",
@@ -55,7 +55,7 @@
         "url": "https://impactco2.fr/outils/caspratiques/avion-pny"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "plane",
@@ -68,7 +68,7 @@
       "unit": "kg CO2e",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Pas de source fiable pour le méthane émis par « pet » : chiffre non forcé.",
       "mode": "ratio",
@@ -85,7 +85,7 @@
         "url": "https://impactco2.fr/outils/alimentation/boeuf"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "steak",
@@ -101,7 +101,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/streamingvideo"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "screen"
@@ -113,7 +113,7 @@
       "unit": "kg CO2e",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Énergie d’une recharge complète : pas de source vérifiée.",
       "mode": "ratio",
@@ -129,7 +129,7 @@
         "url": "https://impactco2.fr/outils/numerique/smartphone"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "phone",
@@ -145,7 +145,7 @@
         "url": "https://impactco2.fr/outils/habillement/jeans"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "jeans",
@@ -158,7 +158,7 @@
       "unit": "kg CO2e",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Dépend du volume d’eau, de la température et du chauffe-eau : pas de source vérifiée.",
       "mode": "ratio",
@@ -174,7 +174,7 @@
         "url": "https://impactco2.fr/outils/chauffage/chauffagegaz"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "flame",
@@ -190,24 +190,27 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2021,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "fuel",
       "hypothesis": "Combustion et production du carburant."
     },
     {
-      "id": "arbres",
-      "label": "arbres pour absorber ça en un an",
-      "value": null,
-      "unit": "kg CO2e",
-      "source": null,
-      "dataYear": null,
-      "retrievedAt": "2026-11-16",
-      "status": "à compléter",
-      "note": "L’absorption annuelle d’un arbre varie énormément selon l’espèce, l’âge et le lieu : chiffre non forcé.",
-      "mode": "ratio",
-      "sprite": "tree"
+      "id": "temps-arbre",
+      "label": "pour qu’un arbre adulte absorbe ce CO2",
+      "value": 22,
+      "unit": "kg CO2 absorbés par arbre et par an",
+      "source": {
+        "name": "Agence européenne pour l’environnement, « Forests, health and climate change » (2011)",
+        "url": "https://www.eea.europa.eu/en/analysis/publications/forests-health-and-climate-change"
+      },
+      "dataYear": 2011,
+      "retrievedAt": "2026-11-17",
+      "status": "ok",
+      "mode": "duree",
+      "sprite": "tree",
+      "hypothesis": "Un arbre adulte absorbe environ 22 kg de CO2 par an. Ordre de grandeur : cela varie beaucoup selon l’espèce, l’âge et le climat, et ce chiffre porte sur le CO2 seul."
     },
     {
       "id": "banquise",
@@ -219,7 +222,7 @@
         "url": "https://doi.org/10.1126/science.aag2345"
       },
       "dataYear": 2016,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "ice",
@@ -235,7 +238,7 @@
         "url": "https://physics.nist.gov/cgi-bin/cuu/Value?r"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "ratio",
       "sprite": "balloon",
@@ -251,7 +254,7 @@
         "url": "https://impactco2.fr/outils/caspratiques/2050"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "pourcentage",
       "sprite": "target",
@@ -267,7 +270,7 @@
         "url": "https://www.insee.fr/fr/statistiques/9074153"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "mode": "pourcentage",
       "sprite": "flag",

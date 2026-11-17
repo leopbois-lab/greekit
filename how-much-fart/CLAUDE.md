@@ -1,4 +1,6 @@
-# How much fart
+# The carbon quest
+
+_Anciennement « How much fart » : le dossier `how-much-fart/`, la base IndexedDB, la clé des réglages et l’identifiant des sauvegardes gardent l’ancien nom pour ne pas perdre les données existantes._
 
 Web app installable (PWA, responsive PC + mobile) qui calcule l'empreinte carbone (kg CO2e) des achats de l'utilisateur et la rend fun avec une planète-mascotte à garder en forme, dans une interface moderne et épurée. Interface en français. Pas de backend, pas de compte.
 
@@ -58,9 +60,11 @@ Chaque achat propose une alternative moins émettrice (facteur sourcé plus bas 
 
 ## Équivalences
 
-Chaque total s'affiche en cartes animées avec une illustration : km en voiture thermique, km en TGV, vols Paris–New York, pets de vache (info-bulle : en vrai ce sont surtout des rots), steaks de bœuf, heures de streaming, recharges de smartphone, smartphones fabriqués, jeans, douches chaudes, jours de chauffage, litres d'essence, arbres pour absorber ça en un an, m² de banquise fondue, ballons remplis de CO2, % du budget annuel de 2 t CO2e, comparaison à la moyenne française.
+Chaque total s'affiche en cartes animées avec une illustration : km en voiture thermique, km en TGV, vols Paris–New York, pets de vache (info-bulle : en vrai ce sont surtout des rots), steaks de bœuf, heures de streaming, recharges de smartphone, smartphones fabriqués, jeans, douches chaudes, jours de chauffage, litres d'essence, m² de banquise fondue, ballons remplis de CO2, % du budget annuel de 2 t CO2e, comparaison à la moyenne française.
 
-Chaque conversion est sourcée comme un facteur. « Pets de vache », « arbres » et « banquise » sont les plus fragiles : ne pas forcer un chiffre. Pour les ballons, expliciter l'hypothèse de volume.
+Chaque conversion est sourcée comme un facteur. « Pets de vache » et « banquise » sont les plus fragiles : ne pas forcer un chiffre. Pour les ballons, expliciter l'hypothèse de volume. Les équivalences « à compléter » ne s'affichent pas dans l'app.
+
+Chaque fiche d'achat affiche aussi le temps qu'il faudrait à un arbre adulte pour absorber ce CO2 (environ 22 kg par an, Agence européenne pour l'environnement, 2011 ; vérifié dans le rapport le 17/11/2026).
 
 ## Direction artistique
 
@@ -153,3 +157,9 @@ Accueil (planète, barre de vie, bouton « Ajouter »), ajout (3 modes), fiche r
 - Aide à l'installation : écran `/installer`, conseil sur l'accueil pour Safari iPhone hors app installée ; bouton natif quand le navigateur propose `beforeinstallprompt`.
 - Accessibilité : audit axe-core (règles WCAG 2.1 AA et bonnes pratiques) sur tous les écrans, en clair et en sombre : aucune violation après correction. Lien « Aller au contenu », titre de page par écran, liens soulignés dans le texte.
 - CI : `.github/workflows/how-much-fart-ci.yml` lance tests et build sur chaque pull request qui touche l'app.
+
+## Changements du 17/11/2026
+
+- App renommée « The carbon quest » (nom affiché, manifeste, titre des pages, nom du fichier de sauvegarde). Identifiants internes inchangés : dossier `how-much-fart/`, base IndexedDB `how-much-fart`, réglages `hmf-settings`, champ `app` des sauvegardes.
+- Les équivalences sans source (pets de vache, recharges de smartphone, douches chaudes) ne sont plus listées sous « C’est comme… ».
+- Nouvelle équivalence `temps-arbre` (mode `duree` : total ÷ 22 kg par an = années), affichée dans une carte dédiée sur chaque fiche d'achat. Elle remplace l'entrée « arbres pour absorber ça en un an », qui était « à compléter ».

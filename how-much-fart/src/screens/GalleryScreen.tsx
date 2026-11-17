@@ -4,6 +4,7 @@ import { CATEGORY_CHART_ORDER } from '../engine/stats';
 import { PLANET_LABELS, PLANET_STATES, planetStateFromHealth } from '../engine/planet';
 import { Button, Card, EmptyState, HealthBar, LevelUp, Meter, MuteButton, Planet } from '../ui/components';
 import { EquivalenceCards } from '../ui/EquivalenceCards';
+import { TreeTime } from '../ui/TreeTime';
 import { Icon, type IconName } from '../ui/icons';
 import { BossArt, EQUIVALENCE_ART_NAMES, EquivalenceArt, MedalArt, PlanetIllustration } from '../ui/illustrations';
 import { playSfx, SFX_NAMES, type SfxName } from '../ui/sound';
@@ -113,6 +114,7 @@ export function GalleryScreen() {
       <Card title="Cartes d’équivalence">
         <p className="small muted mt-1 mb-4">Exemple pour 100 kg CO2e.</p>
         <EquivalenceCards kgCO2e={100} />
+        <div className="mt-4"><TreeTime kgCO2e={100} /></div>
       </Card>
 
       <Card title="Illustrations">

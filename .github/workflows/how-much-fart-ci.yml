@@ -1,4 +1,4 @@
-name: How much fart CI
+name: The carbon quest CI
 
 # Tests et build de l'app web à chaque pull request qui la touche.
 on:

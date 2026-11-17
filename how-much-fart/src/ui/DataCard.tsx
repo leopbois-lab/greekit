@@ -35,7 +35,7 @@ export function DataCard() {
       // Sur iPhone, la feuille de partage permet d'enregistrer le fichier dans « Fichiers » ou de l'envoyer.
       const shareable = new File([blob], name, { type: 'application/json' });
       if (isIos() && navigator.canShare?.({ files: [shareable] })) {
-        await navigator.share({ files: [shareable], title: 'Sauvegarde How much fart' });
+        await navigator.share({ files: [shareable], title: 'Sauvegarde The carbon quest' });
       } else {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');

@@ -70,8 +70,8 @@ export const equivalenceSchema = z
     ...baseEntry,
     /** Libellé au pluriel, affiché après le nombre : « km en voiture thermique ». */
     label: z.string().min(1),
-    /** `ratio` : total ÷ valeur. `pourcentage` : total ÷ valeur × 100. */
-    mode: z.enum(['ratio', 'pourcentage']),
+    /** `ratio` : total ÷ valeur. `pourcentage` : total ÷ valeur × 100. `duree` : total ÷ valeur annuelle = années. */
+    mode: z.enum(['ratio', 'pourcentage', 'duree']),
     sprite: z.string().min(1),
     hypothesis: z.string().optional(),
     tooltip: z.string().optional(),

@@ -16,7 +16,7 @@ describe('export', () => {
     expect(file).toMatchObject({ app: 'how-much-fart', version: 1, noPurchaseDays: ['2026-11-14'], settings: { theme: 'sombre', customMonthlyBudgetKg: 500 } });
     expect(file.purchases).toHaveLength(2);
     expect('id' in file.purchases[0]).toBe(false);
-    expect(exportFileName(NOW)).toBe('how-much-fart-2026-11-17.json');
+    expect(exportFileName(NOW)).toBe('the-carbon-quest-2026-11-17.json');
   });
   it('se relit à l’identique (aller-retour)', () => {
     const file = buildExport([p()], ['2026-11-14'], { muted: true }, NOW);
@@ -30,7 +30,7 @@ describe('import', () => {
   const valid = () => buildExport([p()], [], {}, NOW);
   it('refuse un fichier illisible, étranger ou trop récent, avec un message clair', () => {
     expect(parseExport('pas du json')).toEqual({ ok: false, error: expect.stringContaining('JSON') });
-    expect(parseExport(JSON.stringify({ app: 'autre', purchases: [] }))).toEqual({ ok: false, error: expect.stringContaining('How much fart') });
+    expect(parseExport(JSON.stringify({ app: 'autre', purchases: [] }))).toEqual({ ok: false, error: expect.stringContaining('The carbon quest') });
     expect(parseExport(JSON.stringify({ ...valid(), version: 2 }))).toEqual({ ok: false, error: expect.stringContaining('plus récente') });
     expect(parseExport('null')).toMatchObject({ ok: false });
   });

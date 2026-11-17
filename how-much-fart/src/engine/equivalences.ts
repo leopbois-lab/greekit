@@ -2,7 +2,7 @@ import type { Equivalence } from '../data/schema';
 
 export interface EquivalenceResult {
   equivalence: Equivalence;
-  /** Nombre d'unités (ou pourcentage si `mode === 'pourcentage'`). */
+  /** Nombre d'unités, pourcentage si `mode === 'pourcentage'`, années si `mode === 'duree'`. */
   count: number;
 }
 

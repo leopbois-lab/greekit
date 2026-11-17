@@ -4,7 +4,7 @@ import factorsJson from '../data/factors.v1.json';
 import { equivalencesFileSchema, factorsFileSchema, type Equivalence, type Factor } from '../data/schema';
 import { computePurchase, confidenceFor, parseQuantity } from './compute';
 import { computeEquivalences } from './equivalences';
-import { formatCount, formatDate, formatKg, toDateKey } from './format';
+import { formatCount, formatDate, formatKg, formatYears, toDateKey } from './format';
 import { filterPurchases, monthlyBudgetKg, monthTotalKg, periodStart, totalKg } from './history';
 import { normalize, pendingFactors, searchFactors } from './search';
 import type { Purchase } from './types';
@@ -105,6 +105,10 @@ describe('computeEquivalences', () => {
     expect(results).toHaveLength(1);
     expect(pending.map((p) => p.id)).toEqual(['vache']);
   });
+  it('calcule une durée en années (arbre : 22 kg par an)', () => {
+    const { results } = computeEquivalences(11, [eq({ id: 'arbre', mode: 'duree', value: 22 })]);
+    expect(results[0].count).toBe(0.5);
+  });
   it('renvoie zéro pour un total nul ou invalide', () => {
     expect(computeEquivalences(Number.NaN, [eq({})]).results[0].count).toBe(0);
     expect(computeEquivalences(-5, [eq({})]).results[0].count).toBe(0);
@@ -126,6 +130,16 @@ describe('format', () => {
     expect(formatKg(2060)).toBe('2,06 t CO2e');
     expect(formatKg(0)).toBe('0 g CO2e');
     expect(formatKg(0.0002)).toBe('< 1 g CO2e');
+  });
+  it('formatYears exprime une durée en jours, mois ou ans', () => {
+    expect(formatYears(0)).toBe('moins d’un jour');
+    expect(formatYears(1 / 730)).toBe('moins d’un jour');
+    expect(formatYears(1 / 365)).toBe('1 jour');
+    expect(formatYears(10 / 365)).toBe('10 jours');
+    expect(formatYears(0.5)).toBe('6 mois');
+    expect(formatYears(14 / 22)).toBe('8 mois');
+    expect(s(formatYears(2.3))).toBe('2,5 ans');
+    expect(s(formatYears(93.6))).toBe('94 ans');
   });
   it('gère les dates locales', () => {
     expect(toDateKey(new Date(2026, 0, 5))).toBe('2026-01-05');

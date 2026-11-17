@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16",
+  "generatedAt": "2026-11-17",
   "licences": [
     {
       "name": "Impact CO2 (ADEME)",
@@ -29,7 +29,7 @@
         "url": "https://impactco2.fr/outils/alimentation/boeuf"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "viandes",
@@ -45,7 +45,7 @@
         "url": "https://impactco2.fr/outils/alimentation/veau"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "viandes",
@@ -61,7 +61,7 @@
         "url": "https://impactco2.fr/outils/alimentation/porc"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "viandes",
@@ -77,7 +77,7 @@
         "url": "https://impactco2.fr/outils/alimentation/canard"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "viandes",
@@ -93,7 +93,7 @@
         "url": "https://impactco2.fr/outils/alimentation/lapin"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "viandes",
@@ -109,7 +109,7 @@
         "url": "https://impactco2.fr/outils/alimentation/poulet"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "viandes",
@@ -125,7 +125,7 @@
         "url": "https://impactco2.fr/outils/alimentation/crevettes"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -141,7 +141,7 @@
         "url": "https://impactco2.fr/outils/alimentation/moules"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -157,7 +157,7 @@
         "url": "https://impactco2.fr/outils/alimentation/huitres"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -173,7 +173,7 @@
         "url": "https://impactco2.fr/outils/alimentation/cabillaud"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -189,7 +189,7 @@
         "url": "https://impactco2.fr/outils/alimentation/lieu"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -205,7 +205,7 @@
         "url": "https://impactco2.fr/outils/alimentation/dorade"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -221,7 +221,7 @@
         "url": "https://impactco2.fr/outils/alimentation/saumon"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -237,7 +237,7 @@
         "url": "https://impactco2.fr/outils/alimentation/thon"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -253,7 +253,7 @@
         "url": "https://impactco2.fr/outils/alimentation/sardines"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "poissons et fruits de mer",
@@ -269,7 +269,7 @@
         "url": "https://impactco2.fr/outils/alimentation/beurre"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -285,7 +285,7 @@
         "url": "https://impactco2.fr/outils/alimentation/fromagedure"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -301,7 +301,7 @@
         "url": "https://impactco2.fr/outils/alimentation/feta"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -317,7 +317,7 @@
         "url": "https://impactco2.fr/outils/alimentation/fromagemolle"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -333,7 +333,7 @@
         "url": "https://impactco2.fr/outils/alimentation/mozarella"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -349,7 +349,7 @@
         "url": "https://impactco2.fr/outils/alimentation/fromagebleu"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -365,7 +365,7 @@
         "url": "https://impactco2.fr/outils/alimentation/oeuf"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -381,7 +381,7 @@
         "url": "https://impactco2.fr/outils/alimentation/matieregrasse"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -397,7 +397,7 @@
         "url": "https://impactco2.fr/outils/alimentation/yaourt"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -413,7 +413,7 @@
         "url": "https://impactco2.fr/outils/alimentation/fromageblanc"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "oeufs et produits laitiers",
@@ -429,7 +429,7 @@
         "url": "https://impactco2.fr/outils/alimentation/riz"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "céréales et légumineuses",
@@ -445,7 +445,7 @@
         "url": "https://impactco2.fr/outils/alimentation/pates"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "céréales et légumineuses",
@@ -461,7 +461,7 @@
         "url": "https://impactco2.fr/outils/alimentation/ble"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "céréales et légumineuses",
@@ -477,7 +477,7 @@
         "url": "https://impactco2.fr/outils/alimentation/boulgour"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "céréales et légumineuses",
@@ -493,7 +493,7 @@
         "url": "https://impactco2.fr/outils/alimentation/poischiches"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "céréales et légumineuses",
@@ -509,7 +509,7 @@
         "url": "https://impactco2.fr/outils/alimentation/haricotsrouges"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "céréales et légumineuses",
@@ -525,7 +525,7 @@
         "url": "https://impactco2.fr/outils/alimentation/lentilles"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "céréales et légumineuses",
@@ -541,7 +541,7 @@
         "url": "https://impactco2.fr/outils/alimentation/cheeseburger"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "plats préparés",
@@ -557,7 +557,7 @@
         "url": "https://impactco2.fr/outils/alimentation/kebab"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "plats préparés",
@@ -573,7 +573,7 @@
         "url": "https://impactco2.fr/outils/alimentation/burgerpoulet"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "plats préparés",
@@ -589,7 +589,7 @@
         "url": "https://impactco2.fr/outils/alimentation/pizza"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "plats préparés",
@@ -605,7 +605,7 @@
         "url": "https://impactco2.fr/outils/alimentation/sushis"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "plats préparés",
@@ -621,7 +621,7 @@
         "url": "https://impactco2.fr/outils/alimentation/burgervegetarien"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "plats préparés",
@@ -637,7 +637,7 @@
         "url": "https://impactco2.fr/outils/alimentation/frites"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "plats préparés",
@@ -653,7 +653,7 @@
         "url": "https://impactco2.fr/outils/alimentation/tofu"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "alternatives végétariennes",
@@ -669,7 +669,7 @@
         "url": "https://impactco2.fr/outils/alimentation/boucheechocolat"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -685,7 +685,7 @@
         "url": "https://impactco2.fr/outils/alimentation/pateatartiner"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -701,7 +701,7 @@
         "url": "https://impactco2.fr/outils/alimentation/brownie"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -717,7 +717,7 @@
         "url": "https://impactco2.fr/outils/alimentation/painauchocolat"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -733,7 +733,7 @@
         "url": "https://impactco2.fr/outils/alimentation/cookie"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -749,7 +749,7 @@
         "url": "https://impactco2.fr/outils/alimentation/madeleine"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -765,7 +765,7 @@
         "url": "https://impactco2.fr/outils/alimentation/painauxraisins"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -781,7 +781,7 @@
         "url": "https://impactco2.fr/outils/alimentation/chaussonauxpommes"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -797,7 +797,7 @@
         "url": "https://impactco2.fr/outils/alimentation/croissant"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -813,7 +813,7 @@
         "url": "https://impactco2.fr/outils/alimentation/paindemie"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -829,7 +829,7 @@
         "url": "https://impactco2.fr/outils/alimentation/bonbons"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -845,7 +845,7 @@
         "url": "https://impactco2.fr/outils/alimentation/baguette"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "en-cas",
@@ -861,7 +861,7 @@
         "url": "https://impactco2.fr/outils/alimentation/pommedeterre"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -877,7 +877,7 @@
         "url": "https://impactco2.fr/outils/alimentation/boulettesvegetales"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "alternatives végétariennes",
@@ -893,7 +893,7 @@
         "url": "https://impactco2.fr/outils/alimentation/galettefromage"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "alternatives végétariennes",
@@ -909,7 +909,7 @@
         "url": "https://impactco2.fr/outils/alimentation/galettevegetale"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "alternatives végétariennes",
@@ -925,7 +925,7 @@
         "url": "https://impactco2.fr/outils/alimentation/hachevegetal"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "alternatives végétariennes",
@@ -941,7 +941,7 @@
         "url": "https://impactco2.fr/outils/alimentation/nuggetsvegetaux"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "alternatives végétariennes",
@@ -957,7 +957,7 @@
         "url": "https://impactco2.fr/outils/alimentation/saucissevegetale"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "alternatives végétariennes",
@@ -973,7 +973,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/fraise"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -989,7 +989,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/pomme"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1005,7 +1005,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/orange"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1021,7 +1021,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/citron"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1037,7 +1037,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/ail"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1053,7 +1053,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/artichaut"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1069,7 +1069,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/asperge"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1085,7 +1085,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/betterave"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1101,7 +1101,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/blette"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1117,7 +1117,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/carotte"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1133,7 +1133,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/celeri"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1149,7 +1149,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/champignonmorille"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1165,7 +1165,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/chou"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1181,7 +1181,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/choudebruxelles"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1197,7 +1197,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/choufleur"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1213,7 +1213,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/concombre"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1229,7 +1229,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/courge"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1245,7 +1245,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/courgette"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1261,7 +1261,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/cresson"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1277,7 +1277,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/echalote"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1293,7 +1293,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/endive"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1309,7 +1309,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/epinard"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1325,7 +1325,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/mangue"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1341,7 +1341,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/manguebateau"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1357,7 +1357,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/fenouil"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1373,7 +1373,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/haricotvert"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1389,7 +1389,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/laitue"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1405,7 +1405,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/mache"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1421,7 +1421,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/navet"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1437,7 +1437,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/mais"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1453,7 +1453,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/oignon"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1469,7 +1469,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/panais"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1485,7 +1485,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/petitpois"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1501,7 +1501,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/poireau"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1517,7 +1517,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/poivron"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1533,7 +1533,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/potiron"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1549,7 +1549,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/radis"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1565,7 +1565,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/salsifis"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1581,7 +1581,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/topinambour"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1597,7 +1597,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/cassis"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1613,7 +1613,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/chataigne"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1629,7 +1629,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/clementine"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1645,7 +1645,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/pamplemousse"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1661,7 +1661,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/coing"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1677,7 +1677,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/figue"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1693,7 +1693,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/groseille"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1709,7 +1709,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/kiwi"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1725,7 +1725,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/mandarine"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1741,7 +1741,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/melon"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1757,7 +1757,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/mure"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1773,7 +1773,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/nectarine"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1789,7 +1789,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/myrtille"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1805,7 +1805,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/noisette"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1821,7 +1821,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/noix"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1837,7 +1837,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/prune"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1853,7 +1853,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/reineclaude"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1869,7 +1869,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/rhubarbe"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1885,7 +1885,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/peche"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1901,7 +1901,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/cerise"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1917,7 +1917,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/abricot"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1933,7 +1933,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/framboise"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1949,7 +1949,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/poire"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1965,7 +1965,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/raisin"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1981,7 +1981,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/aubergine"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -1997,7 +1997,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/brocoli"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2013,7 +2013,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/tomate"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2029,7 +2029,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/ananas"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2045,7 +2045,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/banane"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2061,7 +2061,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/avocat"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2077,7 +2077,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/carambole"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2093,7 +2093,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/datte"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2109,7 +2109,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/fruitdelapassion"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2125,7 +2125,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/grenade"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2141,7 +2141,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/kaki"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2157,7 +2157,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/noixdecoco"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2173,7 +2173,7 @@
         "url": "https://impactco2.fr/outils/fruitsetlegumes/pasteque"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "alimentation",
       "family": "fruits et légumes",
@@ -2189,7 +2189,7 @@
         "url": "https://impactco2.fr/outils/boisson/eaudurobinet"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2205,7 +2205,7 @@
         "url": "https://impactco2.fr/outils/boisson/eauenbouteille"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2221,7 +2221,7 @@
         "url": "https://impactco2.fr/outils/boisson/soda"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2237,7 +2237,7 @@
         "url": "https://impactco2.fr/outils/boisson/biere"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2253,7 +2253,7 @@
         "url": "https://impactco2.fr/outils/boisson/vin"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2269,7 +2269,7 @@
         "url": "https://impactco2.fr/outils/boisson/laitdevache"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2285,7 +2285,7 @@
         "url": "https://impactco2.fr/outils/boisson/soja"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2301,7 +2301,7 @@
         "url": "https://impactco2.fr/outils/boisson/the"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2317,7 +2317,7 @@
         "url": "https://impactco2.fr/outils/boisson/cafe"
       },
       "dataYear": 2025,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "boissons",
       "family": "boissons",
@@ -2333,7 +2333,7 @@
         "url": "https://impactco2.fr/outils/habillement/jeans"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2350,7 +2350,7 @@
         "url": "https://impactco2.fr/outils/habillement/polo"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2367,7 +2367,7 @@
         "url": "https://impactco2.fr/outils/habillement/tshirtencoton"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2384,7 +2384,7 @@
         "url": "https://impactco2.fr/outils/habillement/tshirtenpolyester"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2401,7 +2401,7 @@
         "url": "https://impactco2.fr/outils/habillement/sweatencoton"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2418,7 +2418,7 @@
         "url": "https://impactco2.fr/outils/habillement/chemiseencoton"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2435,7 +2435,7 @@
         "url": "https://impactco2.fr/outils/habillement/chemiseenviscose"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2452,7 +2452,7 @@
         "url": "https://impactco2.fr/outils/habillement/chaussuresencuir"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2469,7 +2469,7 @@
         "url": "https://impactco2.fr/outils/habillement/chaussuresentissu"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2486,7 +2486,7 @@
         "url": "https://impactco2.fr/outils/habillement/chaussuresdesport"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2503,7 +2503,7 @@
         "url": "https://impactco2.fr/outils/habillement/robeencoton"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2520,7 +2520,7 @@
         "url": "https://impactco2.fr/outils/habillement/robeenpolyester"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2537,7 +2537,7 @@
         "url": "https://impactco2.fr/outils/habillement/robeenviscose"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2554,7 +2554,7 @@
         "url": "https://impactco2.fr/outils/habillement/pullenlaine"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2571,7 +2571,7 @@
         "url": "https://impactco2.fr/outils/habillement/pullenacrylique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2588,7 +2588,7 @@
         "url": "https://impactco2.fr/outils/habillement/pullencotonrecycle"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2605,7 +2605,7 @@
         "url": "https://impactco2.fr/outils/habillement/manteau"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2622,7 +2622,7 @@
         "url": "https://impactco2.fr/outils/habillement/vesteimpermeable"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2639,7 +2639,7 @@
         "url": "https://impactco2.fr/outils/habillement/vestesimilicuir"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "vetements",
@@ -2656,7 +2656,7 @@
         "url": "https://impactco2.fr/outils/numerique/smartphone"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2673,7 +2673,7 @@
         "url": "https://impactco2.fr/outils/numerique/ordinateurfixeparticulier"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2690,7 +2690,7 @@
         "url": "https://impactco2.fr/outils/numerique/ordinateurfixeprofessionnel"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2707,7 +2707,7 @@
         "url": "https://impactco2.fr/outils/numerique/ecran"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2724,7 +2724,7 @@
         "url": "https://impactco2.fr/outils/numerique/tabletteclassique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2741,7 +2741,7 @@
         "url": "https://impactco2.fr/outils/numerique/television"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2758,7 +2758,7 @@
         "url": "https://impactco2.fr/outils/numerique/ordinateurportable"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2775,7 +2775,7 @@
         "url": "https://impactco2.fr/outils/numerique/enceintebluetooth"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2792,7 +2792,7 @@
         "url": "https://impactco2.fr/outils/numerique/telephonebasique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2809,7 +2809,7 @@
         "url": "https://impactco2.fr/outils/numerique/casquevr"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2826,7 +2826,7 @@
         "url": "https://impactco2.fr/outils/numerique/alimentationordinateur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2843,7 +2843,7 @@
         "url": "https://impactco2.fr/outils/numerique/alimentationsmartphone"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2860,7 +2860,7 @@
         "url": "https://impactco2.fr/outils/numerique/disquedur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2877,7 +2877,7 @@
         "url": "https://impactco2.fr/outils/numerique/ssd"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2894,7 +2894,7 @@
         "url": "https://impactco2.fr/outils/numerique/clefusb"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2911,7 +2911,7 @@
         "url": "https://impactco2.fr/outils/numerique/box"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2928,7 +2928,7 @@
         "url": "https://impactco2.fr/outils/numerique/videoprojecteur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electronique",
@@ -2945,7 +2945,7 @@
         "url": "https://impactco2.fr/outils/electromenager/bouilloire"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -2962,7 +2962,7 @@
         "url": "https://impactco2.fr/outils/electromenager/cafetieredosette"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -2979,7 +2979,7 @@
         "url": "https://impactco2.fr/outils/electromenager/cafetierefiltre"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -2996,7 +2996,7 @@
         "url": "https://impactco2.fr/outils/electromenager/cafetiereexpresso"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3013,7 +3013,7 @@
         "url": "https://impactco2.fr/outils/electromenager/fourelectrique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3030,7 +3030,7 @@
         "url": "https://impactco2.fr/outils/electromenager/lavevaisselle"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3047,7 +3047,7 @@
         "url": "https://impactco2.fr/outils/electromenager/lavelinge"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3064,7 +3064,7 @@
         "url": "https://impactco2.fr/outils/electromenager/refrigirateur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3081,7 +3081,7 @@
         "url": "https://impactco2.fr/outils/electromenager/aspirateur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3098,7 +3098,7 @@
         "url": "https://impactco2.fr/outils/electromenager/climatiseur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3115,7 +3115,7 @@
         "url": "https://impactco2.fr/outils/electromenager/microondes"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Fabrication, distribution et fin de vie ; phase d’usage retirée. Année de la donnée non précisée par la source.",
       "category": "electromenager",
@@ -3132,7 +3132,7 @@
         "url": "https://impactco2.fr/outils/mobilier/canapeconvertible"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "mobilier",
@@ -3149,7 +3149,7 @@
         "url": "https://impactco2.fr/outils/mobilier/chaiseenbois"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "mobilier",
@@ -3166,7 +3166,7 @@
         "url": "https://impactco2.fr/outils/mobilier/tableenbois"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "mobilier",
@@ -3183,7 +3183,7 @@
         "url": "https://impactco2.fr/outils/mobilier/canapetextile"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "mobilier",
@@ -3200,7 +3200,7 @@
         "url": "https://impactco2.fr/outils/mobilier/armoire"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "mobilier",
@@ -3217,7 +3217,7 @@
         "url": "https://impactco2.fr/outils/mobilier/lit"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "mobilier",
@@ -3234,7 +3234,7 @@
         "url": "https://impactco2.fr/outils/transport/avion-courtcourrier"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3251,7 +3251,7 @@
         "url": "https://impactco2.fr/outils/transport/avion-moyencourrier"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3268,7 +3268,7 @@
         "url": "https://impactco2.fr/outils/transport/avion-moyenlongcourrier"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3285,7 +3285,7 @@
         "url": "https://impactco2.fr/outils/transport/avion-longcourrier"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3302,7 +3302,7 @@
         "url": "https://impactco2.fr/outils/transport/tgv"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3319,7 +3319,7 @@
         "url": "https://impactco2.fr/outils/transport/intercites"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3336,7 +3336,7 @@
         "url": "https://impactco2.fr/outils/transport/voiturethermique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3353,7 +3353,7 @@
         "url": "https://impactco2.fr/outils/transport/voitureelectrique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3370,7 +3370,7 @@
         "url": "https://impactco2.fr/outils/transport/autocar"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3387,7 +3387,7 @@
         "url": "https://impactco2.fr/outils/transport/velo"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3404,7 +3404,7 @@
         "url": "https://impactco2.fr/outils/transport/veloelectrique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3421,7 +3421,7 @@
         "url": "https://impactco2.fr/outils/transport/busthermique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3438,7 +3438,7 @@
         "url": "https://impactco2.fr/outils/transport/tramway"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3455,7 +3455,7 @@
         "url": "https://impactco2.fr/outils/transport/metro"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3472,7 +3472,7 @@
         "url": "https://impactco2.fr/outils/transport/scooter"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3489,7 +3489,7 @@
         "url": "https://impactco2.fr/outils/transport/moto"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3506,7 +3506,7 @@
         "url": "https://impactco2.fr/outils/transport/rer"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3523,7 +3523,7 @@
         "url": "https://impactco2.fr/outils/transport/ter"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3540,7 +3540,7 @@
         "url": "https://impactco2.fr/outils/transport/buselectrique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3557,7 +3557,7 @@
         "url": "https://impactco2.fr/outils/transport/trottinette"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3574,7 +3574,7 @@
         "url": "https://impactco2.fr/outils/transport/campingcar"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3591,7 +3591,7 @@
         "url": "https://impactco2.fr/outils/transport/scooterelectrique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3608,7 +3608,7 @@
         "url": "https://impactco2.fr/outils/transport/triporteurelectrique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3625,7 +3625,7 @@
         "url": "https://impactco2.fr/outils/transport/van"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3642,7 +3642,7 @@
         "url": "https://impactco2.fr/outils/transport/voiturehybride"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Par personne et par km, construction du véhicule incluse. Année de la donnée non précisée par la source.",
       "category": "transport",
@@ -3659,7 +3659,7 @@
         "url": "https://impactco2.fr/outils/chauffage/chauffagegaz"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3676,7 +3676,7 @@
         "url": "https://impactco2.fr/outils/chauffage/chauffagefioul"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3693,7 +3693,7 @@
         "url": "https://impactco2.fr/outils/chauffage/chauffageelectrique"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3710,7 +3710,7 @@
         "url": "https://impactco2.fr/outils/chauffage/pompeachaleur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3727,7 +3727,7 @@
         "url": "https://impactco2.fr/outils/chauffage/poeleagranule"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3744,7 +3744,7 @@
         "url": "https://impactco2.fr/outils/chauffage/poeleabois"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3761,7 +3761,7 @@
         "url": "https://impactco2.fr/outils/chauffage/reseaudechaleur"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3778,7 +3778,7 @@
         "url": "https://impactco2.fr/outils/chauffage/chaudiereagranule"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3795,7 +3795,7 @@
         "url": "https://impactco2.fr/outils/chauffage/chaudiereabois"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "energie",
@@ -3812,7 +3812,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/email"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "numerique",
@@ -3829,7 +3829,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/spam"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "numerique",
@@ -3846,7 +3846,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/stockagedonnee"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "numerique",
@@ -3863,7 +3863,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/rechercheweb"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "numerique",
@@ -3880,7 +3880,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/streamingvideo"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "numerique",
@@ -3897,7 +3897,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/visioconference"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "numerique",
@@ -3914,7 +3914,7 @@
         "url": "https://impactco2.fr/outils/usagenumerique/telechargement"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "numerique",
@@ -3931,7 +3931,7 @@
         "url": "https://impactco2.fr/outils/caspratiques/ski"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "loisirs",
@@ -3948,7 +3948,7 @@
         "url": "https://impactco2.fr/outils/caspratiques/hotel"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "loisirs",
@@ -3965,7 +3965,7 @@
         "url": "https://impactco2.fr/outils/caspratiques/camping"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "loisirs",
@@ -3982,7 +3982,7 @@
         "url": "https://impactco2.fr/outils/caspratiques/location"
       },
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Année de la donnée non précisée par la source.",
       "category": "loisirs",
@@ -3999,7 +3999,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2021,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "energie",
       "family": "carburants",
@@ -4015,7 +4015,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2021,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "energie",
       "family": "carburants",
@@ -4031,7 +4031,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2024,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "energie",
       "family": "électricité et gaz",
@@ -4047,7 +4047,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2022,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "category": "energie",
       "family": "électricité et gaz",
@@ -4063,7 +4063,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Produits des industries alimentaires, boissons et produits à base de tabac - 2023 » : 540 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "alimentation",
@@ -4080,7 +4080,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Produits des industries alimentaires, boissons et produits à base de tabac - 2023 » : 540 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "boissons",
@@ -4097,7 +4097,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Produits de l'industrie textile, articles d'habillement, cuir et articles en cuir - 2023 » : 271 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "vetements",
@@ -4114,7 +4114,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Produits informatiques, électroniques et optiques - 2023 » : 216 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "electronique",
@@ -4131,7 +4131,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Meubles  - 2023 » : 231 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "mobilier",
@@ -4148,7 +4148,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Transports terrestres et transports par conduites - 2023 » : 319 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "transport",
@@ -4165,7 +4165,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Transports aériens - 2023 » : 914 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "transport",
@@ -4182,7 +4182,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Services de télécommunications - 2023 » : 136 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "numerique",
@@ -4199,7 +4199,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Cinéma, TV, musique, enregistrement / Programmation, diffusion – 2023 » : 156 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "numerique",
@@ -4216,7 +4216,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Services sportifs, récréatifs et de loisirs - 2023 » : 191 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "loisirs",
@@ -4233,7 +4233,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Arts, spectacles, musées, bibliothèques / Jeux de hasard – 2023 » : 104 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "loisirs",
@@ -4250,7 +4250,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Edition - 2023 » : 96 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "loisirs",
@@ -4267,7 +4267,7 @@
         "url": "https://data.ademe.fr/datasets/base-carboner"
       },
       "dataYear": 2023,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "ok",
       "note": "Ratio monétaire « Services d'hébergement et de restauration - 2023 » : 250 kg CO2e par millier d’euros 2023 hors taxes, appliqué ici au prix payé (TTC). Incertitude annoncée par la source : 80 %.",
       "category": "loisirs",
@@ -4281,7 +4281,7 @@
       "unit": "€",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Aucun ratio monétaire 2023 « équipements électriques » dans la Base Carbone V23.6.",
       "category": "electromenager",
@@ -4295,7 +4295,7 @@
       "unit": "€",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Aucun ratio monétaire 2023 « électricité, gaz » dans la Base Carbone V23.6.",
       "category": "energie",
@@ -4309,7 +4309,7 @@
       "unit": "unité",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Facteur par unité à sourcer.",
       "category": "loisirs",
@@ -4323,7 +4323,7 @@
       "unit": "unité",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Absent de l’API Impact CO2 ; à sourcer.",
       "category": "electronique",
@@ -4337,7 +4337,7 @@
       "unit": "unité",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Fabrication d’un vélo : facteur à sourcer.",
       "category": "transport",
@@ -4351,7 +4351,7 @@
       "unit": "unité",
       "source": null,
       "dataYear": null,
-      "retrievedAt": "2026-11-16",
+      "retrievedAt": "2026-11-17",
       "status": "à compléter",
       "note": "Facteur par séance à sourcer.",
       "category": "loisirs",
